@@ -1,0 +1,640 @@
+/* Font faces moved to common.css for consistency */
+
+/* #website styles moved to common.css for consistency */
+#centered-sec{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Typography - Enhanced hierarchy and legibility */
+
+/* Major section headers - make them more prominent */
+.section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 30px;
+  margin-top: 0;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* Ensure conclusion h2 matches other section h2s */
+#conclusion h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 30px;
+  margin-top: 0;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* Subsection headers - clear hierarchy */
+.section h3, .h3-section h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+/* Sub-subsection headers */
+.section h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #4a4a4a;
+  margin-bottom: 16px;
+  margin-top: 32px;
+  line-height: 1.4;
+}
+
+/* Problem/Solution specific styling */
+#problem h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #87004d;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#problem {
+  margin-top: 40px;
+}
+
+/* Enhanced banner text styling */
+#banner-text h4 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #2c2c2c;
+  margin-bottom: 20px;
+}
+
+#banner-text h5 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #87004d;
+  margin-top: 10px;
+}
+
+/* Improved paragraph spacing and readability */
+p {
+  line-height: 1.7;
+  margin-bottom: 16px;
+  color: #404040;
+}
+
+/* Enhanced overview text styling */
+.overview-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 8px;
+  margin-top: 24px;
+}
+
+/* List styling improvements */
+li {
+  line-height: 1.6;
+  margin-bottom: 8px;
+  color: #404040;
+}
+
+li:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+/* Enhanced section spacing */
+.section {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+/* Specific spacing for functionality section */
+#functionality {
+  margin-top: 80px !important;
+  padding-top: 20px;
+}
+
+.h3-section {
+  margin-top: 50px;
+}
+
+/* Better spacing for overview section */
+#overview {
+  margin-top: 40px;
+}
+
+/* Enhanced banner section styling */
+#banner-sec {
+  display: flex;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 40px 20px;
+  border-radius: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#banner-text {
+  width: 80%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#banner {
+  width: 90%;
+  max-width: 800px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+/* Improved content organization */
+#overviewContent{
+  display: flex;
+  gap: 10%;
+  margin-top: 30px;
+}
+
+#tools{
+  width: 35%;
+  min-width: 300px;
+  background: #f8f9fa;
+  padding: 24px;
+  border-radius: 12px;
+  border-left: 4px solid #87004d;
+}
+
+/* Enhanced prep section styling */
+#prep-writing {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+#list-sec, #mood-sec, #colors-sec {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+#mood-sec, #colors-sec {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8%;
+}
+
+.prep-desc {
+  width: 60%;
+}
+
+/* Brain list styling */
+#brain-list {
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 16px;
+  padding-left: 50px;
+}
+
+#brain-list li {
+  font-style: italic;
+  color: #555;
+  padding-left: 10px;
+}
+
+/* Image styling improvements */
+#moodboard {
+  width: 45%;
+  border-radius: 12px;
+  height: fit-content;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+#color-ideas {
+  width: 35%;
+  height: fit-content;
+  border-radius: 8px;
+}
+
+/* Sketches section - Enhanced gallery layout */
+#sketches-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+  align-items: start;
+}
+
+.featured-sketch {
+  grid-row: span 2;
+}
+
+.sketch-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sketch-item {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  border: 1px solid #f0f0f0;
+}
+
+.sketch-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.sketch-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sketch-description {
+  padding: 24px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.sketch-description h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.sketch-description p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 0;
+}
+
+/* Featured sketch styling */
+.featured-sketch .sketch-description {
+  padding: 30px;
+}
+
+.featured-sketch .sketch-description h4 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.featured-sketch .sketch-description p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Legacy sketch styles - kept for backward compatibility but updated */
+#sketches {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+#sketch-col {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  gap: 20px;
+}
+
+#sketch1, #sketch2, #sketch3 {
+  width: 100%;
+  height: fit-content;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+/* Style guide section enhancement */
+#style-guide-sec {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  margin-top: 20px;
+  display: flex;
+  gap: 5%;
+  align-items: flex-start;
+}
+
+#style-guide {
+  width: 65%;
+  border-radius: 8px;
+  margin-bottom: 0;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+/* 3D Assets section */
+#asset-imgs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2%;
+  margin-top: 20px;
+}
+
+.asset {
+  width: 20%;
+  height: fit-content;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease;
+}
+
+.asset:hover {
+  transform: scale(1.05);
+}
+
+#alien, #moon-bear {
+  width: 27%;
+}
+
+.star {
+  width: 12%;
+  height: fit-content;
+}
+
+/* High-fi prototype sections */
+#desktop-cont, #mobile-cont {
+  display: flex;
+  gap: 6%;
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+#desktop-cont {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+#desktop-vid {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+#mobile-vid {
+  width: 40%;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+/* Implementation and conclusion sections */
+#implementationSec {
+  display: flex;
+  gap: 5%;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#conclusion {
+  margin-bottom: 40px;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 60px;
+  min-width: 325px;
+}
+
+#takeaway-sec {
+  display: flex;
+  align-items: flex-start;
+  gap: 5%;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#takeaway-list {
+  width: 85%;
+}
+
+#count-sec {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+#countdown-vid {
+  border-radius: 12px;
+  width: 100%;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+/* Link styling */
+.link:link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link {
+  color: inherit;
+}
+
+.link:hover {
+  color: #87004d;
+  text-decoration: underline;
+}
+
+/* Table styling improvements */
+th{
+  height: 55px;
+  text-align: center;
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #2c2c2c;
+}
+
+td {
+  font-size: 16px;
+  font-family: 'BasisGrotesk';
+  max-width: 200px;
+  padding: 16px;
+  color: #404040;
+}
+
+table, td, th {
+  border: 1px solid #dee2e6;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+#titleArea{
+  display: flex;
+  flex-direction: column;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 2%;
+  margin-bottom: 40px;
+  scroll-margin-top: 80px;
+}
+
+/* Mobile responsiveness improvements */
+@media screen and (max-width: 768px) {
+  .section {
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 40px;
+  }
+  
+  .section h2 {
+    font-size: 28px;
+  }
+  
+  .section h3, .h3-section h3 {
+    font-size: 20px;
+  }
+  
+  #banner-sec {
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 30px 15px;
+  }
+  
+  #banner-text {
+    width: 95%;
+  }
+  
+  #overviewContent {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  #tools {
+    min-width: unset;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
+  }
+  
+  #prep-writing {
+    gap: 20px;
+  }
+  
+  #list-sec, #mood-sec, #colors-sec {
+    padding: 20px;
+  }
+  
+  #mood-sec, #colors-sec {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  
+  #moodboard, .prep-desc, #mobile-vid {
+    width: 100%;
+  }
+  
+  #color-ideas {
+    width: 80%;
+  }
+  
+  #style-guide-sec, #mobile-cont, #takeaway-sec {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  #style-guide {
+    width: 100%;
+  }
+  
+  /* Updated mobile styles for new sketch gallery */
+  #sketches-gallery {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .featured-sketch {
+    grid-row: span 1;
+  }
+  
+  .sketch-grid {
+    gap: 25px;
+  }
+  
+  .sketch-description {
+    padding: 20px;
+  }
+  
+  .featured-sketch .sketch-description {
+    padding: 24px;
+  }
+  
+  .sketch-description h4 {
+    font-size: 16px;
+  }
+  
+  .featured-sketch .sketch-description h4 {
+    font-size: 18px;
+  }
+  
+  .sketch-description p {
+    font-size: 13px;
+  }
+  
+  .featured-sketch .sketch-description p {
+    font-size: 14px;
+  }
+  
+  /* Legacy mobile styles for backward compatibility */
+  #sketch1, #sketch2, #sketch3, .asset, #alien, .star, #moon-bear {
+    height: auto;
+  }
+  
+  #sketch-col {
+    width: 100%;
+  }
+  
+  #sketches {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  #takeaway-list, #implementationSec, #count-sec {
+    width: 100%;
+  }
+  
+  #conclusion {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+}
+

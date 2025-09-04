@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art Page</title>
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="navigation.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="mouse.css" />
+    <link rel="stylesheet" href="pages-art/lightbox.min.css" />
+    <link rel="stylesheet" href="art.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="pages-art/lightbox-plus-jquery.min.js"></script>
+  </head>
+  <body id="website">
+    <div id="nav-bar" class="collapsed">
+    </div>
+    <script>
+      $(function(){
+        $("#nav-bar").load("nav.html");
+      });
+    </script>
+
+    <div id="titleArea">
+        <h1>Explore my artistic work!</h1>
+        <p>This page is primarily personal work, but see my visual communication section for my professional illustration work.</p>
+    </div>
+    <div id="art-sec">
+      <a href="pages-art/vis-art.html">
+          <div class="work">
+            <div class="work-content">
+              <img id="main-img" src="assets/art/Warped-copyright.jpg" alt="Warped - a black and white artistic photograph"/>
+              <div class="work-desc">
+                <h3 class="project-title">Visual Art</h3>
+              </div>
+            </div>
+          </div>
+      </a>
+      <a href="pages-art/photography.html">
+          <div class="work">
+            <div class="work-content">
+              <img id="main-img" src="assets/art/photography/Plastic-copyright.jpg" alt="Plastic - an artistic photograph featuring plastic materials"/>
+              <div class="work-desc">
+                <h3 class="project-title">Photography</h3>
+              </div>
+            </div>
+          </div>
+      </a>
+    </div>
+    <div id="footer">
+      <hr>
+      <div id="footer-text">
+        <div id="spacer"></div>
+        <div id="main-text">
+          <h4>Thanks for browsing!</h4>
+          <label>Designed + built with <3 and iced vanilla lattes</label>
+        </div>
+        <a href="#titleArea">
+          <div id="to-top">
+              <p id="up-text">Back to top</p>
+              <img id="up" src="assets/solar_arrow-up-outline.png" alt="return to top of page"/>
+          </div>
+        </a>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+    <!-- <script src="/path/to/masonry.pkgd.min.js"></script> -->
+</html>

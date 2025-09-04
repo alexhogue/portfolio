@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art Page</title>
+    <link rel="stylesheet" href="art-pages.css" />
+    <link rel="stylesheet" href="../common.css" />
+    <link rel="stylesheet" href="../navigation.css" />
+    <link rel="stylesheet" href="lightbox.min.css" />
+    <link rel="stylesheet" href="../footer.css" />
+    <script src="lightbox-plus-jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body id="website">
+    <div id="nav-bar" class="collapsed">
+    </div>
+    <script>
+      $(function(){
+        $("#nav-bar").load("nav-subdir.html");
+      });
+    </script>
+    <div>
+    <div id="titleArea">
+        <h1>Visual Art</h1>
+    </div>
+    <div id="art-sec">
+        <div id="photos">
+            <div class="column"> 
+                <a href="../assets/art/12+IMG_1743.jpeg" data-lightbox="myartgallery"><img class="photo" src="../assets/art/12+IMG_1743.jpeg"></a>
+                <a href="../assets/art/streetview-copyright.jpeg" data-lightbox="myartgallery"><img class="photo" src="../assets/art/streetview-copyright.jpeg"></a>
+            </div>
+            <div class="column"> 
+                <a href="../assets/art/streets.JPG" data-lightbox="myartgallery"><img class="photo" src="../assets/art/streets.JPG"></a>
+                <a href="../assets/art/Warped-copyright.jpg" data-lightbox="myartgallery"><img class="photo" src="../assets/art/Warped-copyright.jpg"></a>
+            </div>
+            <div class="column"> 
+                <a href="../assets/art/ear-harp.jpg" data-lightbox="myartgallery"><img class="photo" src="../assets/art/ear-harp.jpg"></a>
+                <a href="../assets/art/portrait.JPG" data-lightbox="myartgallery"><img class="photo" src="../assets/art/portrait.JPG"></a>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <div id="footer">
+      <hr>
+      <div id="footer-text">
+        <div id="spacer"></div>
+        <div id="main-text">
+          <h4>Thanks for browsing!</h4>
+          <label>Designed + built with <3 and iced vanilla lattes</label>
+        </div>
+        <a href="#titleArea">
+          <div id="to-top">
+              <p id="up-text">Back to top</p>
+              <img id="up" src="../assets/solar_arrow-up-outline.png" alt="return to top of page"/>
+          </div>
+        </a>
+      </div>
+    </div>
+    <script src="../script.js"></script>
+  </body>
+  <!-- <script src="/path/to/masonry.pkgd.min.js"></script> -->
+</html>

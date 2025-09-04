@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voyage Vault Portfolio Page</title>
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="navigation.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="mouse.css" />
+    <link rel="stylesheet" href="voyage.css" /> 
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body id="website">
+    <div id="nav-bar" class="collapsed">
+    </div>
+    <script>
+      $(function(){
+        $("#nav-bar").load("nav.html");
+      });
+    </script>
+
+    <div id="titleArea">
+        <h1>Voyage Vault</h1>
+        <h4>Create your dream travel bucket list!</h4>
+    </div>
+    <div id="centered-sec">
+      <div id="overview" class="section">
+        <h2>Overview</h2>
+        <div id="overviewContent">
+          <div>
+            <p>The goal of the project was to design and build an interface for users to create their dream travel bucket list, share 
+              their travel experiences, and explore others' travel opinions.</p>
+            <p>The final product is a fully functional interactive interface that displays travel destinations to users, allows them to 
+              sort and filter the options, and add their favorites to their "vault" which functions as an aggregator to display users' 
+              selections "vault".</p>
+          </div>
+          <div id="tools">
+            <h5 class="overview-text">Project Focus:</h5>
+            <p>UI/UX design, front-end development</p>
+            <h5 class="overview-text">Tools:</h5>
+            <p>Figma, ReactJS, Procreate</p>
+            <h5 class="overview-text">View Webpage:</h5>
+            <a class="link" href="https://voyage-vault.vercel.app/" target=”_blank”><p>Deployed site</p></a>
+          </div>
+        </div>
+        <br>
+        <hr>
+        
+      </div>
+      <div id="problem" class="section">
+          <h3 class="h3-section">Problem</h3>
+          <p>How can I create an app for people who want to travel–particularily those looking to travel somewhere new–
+              but are struggling to figure out their ideal destination?</p>
+          <h3 class="h3-section">Solution</h3>
+          <p>Using a clearly structured layout that displays options to users as well as an accessible pannel to "store" 
+              favorite makes this process easy. Additionally, features such as ranking and sorting destinations by various features
+              as well as popularity allows users to find thier ideal destinations. This would be helpful for inexperiened travellers
+              who as well as experienced travelers looking to learn about new destinations.
+          </p>
+              <br>
+          <hr>
+      </div>
+      <div id="partOne" class="section">
+        <h2>Preperation</h2>
+        <p>I began the design process by analyzing and drawing comparisons between various existing interfaces that implement a favoriting
+          feature in order to figure out the clearest and most effective way to implement my travel bucket list builder.
+        </p>
+          <div id="competitiveAnalysis">
+            <h3>Competitive Analysis</h3>
+            <p>Below is a competitive comparison chart used to analyse the features of 3 interfaces with favoriting functions: Goodreads, Netflix, 
+              and TripAdvisor.</p>
+
+            <table>
+              <tr>
+                <th> </th>
+                <th><a class="link" href="https://www.goodreads.com/choiceawards/best-fiction-books-2023" target=”_blank”><b>Goodreads</b></a></th>
+                <th><a class="link" href="https://www.netflix.com/browse" target=”_blank”><b>Netflix</b></a></th>
+                <th><a class="link" href="https://www.tripadvisor.com/Hotels" target=”_blank”><b>TripAdvisor</b></a></th>
+              </tr>
+              <tr>
+                <td><b>Favorite options</b></td>
+                <td>4 options: Rating scale: 1-5; Read; currently reading; and want to read</td>
+                <td>3 options: Like, love, dislike</td>
+                <td>1 option: Only like</td>
+              </tr>
+              <tr>
+                <td><b>Filter customizability</b></td>
+                <td><img class="x" src="assets/voyage/check.png" alt="check indicating feature present"/> (by genre)</td>
+                <td><img class="x" src="assets/voyage/check.png" alt="check indicating feature present"/> (by genre)</td>
+                <td><img class="x" src="assets/voyage/check.png" alt="check indicating feature present"/> (by purpose)</td>
+              </tr>
+              <tr>
+                <td><b>Options displayed on home</b></td>
+                <td><img class="x" src="assets/voyage/x.png" alt="X indicating feature not present"/> (must click to view options)</td>
+                <td><img class="x" src="assets/voyage/check.png" alt="check indicating feature present"/> (scroll by category; clicking not necessary)</td>
+                <td><img class="x" src="assets/voyage/check.png" alt="check indicating feature present"/></td>
+              </tr>
+              <tr>
+                <td><b>Favorite action clarity</b></td>
+                <td><img class="x" src="assets/voyage/x.png" alt="X indicating feature not present"/> (wordy; too many options to click)</td>
+                <td><img class="x" src="assets/voyage/x.png" alt="X indicating feature not present"/> (requires hover to appear)</td>
+                <td><img class="x" src="assets/voyage/check.png" alt="check indicating feature present"/> (heart icon) </td>
+              </tr>
+              <tr>
+                <td><b>Unfavorite clarity</b></td>
+                <td><img class="x" src="assets/voyage/x.png" alt="X indicating feature not present"/></td>
+                <td><img class="x" src="assets/voyage/check.png" alt="check indicating feature present"/></td>
+                <td><img class="x" src="assets/voyage/x.png" alt="X indicating feature not present"/> (doesn’t unclick automatically; opens pop-up in order to do so)</td>
+              </tr>
+              <tr>
+                <td><b>Reward/ feedback</b></td>
+                <td><img class="x" src="assets/voyage/check.png" alt="check indicating feature present"/></td>
+                <td><img class="x" src="assets/voyage/check.png" alt="check indicating feature present"/></td>
+                <td><img class="x" src="assets/voyage/check.png" alt="check indicating feature present"/> (color and icon very clear)</td>
+              </tr>
+              <tr>
+                <td><b>Favorite list display</b></td>
+                <td><img class="x" src="assets/voyage/check.png" alt="check indicating feature present"/> (however not visually appealing)</td>
+                <td><img class="x" src="assets/voyage/x.png" alt="X indicating feature not present"/> (no clear hierarchy)</td>
+                <td><img class="x" src="assets/voyage/check.png" alt="check indicating feature present"/></td>
+              </tr>
+            </table>
+            <div id="plans">
+              <div id="plan-list">
+                  <p>Based on my analysis, it is important to implement the following factors in my own design to optimize the user 
+                  experience with the interface:</p>
+                  <ul>
+                  <li>Clear layout with all options viewable on the home page; make use of grids to create visual hierarchy</li>
+                  <li>Allow sorting by category</li>
+                  <li>Limit excess wordiness</li>
+                  <li>Use clear icons for liking items without extra clicks needed</li>
+                  <li>Easy removal of items once added</li>
+                  </uL>
+              </div>
+              <br>
+              <div id="initial-design" class="h3-section">
+                <h3>Initial Layout</h3>
+                <div id="planning-sec">
+                  <img id="initial-img" src="assets/voyage/initial.png" alt="initial layout design"/>
+                  <div id="initial-writing-sec">
+                    <p>This is my initial layout design in Figma. I focused on clearly defined sections using
+                      a card layout. </p>
+                    <p>However, I was not yet satisfied with this design and revised it to be
+                      more clean and refined with less overpowering divisions and more intitional pops of color (see below).</p>
+                    <!-- <img id="arrow" src="assets/arrowicon.png"/> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div id="partTwo" class="section">
+        <h2>Final Design</h2>
+          <div id="planning" >
+            <h3>Planning</h3>
+            <p>I began by planning out my design using Figma with a focus on clarity and accessibility.</p>
+            <p>Using the information gleaned from my competitive comparison and initial design, I took the elements from the three interfaces
+              that were most effective, and revised elements that were less effective.</p>
+          </div>
+          <div id="analysis">
+            <h3>Design Choices</h3>
+            <img id="pageAnalysis" src="assets/voyage/page_analysis.png" alt="graphic outlining elemnts in the final design including clear display grid and ability to filter data"/>
+            <div id="purposeWriting">
+              <div class="choices">
+              <h4><b>Layout</b></h4>
+              <p>The purpose of the app is to provide users with travel destination ideas and allow them to build their travel bucket 
+                list and view other users opinions and rankings. It is important that the travel information for each destination be
+                clearly layed out into item cards for users to easily browse.</p>
+              </div>
+              <div class="choices">
+                <h4><b>Sort and Filter</b></h4>
+                <p>Because travel is incredibly distinct to each individual's 
+                preferences, sorting and filtering the options is extremely useful. I created the options for users to sort by most liked destinations 
+                and filter destinations by both continent as well as desired activity (e.g city, beach, and adventure focused destinations).</p>
+              </div>
+              <div class="choices">
+                <h4><b>Aggregator</b></h4>
+                <p>The user is then able to add their favorite destinations to their travel vault. The vault is the aggregator that displays the users choices 
+                in a section to the left of the travel grid so that users can easily view and update their list as they browse.</p>
+              </div>
+            </div>
+          </div>
+          <div id="imageSection">
+            <div id="imageExamples">
+              <div id="writingSec">
+                <h3>Illustrations</h3>
+                <p id="imageWriting">I created colorful illustrations to make the page more visually engaging and to capture the excitment 
+                and discovery of travel.</p>
+              </div>
+              <img id="plane" src="assets/voyage/plane.png" alt="flying airplane illustration"/>
+              <div id="placeImages">
+                <img id="kruger" src="assets/voyage/kruger.png" alt="kruger national park illustration"/>
+                <img id="iceland" src="assets/voyage/iceland.png" alt="iceland illustration"/>
+                <img id="grand" src="assets/voyage/grand_canyon.png" alt="grand canyon illustration"/>
+                <img id="london" src="assets/voyage/london.png" alt="london illustration"/>
+              </div>
+            </div>
+          </div>
+          <div id="functionality">
+            <h2>Implementation</h2>
+            <div id="implementationSec">
+              <div>
+                <p>After completing the design process, I implemented the webpage as an interactive interface with React.js.</p>
+                <p>Here is the link to the <a id="pageLink" class="link" href="https://voyage-vault.vercel.app/" target=”_blank”><b>deployed webpage</b></a>.</p>
+              </div>
+              <img id="gif" alt="user interacting with the interface" src="assets/voyage/interface.gif"/>
+            </div>
+          </div>
+      </div>
+
+      <div id="conclusion">
+        <h2>Reflections</h2>
+        <p>With this project, I learned a lot about designing and building an intuitive and functional interactive interface. I 
+          refined my skills in programming with React to implement my UI after completing the design process. I
+          also learned about the considerations and intricacies that go into building an interface at both a the design stage
+          and the implementation stage; both require structured planning in order to figure out the best way to acheive the project
+          goal. I look forward to continuing to develop my design and front-end programming skills. </p>
+        <div id="takeaways">
+          <h3>Key Takeaways</h3>
+          <p><span class="important">Clear and Accessible Layout:</span> Providing a clear layout with all options readily viewable enhances usability and allows users to 
+            easily navigate and interact with the interface.</p>
+          <p><span class="important">Simplified Interaction:</span> Using clear icons and limiting excess wordiness helps streamline user interactions and reduces 
+            cognitive load, resulting in a more efficient and enjoyable user experience.</p>
+          <p><span class="important">Flexibility and Feedback:</span> Offering options for sorting, favoriting, and removing items, along with clear feedback 
+            mechanisms, empowers users to customize their experience and provides valuable feedback on their actions.</p>
+        </div>
+      </div>
+      <div id="footer">
+        <hr>
+        <div id="footer-text">
+          <div id="spacer"></div>
+          <div id="main-text">
+            <h4>Thanks for browsing!</h4>
+            <label>Designed + built with <3 and iced vanilla lattes</label>
+          </div>
+          <a href="#titleArea">
+            <div id="to-top">
+                <p id="up-text">Back to top</p>
+                <img id="up" src="assets/solar_arrow-up-outline.png" alt="return to top of page"/>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  </html>

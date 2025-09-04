@@ -1,0 +1,336 @@
+/* #website styles moved to common.css for consistency */
+#centered-sec{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Typography - removed custom overrides to use common.css definitions */
+
+/* Overview section specific styles */
+#overview {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 4%;
+}
+
+#overviewContent{
+  display: flex;
+  gap: 10%;
+  align-items: flex-start;
+}
+
+#overviewContent > div:first-child {
+  flex: 1; /* Allow main content to take remaining space */
+}
+
+#tools{
+  width: 30%;
+  min-width: 200px;
+  flex-shrink: 0;
+}
+
+.overview-text{
+  margin-bottom: 5px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.choices{
+  margin-bottom: 3%;
+}
+
+#planning-sec{
+  display: flex;
+  gap: 6%;
+  align-items: flex-start;
+  margin-top: 4%;
+}
+
+#initial-img{
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+
+#initial-writing-sec{
+  width: 45%;
+}
+
+#imageExamples{
+  display: flex;
+  gap: 4%;
+  align-items: flex-start;
+  margin-top: 4%;
+}
+
+#writingSec{
+  width: 30%;
+}
+
+#placeImages{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 25%;
+}
+
+#implementationSec{
+  display: flex;
+  gap: 6%;
+  align-items: center;
+  margin-top: 4%;
+}
+
+#takeaways{
+  margin-top: 4%;
+}
+
+/* Analysis section styles */
+#analysis{
+  margin-top: 4%;
+}
+
+#pageAnalysis{
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+#purposeWriting{
+  margin-top: 20px;
+}
+
+/* Table styles */
+#competitiveAnalysis{
+  margin-top: 4%;
+}
+
+#table-sec{
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+th {
+  text-align: left;
+  background-color: rgb(244, 244, 244);
+  font-weight:700;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 4%;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 20px;
+  border: 1px solid #222222;
+}
+
+.x{
+  width: 15px;
+  height: auto;
+}
+
+#titleArea{
+  display: flex;
+  flex-direction: column;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 4%;
+  margin-bottom: 2%;
+  scroll-margin-top: 80px; /* Extra space above title when scrolling from "Back to top" */
+}
+
+#initial-sec{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+#initial-text{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#visual-hierarchy{
+  margin-top: 4%;
+}
+
+#hierarchy-desc{
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.button {
+  margin-top: 25px;
+  width: 4%;
+  min-width: 35px;
+  max-width: 50px;
+  height: fit-content;
+  transition: transform .2s;
+}
+
+.button:hover{
+  transform: scale(1.3);
+}
+
+#illus-imgs{
+  display: flex;
+  gap: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 4%;
+}
+
+#kruger, #iceland, #grand, #london{
+  width: 18%;
+  max-width: 160px;
+  min-width: 140px;
+  height: auto;
+  border-radius: 10px;
+}
+
+#plane{
+  width: 15%;
+  max-width: 140px;
+  min-width: 120px;
+  height: auto;
+}
+
+#gif{
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+#final-sec{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+/* CSS Gallery */
+#carousel-section{
+  margin-top: 4%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#carousel-section .carousel{
+  margin-top: 65px;
+}
+
+/* Default section styles - consistent with other case study pages */
+.section, #conclusion{
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 4%;
+}
+
+.h3-section {
+  margin-top: 6%;
+}
+
+@media screen and (max-width: 768px) {
+  #overviewContent{
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  #overviewContent > div:first-child {
+    flex: none;
+  }
+  
+  #tools{
+    width: 100%;
+    min-width: unset;
+  }
+  
+  #planning-sec{
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  #initial-img{
+    width: 100%;
+  }
+  
+  #initial-writing-sec{
+    width: 100%;
+  }
+  
+  #imageExamples{
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  #writingSec{
+    width: 100%;
+  }
+  
+  #placeImages{
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #kruger, #iceland, #grand, #london{
+    width: 45%;
+    min-width: 120px;
+  }
+  
+  #implementationSec{
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .section, #conclusion{
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  
+  #titleArea{
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  
+  #overview {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  
+  #hierarchy-desc{
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  
+  #illus-imgs{
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  
+  #final-sec{
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  
+  #carousel-section{
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+}
+
+

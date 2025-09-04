@@ -1,0 +1,622 @@
+/* Enhanced Typography - Consistent with hack.html hierarchy */
+
+/* Major section headers - make them more prominent */
+.section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 30px;
+  margin-top: 0;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* Ensure reflection h2 matches other section h2s */
+#reflection h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 30px;
+  margin-top: 0;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* Subsection headers - clear hierarchy */
+.section h3, .h3-section h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+/* Sub-subsection headers */
+.section h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #4a4a4a;
+  margin-bottom: 16px;
+  margin-top: 32px;
+  line-height: 1.4;
+}
+
+/* Improved paragraph spacing and readability - match hack.css */
+p {
+  line-height: 1.7;
+  margin-bottom: 16px;
+  color: #404040;
+}
+
+/* Enhanced overview text styling - match hack.css */
+.overview-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 8px;
+  margin-top: 24px;
+}
+
+/* List styling improvements - match hack.css */
+li {
+  line-height: 1.6;
+  margin-bottom: 8px;
+  color: #404040;
+}
+
+li:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+/* Enhanced section spacing - match hack.css */
+.section {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.h3-section {
+  margin-top: 50px;
+}
+
+/* Better spacing for overview section */
+#overview {
+  margin-top: 40px;
+}
+
+#titleArea {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 2%;
+  margin-bottom: 40px;
+  scroll-margin-top: 80px; /* Extra space above title when scrolling from "Back to top" */
+}
+
+/* Link styling - match hack.css */
+.link:link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link {
+  color: inherit;
+}
+
+.link:hover {
+  color: #4a90e2;
+  text-decoration: underline;
+}
+
+/* Card-based section styling */
+#tools {
+  width: 35%;
+  min-width: 300px;
+  background: #f8f9fa;
+  padding: 24px;
+  border-radius: 12px;
+  border-left: 4px solid #4a90e2;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+#about-desc {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  border: 1px solid #f0f0f0;
+  margin: 20px 0;
+}
+
+#carousel-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 250px;
+  width: 50%;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  border: 1px solid #f0f0f0;
+}
+
+#sketch-writing {
+  width: 45%;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+/* Video and image enhancements */
+#screen {
+  width: 100%;
+  border-radius: 15px;
+  height: fit-content;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  margin: 20px 0;
+}
+
+/* Wireframe group styling - match hack.css card patterns */
+.group {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  background: #ffffff;
+  padding: 10px;
+}
+
+.group h4 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #4a4a4a;
+}
+
+.group img {
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Carousel section styling - match hack.css patterns */
+.carousel-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+}
+
+#carousel{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.carousel-item {
+  width: 100%;
+  height: 100%;
+  display: none;
+  border-radius: 8px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#button-section{
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+}
+
+.button {
+  width: 20px;
+  height: fit-content;
+  opacity: 75%;
+  border-radius: 4px;
+}
+
+/* Style guide text section width */
+#style-guide-text{
+  width: 50%;
+}
+
+/* #website styles moved to common.css for consistency */
+#centered-sec{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Better content organization - match hack.css */
+#overview-section{
+  display: flex;
+  gap: 10%;
+  margin-top: 30px;
+}
+
+/* Image styling improvements - match hack.css */
+#warp-icon{
+    width: 7%;
+    height: fit-content;
+}
+
+#screen{
+    width: 100%;
+    border-radius: 12px;
+    height: fit-content;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+
+/* Sketches section layout */
+#sketches{
+  display: flex;
+  gap: 8%;
+}
+
+/* High-fi prototype sections - match hack.css */
+video {
+  width: 70%;
+  min-width: 265px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.highfiImg{
+  width: 70%;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  min-width: 265px;
+}
+
+/* Enhanced video and image styling - match hack.css */
+#highfiVid {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+/* Style guide section - match hack.css styling */
+#style-guide-images{
+  min-width: 250px;
+  width: 50%;
+}
+
+.styleGuide{
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+#type-guide{
+  border-radius: 8px 8px 0px 0px;
+}
+
+#color-guide{
+  border-radius: 0px 0px 8px 8px;
+}
+
+/* Horizontal section styling */
+.hor-section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.hor-section img {
+  width: 75%;
+  margin-right: 2%;
+}
+
+/* Low-fi wireframe styling - match hack.css */
+.lowfiSec{
+  width: 100%;
+}
+
+.lofiFinal{
+  width: 55%;
+  max-width: 1000px;
+  border-radius: 8px;
+}
+
+.lofiFlow{
+  width: 115%;
+  max-width: 1000px;
+  border-radius: 8px;
+}
+
+/* Table styling improvements - match hack.css */
+th{
+  height: 55px;
+  text-align: center;
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #2c2c2c;
+}
+
+td {
+  font-size: 16px;
+  font-family: 'BasisGrotesk';
+  max-width: 200px;
+  padding: 16px;
+  color: #404040;
+}
+
+table, td, th {
+  border: 1px solid #dee2e6;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+#reflection-sec{
+  display: flex;
+  gap: 8%;
+  justify-content: space-between;
+}
+#group-pic-sec{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* width: 50%; */
+
+}
+#group-pic{
+  width: 100%;
+  border-radius: 15px;
+  height: fit-content;
+}
+#next, #impact{
+  width: 75%;
+  min-width: 250px;
+}
+
+#reflection {
+  margin-bottom: 2%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 4%;
+  min-width: 325px;
+}
+
+
+/* Mobile responsiveness improvements - match hack.css */
+@media screen and (max-width: 768px) {
+  .section {
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 40px;
+  }
+  
+  .section h2 {
+    font-size: 28px;
+  }
+  
+  .section h3, .h3-section h3 {
+    font-size: 20px;
+  }
+  
+  .section h4 {
+    font-size: 18px;
+  }
+  
+  #titleArea {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  
+  #overview-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  #tools {
+    width: 100%;
+    min-width: unset;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
+  }
+  
+  #about-desc {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  #warp-icon {
+    width: 15%;
+  }
+  
+  #sketches {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  #carousel-section {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  #sketch-writing {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .hor-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .group {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  #screen {
+    margin: 15px 0;
+  }
+  
+  /* Style guide mobile styling */
+  #style-guide-sec {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  #style-guide-text {
+    padding: 15px;
+  }
+  
+  /* New structured sections mobile styles */
+  .lowfiSec {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  #reflection-sec {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  #conc-writing {
+    padding: 20px;
+  }
+  
+  #group-pic-sec {
+    padding: 15px;
+  }
+  
+  #next {
+    padding: 20px;
+  }
+  
+  #highfiVid, .highfiImg {
+    margin: 12px 0;
+  }
+  
+  /* Video and image mobile adjustments */
+  video, .highfiImg {
+    width: 90%;
+    min-width: unset;
+  }
+  
+  .lofiFinal, .lofiFlow {
+    width: 100%;
+  }
+}
+
+/* Enhanced section styling for new structure */
+.lowfiSec {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  border: 1px solid #f0f0f0;
+  margin-bottom: 24px;
+}
+
+.lowfiSec h4 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #4a4a4a;
+}
+
+.lowfiSec img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+#style-guide-sec {
+  display: flex;
+  gap: 5%;
+  align-items: flex-start;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  border: 1px solid #f0f0f0;
+  margin: 20px 0;
+}
+
+#style-guide-text {
+  padding: 20px;
+  border-radius: 8px;
+}
+
+#reflection-sec {
+  display: flex;
+  gap: 5%;
+  align-items: flex-start;
+}
+
+#conc-writing {
+  flex: 2;
+}
+
+#group-pic-sec {
+  flex: 1;
+  text-align: center;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+#group-pic {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 12px;
+}
+
+/* Enhanced video and image styling */
+#highfiVid {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  margin: 16px 0;
+}
+
+.highfiImg {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  margin: 16px 0;
+}
+
+/* Label styling improvements */
+label {
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 8px;
+  display: block;
+}

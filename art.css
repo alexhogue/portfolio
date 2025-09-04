@@ -1,0 +1,100 @@
+/* #website styles moved to common.css for consistency */
+.section {
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 4%;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+#titleArea {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 4% !important;
+  padding-top: 0 !important;
+  scroll-margin-top: 80px; /* Extra space above title when scrolling from "Back to top" */
+}
+#art-sec{
+  display: flex;
+  gap:20px;
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  min-width: 300px;
+}
+.work-content{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  cursor: url("assets/eye3.png") 35 30, auto;
+}
+.work-desc{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.work{
+  display: flex;
+  height: auto;
+  margin: auto;
+  height: 100%;
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform .2s;
+  cursor: url("assets/eye3.png") 35 30, auto;
+}
+.work:hover{
+  box-shadow: 0 0 10px #d0d0d0;
+  transform: scale(1.04);
+}
+#main-img {
+  width: 100%;
+  max-height: 550px;
+  height:auto;
+  min-width: 225px;
+  border-radius: 15px;
+  transition: transform .2s;
+}
+.project-title{
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+.project-title:hover {
+  color: #8a8a8a;
+}
+
+@media screen and (max-width: 768px) {
+  #art-sec{
+    flex-direction: column;
+    margin-left: 0%;
+    margin-right: 0%;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .work{
+    cursor: auto;
+  }
+  .work-content{
+    cursor: auto;
+  }
+  #main-img {
+    width: 95%;
+    height:fit-content;
+    border-radius: 15px;
+    transition: transform .2s;
+  }
+  #titleArea{
+    margin-top: 40px;
+  }
+}

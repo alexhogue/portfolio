@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy-Focused ChatGPT Design Recommendations</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="navigation.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="mouse.css" />
+    <link rel="stylesheet" href="chatgpt.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body id="website">
+    <div id="nav-bar" class="collapsed">
+    </div>
+    <script>
+      $(function(){
+        $("#nav-bar").load("nav.html");
+      });
+    </script>
+
+    <div id="titleArea">
+        <h1>Privacy-Focused ChatGPT Design Recommendations</h1>
+        <h4>Developing privacy-centered design improvements for AI chat interfaces</h4>
+    </div>
+
+    <div class="section">
+        <hr>
+    </div>
+
+    <div id="overview" class="section">
+        <h2>Project Overview</h2>
+        <div id="overview-section">
+            <div id="overview-content">
+                <h4>Project Goal</h4>
+                <p>This capstone project focused on developing comprehensive design recommendations to enhance privacy protections and user control within ChatGPT and similar AI chat interfaces. Through user research and design analysis, our team identified key areas for improvement in privacy-conscious AI interactions.</p>
+                <h4>Academic Context</h4>
+                <p>Completed as an independently directed capstone project for a course on privacy and accessibility, examining the intersection of AI technology and user privacy rights.</p>
+            </div>
+            <div id="tools">
+                <h4>Project Focus</h4>
+                <p>User research, UX design, wireframing</p>
+                <h4>Design Team</h4>
+                <p>3 person design team, independently directed capstone project</p>
+                <h4>Tools</h4>
+                <p>Figma, qualitative research methods</p>
+                <h4>Timeline</h4>
+                <p>2 months</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="problem" class="section">
+        <h3>Problem</h3>
+        <p>How can we enhance privacy protections and user control in AI chat interfaces while maintaining usability and functionality?</p>
+        <h3 class="h3-section">Solution</h3>
+        <p>Through comprehensive research and design analysis, we developed targeted recommendations for improving privacy-conscious design patterns in ChatGPT and similar AI interfaces.</p>
+        <br>
+        <hr>
+    </div>
+
+    <div id="research-foundation" class="section">
+        <h2>Research Foundation</h2>
+        <div class="h3-section">
+            <h3>Motivations</h3>
+            <ul>
+                <li>Conversational AI chatbots becoming more integrated into daily life</li>
+                <li>These tools collect and store user data, often without user being aware, which leads to privacy concerns</li>
+            </ul>
+        </div>
+        
+        <div class="h3-section">
+            <h3>Questions</h3>
+            <ul>
+                <li>For what purposes do college students engage with conversational AI chatbots, and what can they do to safeguard their privacy while interacting with these systems?</li>
+                <li>How can the design of conversational AI chatbots make users more aware of how their data is being used and stored?</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="methodology" class="section">
+        <h2>Approach</h2>
+        <p>Our research methodology combined multiple approaches to comprehensively understand privacy concerns and develop actionable design solutions.</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 30px 0;">
+            <div style="background: #e3f2fd; padding: 30px; border-radius: 12px; border-left: 4px solid #1976d2; text-align: center;">
+                <h4 style="margin-top: 0; font-size: 20px; margin-bottom: 15px; color: #1976d2;">Literature Review</h4>
+                <p style="margin-bottom: 0; color: #424242;">Research, privacy policy analysis, and conversational AI landscape exploration</p>
+            </div>
+            
+            <div style="background: #e3f2fd; padding: 30px; border-radius: 12px; border-left: 4px solid #1976d2; text-align: center;">
+                <h4 style="margin-top: 0; font-size: 20px; margin-bottom: 15px; color: #1976d2;">Survey Research</h4>
+                <p style="margin-bottom: 0; color: #424242;">Quantitative data collection from 60 college students across 14 universities</p>
+            </div>
+            
+            <div style="background: #e3f2fd; padding: 30px; border-radius: 12px; border-left: 4px solid #1976d2; text-align: center;">
+                <h4 style="margin-top: 0; font-size: 20px; margin-bottom: 15px; color: #1976d2;">User Interviews</h4>
+                <p style="margin-bottom: 0; color: #424242;">In-depth qualitative insights from 6 participants with hands-on privacy feature testing</p>
+            </div>
+            
+            <div style="background: #e8f5e8; padding: 30px; border-radius: 12px; border-left: 4px solid #2e7d32; text-align: center;">
+                <h4 style="margin-top: 0; font-size: 20px; margin-bottom: 15px; color: #2e7d32;">Design Solutions</h4>
+                <p style="margin-bottom: 0; color: #424242;">Privacy-focused UI recommendations and interactive prototyping</p>
+            </div>
+        </div>
+        
+        <br>
+        <hr>
+    </div>
+
+    <div id="literature-review" class="section">
+        <h2>Literature Review</h2>
+        <p>We conducted comprehensive research to understand the current landscape of conversational AI and privacy concerns, establishing a foundation for our design recommendations.</p>
+        <br>
+        
+        <div class="h3-section">
+            <h3>Defining Conversational AI Chatbots</h3>
+            <p>Conversational AI chatbots are virtual agents that use "large volumes of data, machine learning, and natural language processing to help imitate human interactions." Examples include ChatGPT, Claude, Copilot, and Perplexity. Released at the end of 2022, ChatGPT immediately attracted attention for its ability to respond in-depth to natural language prompts, acquiring over 100 million users within two months.</p>
+            
+            <p>Training involves pre-training (where the model learns grammar and general knowledge from large public datasets) and fine-tuning (where the model is refined using smaller, specialized datasets to improve specific behaviors). ChatGPT excels in text generation, often surpassing human performance in summarizing content, answering questions, and providing feedback. However, users must be cautious as it can make factual errors or hallucinate.</p>
+            
+            <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; border-left: 4px solid #1976d2; margin: 20px 0;">
+                <h4 style="margin-top: 0; color: #1976d2;">Privacy Consideration</h4>
+                <p style="margin-bottom: 0;">Users must be aware of privacy implications and data sharing policies, as OpenAI collects, stores, and trains ChatGPT with an immense amount of user data.</p>
+            </div>
+        </div>
+        
+        <div class="h3-section">
+            <h3>Privacy Concerns of Chatbots</h3>
+            <p>Conversational AI chatbots pose numerous privacy risks as they leverage user input data for contextually relevant interactions. These concerns stem from data collection and usage practices, lack of consent and transparency, and limited technical knowledge among users.</p>
+        </div>
+        
+        <div class="h3-section">
+            <h3>Privacy Policy Review of ChatGPT</h3>
+            <p>We analyzed OpenAI's privacy policy to understand current transparency practices and identify areas for improvement.</p>
+            
+            <div style="display: flex; gap: 40px; align-items: flex-start; margin-top: 20px;">
+                <div style="flex: 1;">
+                    <h4>Policy Structure and Accessibility</h4>
+                    <p>Privacy policies inform users about personal information collection, usage, protection, and user choices. In the United States, companies have discretion over disclosure levels due to the absence of nationwide privacy laws.</p>
+                    
+                    <p>The ChatGPT privacy policy contains ten sections covering data collection, usage, and sharing practices.</p>
+                    
+                    <p>Grammarly's Flesch reading-ease test scored OpenAI's privacy policy as 37, indicating it requires at least some college education to understand and may not be easy to read.</p>
+                    
+                    <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; border-left: 4px solid #1976d2; margin: 20px 0;">
+                        <h4 style="margin-top: 0; color: #1976d2;">Main Privacy Concerns Identified</h4>
+                        <ul style="margin-bottom: 0;">
+                            <li><strong>Amount of data collected</strong></li>
+                            <li><strong>Data retention practices</strong></li>
+                            <li><strong>How data is used</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="flex: 1;">
+                    <img src="assets/chatgpt/policy-analysis.png" alt="Readability score analysis of OpenAI's privacy policy showing Flesch Reading-Ease Test results" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+                    <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center; font-style: italic;">Privacy policy readability analysis from Grammarly</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+    </div>
+
+    <div id="survey" class="section">
+        <h2>Survey</h2>
+        <p>To understand student perceptions and usage patterns of AI chatbots, we conducted a comprehensive survey across multiple universities.</p>
+        <br>
+        
+        <div class="h3-section">
+            <h3>Participants and Methodology</h3>
+            <div style="display: flex; gap: 30px; margin: 20px 0;">
+                <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; flex: 1; text-align: center;">
+                    <h4 style="color: #1976d2; margin-top: 0; font-size: 24px;">60</h4>
+                    <p style="margin-bottom: 0;">Undergraduate students</p>
+                </div>
+                <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; flex: 1; text-align: center;">
+                    <h4 style="color: #1976d2; margin-top: 0; font-size: 24px;">14</h4>
+                    <p style="margin-bottom: 0;">Universities across the US</p>
+                </div>
+                <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; flex: 1; text-align: center;">
+                    <h4 style="color: #1976d2; margin-top: 0; font-size: 24px;">45</h4>
+                    <p style="margin-bottom: 0;">From Brown & RISD</p>
+                </div>
+            </div>
+            
+            <p>The survey was designed to collect quantitative and qualitative data on undergraduate university students' usage and perceptions of generative conversational AI chatbots. It was developed by the research team in two rounds of drafting and discussion, with feedback provided by Dr. Diana Freed.</p>
+        </div>
+        
+        <div class="h3-section">
+            <h3>Survey Structure</h3>
+            <p>The survey collected demographic information (university, major, graduation year, gender, and age) and included a mix of multiple-choice, multi-select, and short-answer questions focused on understanding perceptions of AI, usage patterns, and privacy considerations. Results were anonymous unless respondents volunteered for follow-up interviews by providing their email address.</p>
+        </div>
+        
+        <div class="h3-section">
+            <h3>Distribution and Outreach</h3>
+            <p>Researchers used purposeful sampling to focus on undergraduate students across the United States, distributing the survey through individual outreach, EdStem classrooms for academic course communities, and Slack communities to reach diverse student groups.</p>
+        </div>
+        
+        <br>
+        <hr>
+    </div>
+
+    <div id="user-research" class="section">
+        <h2>User Interviews</h2>
+        <p>Following the survey, we conducted in-depth interviews to gain deeper insights into student behaviors and privacy awareness when using AI chatbots.</p>
+        <br>
+        
+        <div class="h3-section">
+            <h3>Research Process</h3>
+            <h4>Participant Selection</h4>
+            <p>Of the 14 respondents who expressed willingness to interview in the survey, we reached out to 6 participants representing diverse experiences, usage patterns, and opinions on AI chatbots.</p>
+            
+            <h4>Interview Participants</h4>
+            <ul>
+                <li><strong>6 total participants</strong> - all current undergraduate students</li>
+                <li><strong>5 from Brown University</strong></li>
+                <li><strong>1 from Rhode Island School of Design</strong></li>
+            </ul>
+            
+            <h4>Interview Format</h4>
+            <p>The six interviews were conducted over Zoom or in-person between individual participants and one researcher. Each session included:</p>
+            
+            <ul>
+                <li><strong>Standard questions</strong> about AI chatbot thoughts and usage</li>
+                <li><strong>Survey follow-ups</strong> to expand on previous responses</li>
+                <li><strong>Personalized questions</strong> tailored to each respondent</li>
+                <li><strong>Hands-on exploration</strong> of ChatGPT privacy features</li>
+            </ul>
+        </div>
+        
+        <div class="h3-section">
+            <h3>Interview Process</h3>
+            <h4>Session Structure</h4>
+            <ol>
+                <li><strong>Usage Discussion:</strong> General AI chatbot usage patterns and platform preferences</li>
+                <li><strong>Screen Sharing:</strong> Permission-based observation of user interactions</li>
+                <li><strong>Feature Exploration:</strong> Guided discovery of privacy settings and controls</li>
+                <li><strong>Policy Review:</strong> Finding and reading ChatGPT's privacy policy</li>
+            </ol>
+            
+            <p>Participants were asked to locate and interact with specific privacy features including training data permissions, memory settings, temporary chat features, and default preferences. We also examined their understanding of ChatGPT's privacy policy—testing their prior knowledge, ability to locate the policy within the interface, and identifying surprising or concerning aspects after reading it.</p>
+        </div>
+        
+        <div class="h3-section">
+            <h3>Key Findings</h3>
+            <p>Our interviews revealed significant gaps in privacy awareness and feature discoverability:</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
+                <div style="background: #ffebee; padding: 20px; border-radius: 8px; border-left: 4px solid #f44336;">
+                    <h4 style="margin-top: 0; color: #c62828;">Critical Issues</h4>
+                    <ul style="margin-bottom: 0;">
+                        <li><strong>Difficulty finding privacy policy</strong></li>
+                        <li><strong>Unknown current settings</strong> - participants unaware of their privacy configurations</li>
+                        <li><strong>Feature awareness gaps</strong> - mixed knowledge of temporary chat</li>
+                    </ul>
+                </div>
+                
+                <div style="background: #e8f5e8; padding: 20px; border-radius: 8px; border-left: 4px solid #2e7d32;">
+                    <h4 style="margin-top: 0; color: #2e7d32;">Positive Insights</h4>
+                    <ul style="margin-bottom: 0;">
+                        <li><strong>Universal desire for choice</strong> - all participants wanted initial privacy setting options</li>
+                        <li><strong>Trust concerns</strong> - non-users expressed clear AI distrust</li>
+                        <li><strong>Privacy-first mindset</strong> - students value control over their data</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; border-left: 4px solid #1976d2; margin: 20px 0;">
+                <h4 style="margin-top: 0; color: #1976d2;">Key Takeaway</h4>
+                <p style="margin-bottom: 0; font-style: italic;">"All participants thought that they should be initially presented with privacy setting choices" - highlighting a clear user need for transparent, upfront privacy controls.</p>
+            </div>
+        </div>
+        <br>
+        <hr>
+    </div>
+
+    <div id="design-solution" class="section">
+        <h2>Privacy-Focused Redesign</h2>
+        <p>Based on our research findings, we developed comprehensive design recommendations to address the critical privacy and transparency gaps identified in user interviews and surveys.</p>
+        <br>
+        
+        <div class="h3-section">
+            <div style="display: flex; gap: 30px; align-items: flex-start;">
+                <div id="design-goal" style="flex: 1;">
+                    <h3>Design Goal</h3>
+                    <h4>Primary Objective</h4>
+                    <p>Design UI elements and user experiences that better inform users about where their data is going and how it's being used, creating actionable solutions through Figma prototypes.</p>
+                    
+                    <h4>Success Criteria</h4>
+                    <ul>
+                        <li><strong>Transparency:</strong> Users understand data usage clearly</li>
+                        <li><strong>Control:</strong> Easy access to privacy settings</li>
+                        <li><strong>Education:</strong> Informed decision-making capabilities</li>
+                    </ul>
+                </div>
+                <div style="flex: 1;">
+                    <img src="assets/chatgpt/current-interface.png" alt="Current ChatGPT interface showing the main chat area with message input and sidebar navigation" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+                    <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center; font-style: italic;">Existing ChatGPT interface analyzed for privacy design opportunities</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="h3-section">
+            <h3>Primary Needs Observed</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin: 20px 0;">
+                <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; text-align: center; border-left: 4px solid #1976d2;">
+                    <h4 style="color: #1976d2; margin-top: 0;">Privacy Control</h4>
+                    <p style="margin-bottom: 0;">Users need more granular control over their data and privacy settings</p>
+                </div>
+                <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; text-align: center; border-left: 4px solid #1976d2;">
+                    <h4 style="color: #1976d2; margin-top: 0;">Transparency</h4>
+                    <p style="margin-bottom: 0;">Clear information about data collection and usage practices</p>
+                </div>
+                <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; text-align: center; border-left: 4px solid #1976d2;">
+                    <h4 style="color: #1976d2; margin-top: 0;">Intuitive Interface</h4>
+                    <p style="margin-bottom: 0;">Easy-to-find and understand privacy features and settings</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        
+        <div id="ui-design" class="h3-section">
+            <h3>UI Design Recommendations</h3>
+            <p>We identified specific interface improvements to address immediate usability issues with existing privacy features.</p>
+            
+            <div style="display: flex; gap: 40px; margin-top: 30px;">
+                <div style="flex: 1;">
+                    <img src="assets/chatgpt/memory-update.png" alt="UI design improvement: clickable memory update message" style="width: 100%; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+                    <h4>1. Clickable Memory Update Message</h4>
+                    <p>ChatGPT currently tells users that information was added to memory, but it's not immediately clear that this notification is clickable. We added visual cues to make it look like a button, with a pop-up that shows what information was added and allows users to manage their memories.</p>
+                </div>
+                <div style="flex: 1;">
+                    <img src="assets/chatgpt/accessible-policy.png" alt="UI design improvement: privacy policy accessible in settings" style="width: 100%; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+                    <h4>2. Privacy Policy Accessible in Settings</h4>
+                    <p>Many interview participants immediately looked in settings for terms and policies. We added a direct link in the settings panel, in addition to the existing access point from the question mark icon in the main interface.</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        
+        <div id="login-sequence" class="h3-section">
+            <h3>First-Time User Login Sequence</h3>
+            <p>We completely redesigned the onboarding experience to prioritize privacy education and conscious decision-making from the very beginning of a user's ChatGPT journey.</p>
+            <br>
+            
+            <!-- Existing Login Experience -->
+            <div style="margin-bottom: 50px;">
+                <h4>Current Login Experience</h4>
+                <div style="display: flex; gap: 40px; align-items: flex-start; margin-top: 20px;">
+                    <div style="flex: 1;">
+                        <img src="assets/chatgpt/login-sequence/existing-screen.png" alt="ChatGPT's existing single-page login experience with email input and small-font privacy policy text" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+                        <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center; font-style: italic;">Current single-page login with implicit agreement</p>
+                    </div>
+                    <div style="flex: 1;">
+                        <h4>Problems Identified</h4>
+                        <p>ChatGPT's existing login experience consists of a single page where users enter their email and click "Agree" to continue. Most users implicitly agree to all terms without actually viewing them.</p>
+                        
+                        <div style="background: #ffebee; padding: 15px; border-radius: 8px; border-left: 4px solid #f44336; margin: 15px 0;">
+                            <h4 style="margin-top: 0; color: #c62828;">Critical Issues</h4>
+                            <ul style="margin-bottom: 0;">
+                                <li>Implicit agreement without reading terms</li>
+                                <li>Privacy policy text in small font</li>
+                                <li>No opportunity for conscious decision-making</li>
+                                <li>Lack of transparency about data usage</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Revised Login Sequence -->
+            <div>
+                <h4>Revised Login Sequence</h4>
+                <p style="margin-bottom: 30px;">We restructured this into a comprehensive 6-step sequence that promotes conscious agreement and user education:</p>
+                
+                <!-- Step 1: Initial Login -->
+                <div style="display: flex; gap: 40px; align-items: flex-start; margin-bottom: 40px;">
+                    <div style="flex: 1;">
+                        <img src="assets/chatgpt/login-sequence/login-1.png" alt="First step of revised login sequence with cleaner interface and no immediate agreement required" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+                        <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center; font-style: italic;">Step 1: Clean login interface without pressure</p>
+                    </div>
+                    <div style="flex: 1;">
+                        <h4>Step 1: Simplified Login Page</h4>
+                        <p>Removes the immediate "Agree" button and presents a cleaner interface focused on user credentials, allowing users to proceed without feeling pressured to agree to terms they haven't read.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 2: Privacy Acknowledgment -->
+                <div style="display: flex; gap: 40px; align-items: flex-start; margin-bottom: 40px;">
+                    <div style="flex: 1;">
+                        <img src="assets/chatgpt/login-sequence/acknowledgement.png" alt="Privacy acknowledgment page with explicit agree/disagree options and improved typography" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+                        <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center; font-style: italic;">Step 2: Explicit privacy policy agreement</p>
+                    </div>
+                    <div style="flex: 1;">
+                        <h4>Step 2: Privacy Policy Agreement</h4>
+                        <p>Users must scroll through the full Privacy Policy with larger font sizes and bolded headings for better readability. They are then presented with explicit "Agree" or "Disagree" options, ensuring conscious decision-making.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 3: Data Controls -->
+                <div style="display: flex; gap: 40px; align-items: flex-start; margin-bottom: 40px;">
+                    <div style="flex: 1;">
+                        <img src="assets/chatgpt/login-sequence/data-controls.png" alt="Data Controls page explaining ChatGPT terminology and data usage in clear language" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+                        <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center; font-style: italic;">Step 3: Data terminology clarification</p>
+                    </div>
+                    <div style="flex: 1;">
+                        <h4>Step 3: Data Controls Education</h4>
+                        <p>After policy agreement, users learn about ChatGPT's technical terminology in plain language. This page clarifies how ChatGPT analyzes conversations, uses data to improve the model, and processes information.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 4: Memory Personalization -->
+                <div style="display: flex; gap: 40px; align-items: flex-start; margin-bottom: 40px;">
+                    <div style="flex: 1;">
+                        <img src="assets/chatgpt/login-sequence/personalization.png" alt="Memory personalization page allowing users to choose whether ChatGPT tracks previous searches" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+                        <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center; font-style: italic;">Step 4: Memory storage personalization</p>
+                    </div>
+                    <div style="flex: 1;">
+                        <h4>Step 4: Memory Personalization</h4>
+                        <p>Users choose whether ChatGPT tracks their previous searches and conversations, providing granular privacy control from the start of their experience.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 5: Multi-Factor Authentication -->
+                <div style="display: flex; gap: 40px; align-items: flex-start; margin-bottom: 40px;">
+                    <div style="flex: 1;">
+                        <img src="assets/chatgpt/login-sequence/multi-factor.png" alt="Multi-factor authentication setup page with options for SMS, authentication app, or opting out" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+                        <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center; font-style: italic;">Step 5: Multi-factor authentication setup</p>
+                    </div>
+                    <div style="flex: 1;">
+                        <h4>Step 5: Multi-Factor Authentication</h4>
+                        <p>Users can set up or opt out of multi-factor authentication. If they opt in, they can choose between SMS authentication, authentication app, or third-party authentication app for enhanced account security.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 6: Review Overview -->
+                <div style="display: flex; gap: 40px; align-items: flex-start; margin-bottom: 40px;">
+                    <div style="flex: 1;">
+                        <img src="assets/chatgpt/login-sequence/review.png" alt="Review page showing overview of user's privacy and security selections before completing login" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+                        <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center; font-style: italic;">Step 6: Review and finalize selections</p>
+                    </div>
+                    <div style="flex: 1;">
+                        <h4>Step 6: Review Overview</h4>
+                        <p>Finally, users see an overview of their selections, which they can review and modify before continuing to ChatGPT. This ensures complete transparency and control over privacy preferences.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Design Rationale -->
+            <div style="margin-top: 50px; padding: 24px; background: #e3f2fd; border-radius: 12px; border-left: 4px solid #1976d2;">
+                <h4 style="margin-top: 0; color: #1976d2;">Design Rationale</h4>
+                <p>It was important to make this sequence clear and straightforward to inform users about how ChatGPT works while presenting important options from the start without overwhelming users.</p>
+                
+                <h4>Key Design Decisions</h4>
+                <ul>
+                    <li><strong>One question per page</strong> to prevent cognitive overload</li>
+                    <li><strong>Progressive disclosure</strong> of complex privacy concepts</li>
+                    <li><strong>Clear visual hierarchy</strong> with improved typography</li>
+                    <li><strong>Explicit choice architecture</strong> requiring conscious decisions</li>
+                </ul>
+                
+                <p style="margin-bottom: 0;"><em>While this creates a longer account creation process, our research showed the critical need for initial education before users begin using the application. Without this, users are forced to discover privacy features themselves—or never at all.</em></p>
+            </div>
+        </div>
+        <br>
+        <hr>
+        
+        <div class="h3-section">
+            <h3>Privacy Walkthrough</h3>
+            <p>We created an interactive Figma prototype to help existing users understand and navigate ChatGPT's privacy-related features after account creation.</p>
+            
+            <h4>Four Main Focus Areas</h4>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
+                <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; border-left: 4px solid #1976d2;">
+                    <h4 style="color: #1976d2; margin-top: 0;">Controlling Privacy Settings</h4>
+                    <p style="margin-bottom: 0;">Navigate and modify data controls and privacy preferences</p>
+                </div>
+                <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; border-left: 4px solid #1976d2;">
+                    <h4 style="color: #1976d2; margin-top: 0;">Locating the Privacy Policy</h4>
+                    <p style="margin-bottom: 0;">Find and access privacy documentation within the interface</p>
+                </div>
+                <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; border-left: 4px solid #1976d2;">
+                    <h4 style="color: #1976d2; margin-top: 0;">Accessing Temporary Chats</h4>
+                    <p style="margin-bottom: 0;">Understand and use private conversation modes</p>
+                </div>
+                <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; border-left: 4px solid #1976d2;">
+                    <h4 style="color: #1976d2; margin-top: 0;">Memory Management</h4>
+                    <p style="margin-bottom: 0;">Interact with and control ChatGPT's memory features</p>
+                </div>
+            </div>
+            
+            <h4>Walkthrough Structure</h4>
+            <p>The walkthrough begins in the settings by describing privacy-related features in Security, Privacy, and Data Controls, highlighting the new location of the "Terms and Policies" link.</p>
+            
+            <h4>Privacy Walkthrough Examples</h4>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px;">
+                <div>
+                    <img src="assets/chatgpt/privacy-walkthrough/settings-intro.png" alt="Settings introduction showing privacy-related settings locations" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0; margin-bottom: 12px;">
+                    <p style="font-size: 14px; color: #666; text-align: center; font-style: italic;">Settings introduction and navigation</p>
+                </div>
+                <div>
+                    <img src="assets/chatgpt/privacy-walkthrough/data-controls.png" alt="Data controls settings explanation within the walkthrough" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0; margin-bottom: 12px;">
+                    <p style="font-size: 14px; color: #666; text-align: center; font-style: italic;">Data controls guidance</p>
+                </div>
+                <div>
+                    <img src="assets/chatgpt/privacy-walkthrough/memory-update.png" alt="Memory update feature demonstration showing clickable memory notifications" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0; margin-bottom: 12px;">
+                    <p style="font-size: 14px; color: #666; text-align: center; font-style: italic;">Memory update interaction</p>
+                </div>
+                <div>
+                    <img src="assets/chatgpt/privacy-walkthrough/temporary-chat.png" alt="Temporary chat access demonstration" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0; margin-bottom: 12px;">
+                    <p style="font-size: 14px; color: #666; text-align: center; font-style: italic;">Temporary chat feature</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+    </div>
+
+    <div class="section">
+        <hr>
+    </div>
+
+    <div id="reflection" class="section">
+        <h2>Reflections</h2>
+        <div style="display: flex; gap: 40px; margin-bottom: 30px;">
+            <div style="flex: 1;">
+                <h4>Considerations + Limitations</h4>
+                <ul>
+                    <li>Trade-off of privacy and free usage</li>
+                    <li>Difficulty getting a diverse sampling for the survey (primarily Brown students, skewed towards CS majors)</li>
+                    <li>Findings not representative of all college students</li>
+                    <li>Interviewed 6 participants, limiting the broader applicability of the findings</li>
+                </ul>
+            </div>
+            <div style="flex: 1;">
+                <h4>Next Steps</h4>
+                <ul>
+                    <li>Test how people would react to our changes through user testing and if they appreciate the changes or find them inconvenient</li>
+                    <li>Going more broad and looking at UI designs across several GenAI models</li>
+                </ul>
+            </div>
+        </div>
+        <div id="conc-writing">
+            <h4>Project Impact</h4>
+            <p>This capstone project provided valuable insights into the intersection of AI technology and user privacy, highlighting critical gaps in current interface design that impact user awareness and control over their personal data.</p>
+        </div>
+    </div>
+
+    <div id="footer">
+        <hr>
+        <div id="footer-text">
+            <div id="spacer"></div>
+            <div id="main-text">
+                <h4>Thanks for browsing!</h4>
+                <label>Designed + built with <3 and iced vanilla lattes</label>
+            </div>
+            <a href="#titleArea">
+                <div id="to-top">
+                    <p id="up-text">Back to top</p>
+                    <img id="up" src="assets/solar_arrow-up-outline.png" alt="return to top of page"/>
+                </div>
+            </a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="carosel.js"></script>
+    <script src="mouse.js"></script>
+  </body>
+</html> 

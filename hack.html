@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hack@Brown Portfolio Page</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="navigation.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="mouse.css" />
+    <link rel="stylesheet" href="hack.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body id="website">
+    <div id="nav-bar" class="collapsed">
+    </div>
+    <script>
+      $(function(){
+        $("#nav-bar").load("nav.html");
+      });
+    </script>
+
+    <div id="titleArea">
+        <h1>Hack@Brown</h1>
+        <h4>Webpage and branding for a student organization</h4>
+    </div>
+    <div id="centered-sec">
+      <div id="overview" class="section">
+        <h2>Overview</h2>
+        <div id="overviewContent">
+          <div id="overview-text">
+              <div>
+              <p>Hack@Brown is Brown University's annual hackathon for high school and college students 
+                  from around the country. Each year, we have a different playful
+                  theme, to encourage students of all backgrounds to participate, which requires a new website and branding.</p>
+              <p>The theme this year was "Outer Space", so our website and branding is all inspired by this concept.</p>
+              </div>
+              <div id="role" class="h3-section">
+                  <h3>My Role</h3>
+                  <p>As a design lead, I handled art direction, and I worked to delegate team responsibilities, 
+                      schedule and lead team meetings, and make final design decisions on social media, web design and branding.</p>
+              </div>
+          </div>
+          <div id="tools">
+            <h5 class="overview-text">Project Focus:</h5>
+            <p>Web design, brand identity</p>
+            <h5 class="overview-text">Design Team:</h5>
+            <p>Vivian Li (co-lead) and a wonderful design team</p>
+            <h5 class="overview-text">Tools:</h5>
+            <p>Figma, Blender</p>
+            <h5 class="overview-text">Visit Site:</h5>
+            <a class="link" href="https://2024.hackatbrown.org/" target=”_blank”><p>Hack@Brown2024</p></a>
+          </div>
+        </div>
+        <br>
+        <hr />
+      </div>
+      <div id="problem" class="section">
+          <h3>Problem</h3>
+          <p>How can we create a culture of inclusivity to encourage even those who never coded before to participate in Hack@Brown?</p>
+          <h3 class="h3-section">Solution</h3>
+          <p>The hackathon theme "Space" emphasizes exploration and encourages anyone with a willingness to learn to participate. 
+              3D visuals also immerse the participant in a fun and "hands-on" startup environment.</p>
+              <br>
+          <hr>
+        </div>
+      <div id="banner-sec">
+          <div id="banner-text">
+              <h4>This year, Hack@Brown is an exploration of all that is unknown, free of limitations that weigh us down. 
+                  We’ll provide a home base of help & support, but our hackathon is the start of a mission to discover 
+                  the unknown. Get ready to think, design, create, and hack. Get excited to FLY 🚀✨</h4>
+              <h5>Takeoff with us!</h5>
+          </div>
+          <img id="banner" src="assets/hack/banner.png" alt="Hack@Brown space banner"/>
+          <label>Banner and blurb for the event</label>
+      </div>
+      <br>
+      <div id="prep" class="section">
+        
+        <h2>Brainstorming</h2>
+        <div>
+          <div id="prep-writing">
+              <div id="list-sec">
+                  <p>In our very first team meeting, I asked everyone to form a list of words that came to mind when thinking of "space":</p>
+                  <ul id="brain-list">
+                      <li>planets (animation– rotating planets)</li>
+                      <li>stars</li>
+                      <li>UFO</li>
+                      <li>astronaut (astronaut bear)</li>
+                      <li>alien (alien bear)</li>
+                      <li>rocket ships</li>
+                      <li>sun & moon</li>
+                      <li>telescope</li>
+                      <li>satellites</li>
+                      <li>and much more...</li>
+                  </ul>
+              </div>
+              <div id="mood-sec">
+                <div class="prep-desc">
+                  <h4>Mood Board</h4>
+                  <div class="prep-text">
+                      <p>We began by gathering inspiration and creating a mood board of images to solidify our 
+                          vision and get our ideas flowing:</p>
+                          <ul>
+                              <li>The theme should be engaging to anyone who opened the website</li>
+                              <li>The playful theme helps <span class="important">remove barriers to participation</span> by making the event approachable
+                                  to beginners and exciting to experienced participants
+                              </li>
+                          </ul>
+                        </div>
+                </div>
+                  <img id="moodboard" src="assets/hack/moodboard.png" alt="space moodboard"/>
+              </div>
+              <div id="colors-sec">
+                <div class="prep-text">
+                  <h4>Color Exploration</h4>
+                  <p class="prep-desc">Using our moodboard, we picked out common colors which we later refined into our final color palette</p>
+                </div>
+                <img id="color-ideas" src="assets/hack/initial-pallette.png" alt="color palette inspired by moodboard"/>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div id="initial-ideas" class="section">
+        <h2>Initial Sketching</h2>
+        <p>I began the design process by exploring different visual concepts and layout ideas through sketching. These early sketches helped establish the creative direction and visual elements that would define the Hack@Brown space theme.</p>
+        
+        <div id="sketches-gallery">
+          <div class="sketch-item featured-sketch">
+            <div class="sketch-content">
+              <img id="sketch2" src="assets/hack/sketch2.png" alt="early website layout sketch"/>
+              <div class="sketch-description">
+                <h4>Website Layout Exploration</h4>
+                <p>Early wireframe concepts exploring different page layouts and user flow for the hackathon website, focusing on space-themed navigation and content organization.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="sketch-grid">
+            <div class="sketch-item">
+              <div class="sketch-content">
+                <img id="sketch1" src="assets/hack/sketch1.png" alt="early illustration sketches"/>
+                <div class="sketch-description">
+                  <h4>Illustration Concepts</h4>
+                  <p>Initial brainstorming for space-themed illustrations including planets, rockets, and cosmic elements that would bring the theme to life.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="sketch-item">
+              <div class="sketch-content">
+                <img id="sketch3" src="assets/hack/sketch3.png" alt="early space bear sketches"/>
+                <div class="sketch-description">
+                  <h4>Character Development</h4>
+                  <p>Sketches exploring the mascot character design, developing the space bear concept that became central to the brand identity.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div id="partTwo" class="section">
+        <h2>Final Design</h2>
+          <!-- <div id="planning" >
+            <h3>Planning</h3>
+            
+          </div> -->
+          <div id="analysis">
+            <h3 class="h3-section">Design Choices</h3>
+            <p>Based on our initial sketches, as a group, we gathered the elements we liked most. We then developed a wireframe mockup
+              in Figma and began developing our 3D assets in Blender. 
+            </p>
+            <h3 class="h3-section">Style Guide</h3>
+            <div id="style-guide-sec">
+              <img id="style-guide" src="assets/hack/style-guide.png" alt="hack@brown 2024 style guide"/>
+              <p>Taking inspiration from our mood board, we wanted to create a futuristic and vibrant style using a unique font for
+                  headings and vibrant accent colors.
+              </p>
+            </div>
+            <div class="h3-section" id="assets-sec">
+              <h3>3D Assets</h3>
+              <p>As a group, we each worked on developing 3D assets using Blender. Below are some examples of our final assets:</p>
+              <div id="asset-imgs">
+                  <img class="asset" src="assets/hack/3dAssets/h@b-logo.png" alt="hack@brown blue pawprint logo"/>
+                  <img class="asset" src="assets/hack/3dAssets/banner 1.png" alt="3D space bear holding 'happy 10 years' banner"/>
+                  <img id="moon-bear" class="asset" src="assets/hack/3dAssets/facebear 1.png" alt="3D space bear on the moon with H@B flag"/>
+                  <img class="asset" src="assets/hack/3dAssets/nikep 1.png" alt="3d blue planet"/>
+                  <img id="alien" class="asset" src="assets/hack/3dAssets/alien-surf.png"  alt="3d alien surfing on saturn's rings"/>
+                  <img class="asset" src="assets/hack/3dAssets/planet 5.png" alt="3d blue and pink planet"/>
+                  <img class="asset" src="assets/hack/3dAssets/planet 4.png" alt="3d earth"/>
+                  <img class="asset" src="assets/hack/3dAssets/planet 6.png" alt="3d cute smiling earth"/>
+                  <img class="asset" src="assets/hack/3dAssets/rocket.png" alt="3d rocket"/>
+                  <img class="asset" src="assets/hack/3dAssets/ufo.png" alt="3d UFO"/>
+                  <img class="star" src="assets/hack/3dAssets/star_smile 1.png" alt="3d cute smiling star"/>
+                  <img class="star" src="assets/hack/3dAssets/winkstar.png" alt="3d cute squinting star"/>
+              </div>
+            </div>
+            <div class="h3-section" id="high-fi">
+              <h3>High-fi Prototype</h3>
+              <div id="desktop">
+                  <h4>High-fi for desktop:</h4>
+                  <div id="desktop-cont">
+                      <video id="desktop-vid" controls loop autoplay muted>
+                          <source src="assets/hack/desktop.mp4" type="video/mp4" alt="final desktop website with space animations">
+                          Your browser does not support the video tag.
+                      </video>
+
+                      <ul>
+                          <li>We aimed to capture outer space at the top descending down to 
+                          earth as you scroll to the bottom using a gradient from a dark to a light blue and
+                          the earth asset at the footer.</li>
+                          <li>Animation was used to make the webpage visually eyecatching and unique</li>
+                      </ul>
+          
+                  </div>
+              </div>
+              <br>
+              <div id="mobile">
+                  <h4>High-fi for mobile:</h4>
+                  <div id="mobile-cont">
+                      <video id="mobile-vid" controls loop autoplay muted>
+                          <source src="assets/hack/mobile.mp4" type="video/mp4" alt="final mobile design">
+                          Your browser does not support the video tag.
+                      </video>
+                      <ul>
+                          <li>The mobile version has fewer assets compared to the desktop version in order 
+                          to reduce business on the smaller screen.</li>
+                          <ul>
+                              <li>This makes the screen clearer and more accessible to mobile users, which would
+                                  likely be a primary use during the hackathon when participants are busy and on the go.
+                              </li>
+                          </ul>
+                      </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        <br>
+      <div id="functionality">
+        <h2>Implementation</h2>
+        <div id="implementationSec">
+          <div>
+            <p>After completing the design process, we worked with the development team to turn our design into a functional webpage.</p>
+            <h5>Here is the link to the <a class="link" href="https://2024.hackatbrown.org/" target="_blank"><b>final website</b></a>.</h5>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div id="conclusion" class="section">
+        <h2>Reflections</h2>
+      
+        <div id="takeaways">
+          <h3>Key Takeaways</h3>
+          <div id="takeaway-sec">
+              <ul id="takeaway-list">
+                  <li>
+                      Leading a team is very different from simply being on a team and requires solid decision making and committment
+                      but is very rewarding in the end. 
+                  </li>
+                  <li>When working to make a website engaging and accessible for a wide audience, it is important to be 
+                      creative in design decisions!</li>
+                  <li>Vibrant colors and simplified 3D illustrations can create an immersive website homepage that appeals
+                      to users of all backgrounds and experience levels.</li>
+              </ul>
+              <div id="count-sec">
+                  <video id="countdown-vid" loop autoplay muted>
+                      <source src="assets/hack/day1.mp4" type="video/mp4" alt="one day countdown gif with rotating earth asset">
+                      Your browser does not support the video tag.
+                  </video>
+                  <label>Final countdown animation for social media</label>
+              </div>
+          </div>
+        
+        </div>
+      </div>
+      <div id="footer">
+        <hr>
+        <div id="footer-text">
+          <div id="spacer"></div>
+          <div id="main-text">
+            <h4>Thanks for browsing!</h4>
+            <label>Designed + built with <3 and iced vanilla lattes</label>
+          </div>
+          <a href="#titleArea">
+            <div id="to-top">
+                <p id="up-text">Back to top</p>
+                <img id="up" src="assets/solar_arrow-up-outline.png" alt="return to top of page"/>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  </html>

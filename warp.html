@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warp Portfolio Page</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="navigation.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="mouse.css" />
+    <link rel="stylesheet" href="warp.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body id="website">
+    <div id="nav-bar" class="collapsed">
+    </div>
+    <script>
+      $(function(){
+        $("#nav-bar").load("nav.html");
+      });
+    </script>
+
+    <div id="titleArea">
+      <h1>Warp Home</h1>
+      <h4>UI/UX design for a startup</h4>
+    </div>
+    <div id="centered-sec">
+      <div class="section">
+        <h2>Overview</h2>
+        <div id="overview-section">
+          <div id="overview">
+            <h4>Project Goal</h4>
+            <p>
+              The goal of this project was to design a home page for the startup Warp that serves as 
+              an aggregator to allow for increased discovery and usage of Warp's features.
+              My team worked directly with the founders to create this design.
+            </p>
+            <div id="project-brief" class="h3-section">
+              <h3>Project Brief</h3>
+              <p>
+                <a class="link" href="https://www.warp.dev/" target="_blank">Warp</a>
+                is a customizable terminal with collaborative tools and AI integration. We were tasked with designing their 
+                homepage.
+              </p>
+            </div>
+            <div id="role" class="h3-section">
+              <h3>My Role</h3>
+              <p>I worked particularly on creating the low-fi and high-fi wireframe mockups in Figma with a focus on clarity
+                  and customizability. My team worked collaboratively throughout the process, each giving constant input and feedback.
+                </p>
+            </div>
+          </div>
+          <div id="tools">
+            <h4>Project Focus</h4>
+            <p>UI/UX design, product design, collaboration</p>
+            <h4>Design Team</h4>
+            <p>Alex Hogue, Megan Ball, Rachel Brooks, Sydney Meza</p>
+            <h4>Tools</h4>
+            <p>Figma</p>
+            <h4>View Final Design</h4>
+            <a class="link" href="https://www.figma.com/file/eeTKzGsuvRveaEWc8YwzYt/Warp-Home---Iterative-Development?type=design&node-id=237%3A588&mode=design&t=7dXzIFzkme9lm5jN-1" target="_blank"><p>Final Figma</p></a>
+          </div>
+        </div>
+        <br>
+        <hr>
+      </div>
+      <div id="problem-sec" class="section">
+          <h2>Introduction</h2>
+          <div class="h3-section">
+              <h3>A Bit About Warp</h3>
+              <div id="about-desc">
+                  <img id="warp-icon" src="assets/warp/warp icon.png" alt="warp logo"/>
+                  <p>Warp is a reimagined command-line terminal; it is an AI driven platform that allows developers to efficiently 
+                      code in the terminal and work collaboratively.</p>
+              </div>
+              <br>
+              <label>View the Warp terminal here:</label>
+              <video id="screen" loop autoplay muted>
+                  <source src="assets/warp/warp-terminal.mp4" type="video/mp4" alt="warp terminal in use">
+                  Your browser does not support the video tag.
+              </video>
+          </div>
+          
+          <div class="h3-section">
+              <h3>Problem</h3>
+              <h4>Current State</h4>
+              <p>Warp does not currently have a centralized home page for users to view information about 
+                    their files, teams, usage, account info, and learn more about Warp. Right now, most of 
+                    this information is housed in settings, making it difficult and unintuitive for users to find, especially
+                    new users who would be unfamiliar with the Warp system.</p>
+              <h4>Users Impacted</h4>
+              <p>This feature would be most useful for existing Warp users who are somewhat seasoned with 
+                  the product, but this would also be an important introduction to Warp for new users through
+                  product education feature opportunities.</p>
+          </div>
+          
+          <div class="h3-section">
+              <h3>Solution</h3>
+              <h4>Design Approach</h4>
+              <p>We designed a centralized home page that adapts to a user's state (new vs. seasoned user) in order to 
+                  efficiently provide users access to their work, teams, personal information, and educational resources.</p>
+              <h4>Key Focus Areas</h4>
+              <p>We focused on <span class="important">accessibility</span> to make Warp more efficient for users to 
+                  navigate and more <span class="important">approachable to new users</span> by adding direct access to education materials 
+                  and Warp communities.</p>
+          </div>
+          <br><hr>
+        </div>
+      <div class="section">
+        <h2>Early Sketching</h2>
+        <div id="sketches">
+          <div id="carousel-section">
+            <h4>Initial Explorations</h4>
+            <p>
+              I began by creating sketches to explore different layouts for the screen
+              and modules:
+            </p>
+            <div id="carousel">
+              <img id="prevBtn" class="button" src="assets/prev.png" alt="view previous sketch"/>
+              <div class="carousel-container">
+                  <div class="carousel-item">
+                    <img src="assets/warp/sketch1.png" alt="Sketch 1" alt="layout flow sketch for active user">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/warp/sketch2.png" alt="Sketch 2" alt="layout flow sketch for new user">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/warp/sketch3.png" alt="Sketch 3" alt="personal to team page flow for active user">
+                  </div>
+              </div>
+              <img id="nextBtn" class="button" src="assets/next.png" alt="view next sketch"/>
+            </div>
+          </div>
+          <div id="sketch-writing">
+            <div>
+              <h4>Design Decisions</h4>
+              <p>Based on the initial sketches, the following focuses were implemented into our wireframes:</p>
+              <ul>
+                <li>Focus on intuitiveness with inspiration from Figma Home, Google Drive and GitHub home</li>
+                <li>Centralize live sessions, user metrics, activity, and educational content with use of a sidebar</li>
+                <li>Consideration of user states (both new and active users)</li>
+                <li>Focus on customizability</li>
+                <li>Split up team and personal functionality</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="wireframe-one" class="section">
+        <h2>First-Iteration Wireframes</h2>
+        <div class="h3-section">
+          <h3>Initial Concepts</h3>
+          <div class="hor-section">
+            <div class="group">
+              <h4>New User - Personal Page</h4>
+              <img alt="initial lo-fi for new user" src="./assets/warp/lo-fi-1-new-user.jpg"/>
+            </div>
+            <div class="group">
+              <h4>Active User - Personal Page</h4>
+              <img
+                alt="initial lo-fi showing active user personal drive"
+                src="./assets/warp/lo-fi-1-personal.jpg"
+              />
+            </div>
+            <div class="group">
+              <h4>Active User - Team Page</h4>
+              <img alt="initial lo-fi showing team drive" src="./assets/warp/lo-fi-1-team.jpg"/>
+            </div>
+            <div class="group">
+              <h4>Active User - Side Bar Hidden</h4>
+              <img
+                alt="initial lo-fi with left side bar hidden"
+                src="./assets/warp/lo-fi-1-left-hidden.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        
+        <div class="h3-section" id="impact">
+          <h3>Intended Outcome</h3>
+          <h4>Design Goals</h4>
+          <p>
+            The goal was to create a <span class="important">user-friendly</span>, glanceable interface that allows 
+            users to understand their current state and easily access their content.</p>
+          <h4>Layout Strategy</h4>  
+          <p>We achieved this through a split layout: the left sidebar displays metrics, live 
+            sessions, activities, and resources, and the main section displays folders, 
+            files, and sessions. Additionally, since Warp is designed for collaboration, it was
+            critical for users to seamlessly switch between personal and team
+            views.
+          </p>
+        </div>
+      </div>
+      <div id="wireframe-two" class="section">
+        <h2>Low-Fidelity Wireframes</h2>
+        <div id="wireframe-feedback" class="h3-section">
+          <h3>Revisions</h3>
+          <h4>Feedback Integration</h4>
+          <p>
+              Based on feedback from the Warp founders as well as peers, we revised our initial drafts with the following in mind:
+          </p>
+          <ul id="revisions">
+              <li>We felt that having four screens was too few to demonstrate user interaction, so we 
+              created more screens.</li>
+              <li>We removed metrics from the left sidebar to clean up the sidebar as it did not feel necessary for users
+              to constantly see this information (better in the account page).</li>
+              <li>We want to make the drive more customizable and we added sorting, filters, and two modes for viewing.</li>
+              <li>We changed the toggle (navigating between "Personal" and "Team") to a drop-down
+              since the founders clarified that in the future Warp would allow users to be on
+              multiple teams.</li>
+              <li>We wanted to make it easy to navigate between
+              the home page and terminal and opted to use a top nav bar, added a new tab for the home page, 
+              replacing the drive tab since drive is now integrated into the home.</li>
+          </ul>
+        </div>
+        
+        <div class="h3-section">
+          <h3>Revised Wireframes</h3>
+          <div class="lowfiSec">
+              <h4>Personal Homepage: Active User</h4>
+              <p>These wireframe displays the potential usage flow through an active user's personal page including features such as collapsable
+                sidebar, list view, new files pop-up, and entering a folder
+              </p>
+              <img class="lofiFlow" src="assets/warp/lofi-complete-flow.png" alt="final low-fi for active user potential flow through homepage"/>
+          </div>
+          <div class="lowfiSec">
+              <h4>Personal Homepage: New User</h4>
+              <p>This displays the state of a new user with no files and with an emphasis on educational tools</p>
+              <img class="lofiFinal" src="assets/warp/lo-fi-new.png" alt="final low-fi for new user state"/>
+          </div>
+          <div class="lowfiSec">
+              <h4>Team Homepage: Member</h4>
+              <p>This displays when an active user navigates to a team homepage, displaying team activity, files, and members list</p>
+              <img class="lofiFlow" src="assets/warp/lo-fi-team-member.png" alt="final low-fi for team member homepage"/>
+          </div>
+          <div class="lowfiSec">
+              <h4>Team Homepage: Admin</h4>
+              <p>This displays the team view from an admin's perspective with access to team settings and billings</p>
+              <img class="lofiFinal" src="assets/warp/lo-fi-team-admin.png" alt="final low-fi for team admin homepage"/>
+          </div>
+        </div>
+      </div>
+      <div id="high-fi" class="section">
+        <h2>High-Fidelity Prototype</h2>
+        <div class="h3-section">
+          <h3>Style Guide</h3>
+          <div id="style-guide-sec">
+            <div id="style-guide-images">
+              <img id="type-guide" class="styleGuide" src="assets/warp/styleguide-type.png" alt="Style Guide for typography">
+              <img class="styleGuide" src="assets/warp/styleguide-icons.png" alt="Style Guide for icons and logos">
+              <img id="color-guide" class="styleGuide" src="assets/warp/styleguide-colors.png" alt="Style Guide for colors">
+            </div>
+            <div id="style-guide-text">
+              <h4>User Considerations</h4>
+              <p>We based the style guide on the current Warp brand guidelines, adding additional 
+                elements including specific font sizes and an icon library to match our design.</p>
+              <ul>
+                <li>The Warp brand guidelines focus on a minimal, dark-mode style. This allows the product to work seamlessly for developers, 
+                  who often work with software in dark mode.</li>
+                <li>Users are often online for long periods of time, so having a website that is minimalistic, professional, 
+                  and easy to read is critical.</li>
+                <li>The main font is sans-serif, simple, and readable, and the terminal font is very similar to that of 
+                  other terminals on the MacOS and Linux systems, aligning with users' mental model.</li> 
+                <li>Warp uses primarily black and white of varying shades, matching with the dark mode 
+                theme as well as additional colors as accents that create fun and eye-catching elements that 
+                make Warp more than a basic terminal.</li>
+              </ul>
+              <h4>Accessibility</h4>
+              <p>We checked the style guide with WCAG (Web Content Accessibility Guidelines) and found that the dark gray on black could 
+                be an issue for accessibility, so we added more contrast between the text and buttons and the background. 
+                The icons are minimalistic and simple to make it clear what each icon represents to a user.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="h3-section">
+          <h3>Final Prototype</h3>
+          <h4>Design Implementation</h4>
+          <p>Our prototype uses the same structure and design as our final wireframe which is shown and 
+            described above. We added in new colors, fonts, and icons as indicated by our style guide to 
+            bring our design to life. The design focuses on depicting the design of the home page based 
+            on the user state and the various actions that they can take.</p>
+          
+          <h4>Interactive Prototype</h4>
+          <label>Active user navigating through their personal home page to a team drive:</label>
+          <video id="highfiVid" loop autoplay muted>
+            <source src="assets/warp/highfi.mp4" type="video/mp4" alt="user navigating through the final high-fi design">
+            Your browser does not support the video tag.
+          </video>
+          
+          <h4>User State Variations</h4>
+          <label>New user's home screen:</label>
+          <img class="highfiImg" src="assets/warp/highfi-new.png" alt="high-fi for new user state"/>
+          <label>Admin's team drive:</label>
+          <img class="highfiImg" src="assets/warp/highfi-admin.png" alt="high-fi for team admin page"/>
+          
+          <h4>Design Principles</h4>
+          <p>We emphasized key design principles in our prototype to fulfill our users' needs and
+            ensured that our design aligns with the mental model users currently have of a 
+            homepage/dashboard.</p>
+          <p>We implemented hierarchical design to create an efficient layout for users. The 
+          scan pattern is based on the F pattern, where users scan horizontally across the top, then vertically 
+          down the left side, and finally horizontally across the screen. With this in mind, we have the welcome 
+          and navigational information across the top, the sidebar on the left side with key information, and 
+          access to files in the center of the screen. This allows users to quickly find what they need on 
+          the page. Along with clear layout, I also ensured that there was sufficient contrast for <span class="important">
+          accessibility</span>.</p>
+          
+          <h4>View the prototype in Figma <a class="link"
+          href="https://www.figma.com/file/eeTKzGsuvRveaEWc8YwzYt/Warp-Home---Iterative-Development?type=design&node-id=237%3A588&mode=design&t=7dXzIFzkme9lm5jN-1" 
+          target="_blank">here</a>!</h4>
+        </div>
+      </div>
+      <div class="section">
+        <h2>Next Steps</h2>
+        <div id="next">
+          <h4>Founder Feedback</h4>
+          <p>In our final meeting with the Warp founders, we received a lot of praise as well as useful feedback that I hope to 
+            implement to revise the design as well as inspire future projects:</p>
+          <ul>
+            <li>Think about what will happen when the sidebar gets filled with a lot of activity information. How will it
+              stay clean and clear?
+            </li>
+            <li>Consider the order of content displayed to new users; perhaps educational content should be first and the 
+              page update as the user becomes more experienced. 
+            </li>
+            <li>Explore where the members, settings, and billings buttons would direct an admin</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div id="reflection" class="section">
+        <h2>Reflections</h2>
+        <div id="reflection-sec">
+          <div id="conc-writing">
+            <h4>Key Learnings</h4>
+            <p>Doing this project, I learned a lot about designing as a team and working with clients in order 
+              to achieve a design goal. Communication was a huge part of this process– both within 
+              my team and with the startup founders. From the very beginning, I prioritized understanding the needs 
+              and expectations of our client, which involved active listening during meetings, thoughtful questions, 
+              and thorough documentation of their thoughts and feedback.</p>
+            <h4>Design Process Insights</h4>
+            <p>One key challenge was translating their vision into tangible designs. This required not 
+              only creative problem-solving but also a deep understanding of design principles and user experience.
+              My team took their feedback and continuously iterated on our designs, constantly striving 
+              to align to their expectations while incorporating our own expertise and insights.</p>
+          </div>
+          <div id="group-pic-sec">
+            <img id="group-pic" src="assets/warp/group-pic.JPG" alt="group zoom picture"/>
+            <label>The design team <3</label>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <hr>
+        <div id="footer-text">
+          <div id="spacer"></div>
+          <div id="main-text">
+            <h4>Thanks for browsing!</h4>
+            <label>Designed + built with <3 and iced vanilla lattes</label>
+          </div>
+          <a href="#titleArea">
+            <div id="to-top">
+                <p id="up-text">Back to top</p>
+                <img id="up" src="assets/solar_arrow-up-outline.png" alt="return to top of page"/>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  <script src="carosel.js"></script>
+  <script src="mouse.js"></script>
+  </body>
+</html>

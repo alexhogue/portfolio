@@ -1,0 +1,190 @@
+/* ========================================
+   COMMON STYLES - SHARED ACROSS PORTFOLIO
+   ======================================== */
+
+/* ========================================
+   FONTS NOW LOADED VIA GOOGLE FONTS IN HTML
+   Custom font files replaced with Inter & Manrope
+   ======================================== */
+
+@font-face {
+  font-family: "BasisGrotesk";
+  src: url("typefaces/BasisGrotesquePro-Light 2.otf");
+}
+@font-face {
+  font-family: "GT";
+  src: url("typefaces/GT-Walsheim-Pro-Light.otf");
+}
+@font-face {
+  font-family: "GT-med";
+  src: url("typefaces/GT-Walsheim-Pro-Medium.otf");
+}
+@font-face {
+  font-family: "MonumentGrotesk";
+  src: url("typefaces/monument-grotesk-regular.otf");
+}
+@font-face {
+  font-family: "GoodSans";
+  src: url("typefaces/GoodSans-Thin.otf");
+}
+@font-face {
+  font-family: "GT-reg";
+  src: url("typefaces/GT-Walsheim-Pro-Regular.otf");
+}
+
+/* ========================================
+   GLOBAL LAYOUT & RESET
+   ======================================== */
+
+/* Main website container */
+#website {
+  display: flex;
+  flex-direction: column;
+  /* Removed align-items: center to prevent nav shifting */
+}
+
+/* HTML and body reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* Body padding for fixed navigation */
+body {
+  padding-top: 41px; /* Account for fixed nav height (40px + 1px border) */
+}
+/* ========================================
+   TYPOGRAPHY STYLES
+   ======================================== */
+
+/* Body text elements */
+p,
+li,
+th, 
+button {
+  font-size: 18px;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+/* Project tags styling */
+.project-tags {
+  font-size: 14px;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  color: #474747;
+}
+
+/* Footer note styling */
+.footer-note {
+  font-size: 14px;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* Heading styles */
+h1 {
+  font-size: 44px;
+  font-family: "GT-reg";
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 20px;
+  font-family: "GoodSans";
+  font-weight: 300;
+  color: #474747;
+}
+
+h3 {
+  font-size: 28px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-weight: 500;
+  min-width: 150px;
+  color: #1e1e1e;
+}
+
+h4 {
+  font-size: 18px;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-weight: 400;
+  min-width: 150px;
+  color: #474747;
+}
+
+h5 {
+  font-size: 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-weight: 500;
+}
+
+/* Form elements */
+label, 
+button {
+  font-size: 14px;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* Horizontal rule styling */
+hr {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+/* Important text styling */
+.important {
+  font-family: "GT-med";
+  font-weight: bold;
+}
+
+/* Link styling */
+.link {
+  color: inherit;
+  border-bottom: 1px dotted #000;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #e7436d;
+}
+
+/* ========================================
+   RESPONSIVE TYPOGRAPHY
+   ======================================== */
+
+@media screen and (max-width: 500px) {
+  /* Mobile heading adjustments */
+  h1 {
+    font-size: 40px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-weight: 400;
+  }
+  
+  h3 {
+    font-size: 24px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-weight: 500;
+    min-width: 150px;
+    color: #1e1e1e;
+  }
+  
+  /* Mobile body text adjustments */
+  p,
+  li,
+  th, 
+  button {
+    font-size: 16px;
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 26px;
+  }
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alex Hogue's portfolio - Designer at the intersection of visual communication, technology, and cognitive science focused on accessibility and inclusion.">
+    <title>Alex Hogue - Portfolio Home</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="mouse.css">
+    <link rel="stylesheet" href="main.css">
+    
+    <!-- jQuery for navigation loading -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  
+  <body id="website">
+    <!-- Navigation -->
+    <nav id="nav-bar" class="collapsed" role="navigation" aria-label="Main navigation">
+    </nav>
+    
+    <script>
+      $(function(){
+        $("#nav-bar").load("nav.html");
+      });
+    </script>
+
+    <!-- Hero Section -->
+    <header id="title-cont">
+      <div id="headingArea">
+        <div id="star"></div>
+        
+        <!-- Main heading -->
+        <h1 id="title">Hello- I'm <a href="about.html"><span id="name">Alex(andra) Hogue</span></a>!</h1>
+      
+        <!-- Hero content -->
+        <section id="main-sec">
+          <div id="sketch-cont">
+            <img id="me-sketch" src="assets/me-sketch.png" alt="Illustration of Alex waving from a window">
+          </div>
+          
+          <div id="bio-cont">
+            <p id="bio-text">I'm a designer at the intersection of <span>visual communication</span>, technology, and cognitive science 
+              focused on accessibility and inclusion. I work to make people and their needs seen!</p>
+            
+            <div id="more">
+              <a href="about.html" aria-label="Learn more about Alex">
+                <div id="about-link">
+                  <p id="about-me">More about me</p>
+                  <img id="arrow" src="assets/arrow.png" alt="">
+                </div>
+              </a>
+              <img id="plane" src="assets/paper-plane.png" alt="Illustrated flying paper airplane">
+            </div>
+          </div>
+        </section>
+      </div>
+    </header>
+    
+    <!-- Portfolio Section -->
+    <main>
+      <section id="selected">
+        <h2>Selected Works:</h2>
+      </section>
+      
+      <hr>
+      
+      <!-- Portfolio Grid -->
+      <section id="work-section" aria-label="Portfolio projects">
+
+        <!-- New Project -->
+        <article class="work">
+          <a href="adobe.html" aria-label="View Adobe Learn project details">
+            <div class="work-content">
+              <img id="adobe-img" src="assets/adobe_logo.png" alt="Adobe company logo">
+              <div class="work-desc">
+                <span class="number" aria-hidden="true"><h1>1.</h1></span>
+                <div>
+                  <h3 class="project-title">Agentic Experience for Adobe Learn</h3>
+                  <p class="project-tags">End-to-end design | Development | AI | User Research</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- Project 2: Warp Home -->
+        <article class="work">
+          <a href="warp.html" aria-label="View Warp Home project details">
+            <div class="work-content">
+              <video loop autoplay muted id="warp-vid" aria-label="Warp Home project preview video">
+                <source src="assets/warp/highfi.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="work-desc">
+                <span class="number" aria-hidden="true"><h1>2.</h1></span>
+                <div>
+                  <h3 class="project-title">Warp Home</h3>
+                  <p class="project-tags">Product design | industry project | collaboration</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </article>
+                
+        <!-- Project 3: Hack@Brown -->
+        <article class="work">
+          <a href="hack.html" aria-label="View Hack@Brown project details">
+            <div class="work-content">
+              <video loop autoplay muted id="hack-vid" aria-label="Hack@Brown project preview video">
+                <source src="assets/hack-cropped.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="work-desc">
+                <span class="number" aria-hidden="true"><h1>3.</h1></span>
+                <div>
+                  <h3 class="project-title">Hack@Brown</h3>
+                  <p class="project-tags">web design | brand identity | leadership</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </article>
+        
+        <!-- Project 4: ChatGPT Privacy Design -->
+        <article class="work">
+          <a href="chatgpt.html" aria-label="View ChatGPT privacy redesign project details">
+            <div class="work-content">
+              <img id="chatgpt-img" src="assets/chatgpt/current-interface.png" alt="ChatGPT privacy redesign interface mockup">
+              <div class="work-desc">
+                <span class="number" aria-hidden="true"><h1>4.</h1></span>
+                <div>
+                  <h3 class="project-title">Privacy-Focused ChatGPT Design</h3>
+                  <p class="project-tags">UX research | privacy design | user interviews</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </article>
+        
+        <!-- Project 5: Voyage Vault -->
+        <article class="work">
+          <a href="voyage-vault.html" aria-label="View Voyage Vault project details">
+            <div class="work-content">
+              <img id="voyage-gif" src="assets/interface.gif" alt="Voyage Vault interface animation">
+              <div class="work-desc">
+                <span class="number" aria-hidden="true"><h1>5.</h1></span>
+                <div>
+                  <h3 class="project-title">Voyage Vault</h3>
+                  <p class="project-tags">UI/UX design | front-end development</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </article>
+        
+        <!-- Project 6: Visual Communication -->
+        <article class="work">
+          <a href="vis-comm.html" aria-label="View Visual Communication project details">
+            <div class="work-content">
+              <img id="vis-img" src="assets/petra-thumbnail.png" alt="Visual communication design samples"> 
+              <div class="work-desc">
+                <span class="number" aria-hidden="true"><h1>6.</h1></span>
+                <div>
+                  <h3 class="project-title">Visual Communication</h3>
+                  <p class="project-tags">illustration | graphic design</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </article>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer id="footer">
+      <hr>
+      <div id="footer-text">
+        <div id="spacer" aria-hidden="true"></div>
+        <div id="main-text">
+          <p>Thanks for browsing!</p>
+          <p class="footer-note">Designed + built with &lt;3 and iced vanilla lattes</p>
+        </div>
+        <a href="#title-cont" id="to-top" aria-label="Return to top of page">
+          <p id="up-text">Back to top</p>
+          <img id="up" src="assets/solar_arrow-up-outline.png" alt="">
+        </a>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+    <script src="mouse.js"></script>
+  </body>
+</html>
