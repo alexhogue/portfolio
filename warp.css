@@ -1,128 +1,14 @@
-/* Enhanced Typography - Consistent with hack.html hierarchy */
+/* Warp-specific enhancements - Typography now handled by common.css */
 
-/* Major section headers - make them more prominent */
-.section h2 {
-  font-size: 32px;
-  font-weight: 700;
-  color: #2c2c2c;
-  margin-bottom: 30px;
-  margin-top: 0;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-}
-
-/* Ensure reflection h2 matches other section h2s */
-#reflection h2 {
-  font-size: 32px;
-  font-weight: 700;
-  color: #2c2c2c;
-  margin-bottom: 30px;
-  margin-top: 0;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-}
-
-/* Subsection headers - clear hierarchy */
-.section h3, .h3-section h3 {
-  font-size: 24px;
-  font-weight: 600;
-  color: #2c2c2c;
-  margin-bottom: 20px;
-  margin-top: 40px;
-  line-height: 1.3;
-  letter-spacing: -0.01em;
-}
-
-/* Sub-subsection headers */
-.section h4 {
-  font-size: 20px;
-  font-weight: 600;
-  color: #4a4a4a;
-  margin-bottom: 16px;
-  margin-top: 32px;
-  line-height: 1.4;
-}
-
-/* Improved paragraph spacing and readability - match hack.css */
-p {
-  line-height: 1.7;
-  margin-bottom: 16px;
-  color: #404040;
-}
-
-/* Enhanced overview text styling - match hack.css */
-.overview-text {
-  font-size: 14px;
-  font-weight: 700;
-  color: #666;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  margin-bottom: 8px;
-  margin-top: 24px;
-}
-
-/* List styling improvements - match hack.css */
-li {
-  line-height: 1.6;
-  margin-bottom: 8px;
-  color: #404040;
-}
-
-li:not(:last-child) {
-  margin-bottom: 12px;
-}
-
-/* Enhanced section spacing - match hack.css */
-.section {
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-top: 60px;
-  margin-bottom: 40px;
-}
-
-.h3-section {
-  margin-top: 50px;
-}
-
-/* Better spacing for overview section */
-#overview {
-  margin-top: 40px;
-}
-
-#titleArea {
-  display: flex;
-  flex-direction: column;
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-top: 2%;
-  margin-bottom: 40px;
-  scroll-margin-top: 80px; /* Extra space above title when scrolling from "Back to top" */
-}
-
-/* Link styling - match hack.css */
-.link:link {
-  color: inherit;
-  text-decoration: none;
-}
-
-.link {
-  color: inherit;
-}
-
+/* Warp-specific link styling */
 .link:hover {
   color: #4a90e2;
   text-decoration: underline;
 }
 
-/* Card-based section styling */
+/* Warp-specific tools section styling */
 #tools {
-  width: 35%;
-  min-width: 300px;
-  background: #f8f9fa;
-  padding: 24px;
-  border-radius: 12px;
   border-left: 4px solid #4a90e2;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 #about-desc {
@@ -235,19 +121,7 @@ li:not(:last-child) {
   width: 50%;
 }
 
-/* #website styles moved to common.css for consistency */
-#centered-sec{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Better content organization - match hack.css */
-#overview-section{
-  display: flex;
-  gap: 10%;
-  margin-top: 30px;
-}
+/* Warp-specific content organization */
 
 /* Image styling improvements - match hack.css */
 #warp-icon{
@@ -404,14 +278,21 @@ table {
 }
 
 
-/* Mobile responsiveness improvements - match hack.css */
+/* Mobile responsiveness improvements */
 @media screen and (max-width: 768px) {
+  /* Section and title area responsive margins */
   .section {
     margin-left: 4%;
     margin-right: 4%;
     margin-top: 40px;
   }
   
+  #titleArea {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  
+  /* Typography responsive scaling */
   .section h2 {
     font-size: 28px;
   }
@@ -424,11 +305,7 @@ table {
     font-size: 18px;
   }
   
-  #titleArea {
-    margin-left: 4%;
-    margin-right: 4%;
-  }
-  
+  /* Overview section mobile layout */
   #overview-section {
     flex-direction: column;
     gap: 20px;
@@ -442,6 +319,7 @@ table {
     border-radius: 0;
   }
   
+  /* About description mobile layout */
   #about-desc {
     flex-direction: column;
     text-align: center;
@@ -453,6 +331,7 @@ table {
     width: 15%;
   }
   
+  /* Sketches section mobile layout */
   #sketches {
     flex-direction: column;
     gap: 20px;
@@ -468,18 +347,27 @@ table {
     padding: 20px;
   }
   
+  /* Horizontal sections mobile layout */
   .hor-section {
     flex-direction: column;
     gap: 20px;
   }
   
   .group {
+    width: 100% !important;
     padding: 15px;
     margin-bottom: 15px;
   }
   
+  /* Video and image mobile adjustments */
   #screen {
+    width: 100% !important;
     margin: 15px 0;
+  }
+  
+  video {
+    width: 100% !important;
+    min-width: unset;
   }
   
   /* Style guide mobile styling */
@@ -490,44 +378,108 @@ table {
   }
   
   #style-guide-text {
+    width: 100% !important;
     padding: 15px;
   }
   
-  /* New structured sections mobile styles */
+  #style-guide-images {
+    width: 100% !important;
+    min-width: unset;
+  }
+  
+  /* Low-fi sections mobile styling */
   .lowfiSec {
     padding: 20px;
     margin-bottom: 20px;
   }
   
+  .lofiFinal, .lofiFlow {
+    width: 100% !important;
+  }
+  
+  /* Reflection section mobile layout */
   #reflection-sec {
     flex-direction: column;
     gap: 20px;
   }
   
   #conc-writing {
+    width: 100% !important;
     padding: 20px;
   }
   
   #group-pic-sec {
+    width: 100% !important;
     padding: 15px;
   }
   
-  #next {
-    padding: 20px;
+  #group-pic {
+    width: 100% !important;
   }
   
+  /* High-fi images and videos mobile */
   #highfiVid, .highfiImg {
+    width: 100% !important;
     margin: 12px 0;
   }
   
-  /* Video and image mobile adjustments */
-  video, .highfiImg {
-    width: 90%;
+  /* Additional responsive fixes */
+  #next, #impact {
+    width: 100% !important;
     min-width: unset;
+    padding: 20px;
   }
   
-  .lofiFinal, .lofiFlow {
-    width: 100%;
+  /* Table responsive adjustments */
+  table {
+    font-size: 14px;
+  }
+  
+  th, td {
+    padding: 12px 8px;
+  }
+}
+
+/* Small mobile breakpoint for additional responsive fixes */
+@media screen and (max-width: 480px) {
+  .section {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  
+  #titleArea {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  
+  .section h2 {
+    font-size: 24px;
+  }
+  
+  .section h3, .h3-section h3 {
+    font-size: 18px;
+  }
+  
+  .section h4 {
+    font-size: 16px;
+  }
+  
+  /* Ensure all images and videos are fully responsive */
+  img, video {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Fix any remaining width issues */
+  .group, .lowfiSec, #style-guide-sec, #reflection-sec {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Ensure text doesn't overflow */
+  p, li, td, th {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 }
 

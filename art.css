@@ -19,10 +19,17 @@ a{
 }
 #art-sec{
   display: flex;
-  gap:20px;
+  flex-direction: column;
+  gap: 30px;
   margin-top: 2%;
   margin-left: 10%;
   margin-right: 10%;
+}
+#art-photo-sec{
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  justify-content: center;
 }
 .column{
   display: flex;
@@ -75,15 +82,23 @@ a{
 @media screen and (max-width: 768px) {
   #art-sec{
     flex-direction: column;
-    margin-left: 0%;
-    margin-right: 0%;
-    gap: 10px;
+    margin-left: 4%;
+    margin-right: 4%;
+    gap: 20px;
     align-items: center;
     justify-content: center;
     width: 100%;
   }
+  
+  #art-photo-sec{
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  
   .work{
     cursor: auto;
+    width: 100%;
   }
   .work-content{
     cursor: auto;
@@ -96,5 +111,7 @@ a{
   }
   #titleArea{
     margin-top: 40px;
+    margin-left: 4%;
+    margin-right: 4%;
   }
 }

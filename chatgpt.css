@@ -1,36 +1,4 @@
-/* Enhanced Typography - Consistent with hack.html hierarchy */
-
-/* Major section headers - make them more prominent */
-.section h2 {
-  font-size: 32px;
-  font-weight: 700;
-  color: #2c2c2c;
-  margin-bottom: 30px;
-  margin-top: 0;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-}
-
-/* Subsection headers - clear hierarchy */
-.section h3, .h3-section h3 {
-  font-size: 24px;
-  font-weight: 600;
-  color: #2c2c2c;
-  margin-bottom: 20px;
-  margin-top: 40px;
-  line-height: 1.3;
-  letter-spacing: -0.01em;
-}
-
-/* Sub-subsection headers */
-.section h4 {
-  font-size: 20px;
-  font-weight: 600;
-  color: #4a4a4a;
-  margin-bottom: 16px;
-  margin-top: 32px;
-  line-height: 1.4;
-}
+/* ChatGPT-specific enhancements - Typography now handled by common.css */
 
 /* Problem/Solution specific styling */
 #problem h3 {
@@ -46,13 +14,6 @@
   margin-top: 40px;
 }
 
-/* Improved paragraph spacing and readability */
-p {
-  line-height: 1.7;
-  margin-bottom: 16px;
-  color: #404040;
-}
-
 /* Enhanced overview text styling */
 .overview-text {
   font-size: 14px;
@@ -64,99 +25,18 @@ p {
   margin-top: 24px;
 }
 
-/* List styling improvements */
-li {
-  line-height: 1.6;
-  margin-bottom: 8px;
-  color: #404040;
-}
-
-li:not(:last-child) {
-  margin-bottom: 12px;
-}
-
-/* Enhanced section spacing */
-.section {
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-top: 60px;
-  margin-bottom: 40px;
-}
-
-.h3-section {
-  margin-top: 50px;
-}
-
-/* Better spacing for overview section */
-#overview {
-  margin-top: 40px;
-}
-
-#titleArea {
-  display: flex;
-  flex-direction: column;
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-top: 2%;
-  margin-bottom: 40px;
-  scroll-margin-top: 80px;
-}
-
-/* Link styling */
-.link:link {
-  color: inherit;
-  text-decoration: none;
-}
-
-.link {
-  color: inherit;
-}
-
+/* ChatGPT-specific link styling */
 .link:hover {
   color: #87004d;
   text-decoration: underline;
 }
 
-/* Better content organization */
-#overview-section{
-  display: flex;
-  gap: 10%;
-  margin-top: 30px;
-}
-
-#overview-content{
-  flex: 1;
-}
-
-/* Enhanced tools section styling */
+/* Enhanced tools section styling with ChatGPT branding */
 #tools{
-  width: 35%;
-  min-width: 250px;
-  background: #f8f9fa;
-  padding: 24px;
-  border-radius: 12px;
   border-left: 4px solid #87004d;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* Image styling improvements */
-img {
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-  width: 100%;
-  height: auto;
-}
-
-/* Icons that should remain unrounded */
-#linkedin-icon, #up, #arrow {
-  border-radius: 0;
-  box-shadow: none;
-}
-
-#linkedin-icon {
-  width: 18px;
-  height: auto;
-}
+/* ChatGPT-specific image styling overrides */
 
 /* Card-based design for sections */
 .card-section {
@@ -194,44 +74,8 @@ img {
   align-items: center;
 }
 
-/* Mobile responsiveness improvements */
+/* ChatGPT-specific mobile enhancements */
 @media screen and (max-width: 768px) {
-  .section {
-    margin-left: 4%;
-    margin-right: 4%;
-    margin-top: 40px;
-  }
-  
-  .section h2 {
-    font-size: 28px;
-  }
-  
-  .section h3, .h3-section h3 {
-    font-size: 20px;
-  }
-  
-  .section h4 {
-    font-size: 18px;
-  }
-  
-  #titleArea {
-    margin-left: 4%;
-    margin-right: 4%;
-  }
-  
-  #overview-section {
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  #tools {
-    width: 100%;
-    min-width: unset;
-    margin-left: 0;
-    margin-right: 0;
-    border-radius: 0;
-  }
-  
   .card-section {
     padding: 20px;
   }
