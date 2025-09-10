@@ -1,0 +1,336 @@
+/* Graphic Design Portfolio Page Styles - Typography now handled by common.css */
+
+/* GD-specific link styling */
+.link:hover {
+  color: #2c5aa0;
+  text-decoration: underline;
+}
+
+/* GD-specific tools section styling */
+#tools {
+  border-left: 4px solid #2c5aa0;
+}
+
+/* Ensure GD page follows common layout patterns */
+
+#titleArea {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 3%;
+  margin-bottom: 48px;
+}
+
+/* Values grid layout */
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 0;
+}
+
+.value-item {
+  background: #f8f9fa;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.value-item h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c5aa0;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+.value-item p {
+  margin-bottom: 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Logo section */
+.logo-section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 40px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.logo-visual img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+}
+
+.logo-description p {
+  max-width: 600px;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+/* Posters section */
+.posters-section {
+  margin-top: 0;
+}
+
+.posters-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.poster-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.poster-item img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.poster-caption {
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Imagery section */
+.imagery-content {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.imagery-text h4 {
+  color: #2c5aa0;
+  margin-top: 24px;
+}
+
+.imagery-text p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.imagery-text p:last-child {
+  margin-bottom: 0;
+}
+
+.imagery-visual {
+  flex: 0 0 500px;
+}
+
+.imagery-visual img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Color section */
+.color-content {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.color-text h4 {
+  color: #2c5aa0;
+}
+
+.color-text p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.color-text p:last-child {
+  margin-bottom: 0;
+}
+
+.color-visual {
+  margin-top: 32px;
+  flex: 0 0 500px;
+}
+
+.color-visual img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Merchandise section */
+.merchandise-content {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.merchandise-content:first-child {
+  margin-top: 0;
+}
+
+.merchandise-text p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.merchandise-text p:last-child {
+  margin-bottom: 0;
+}
+
+.merchandise-visual {
+  flex: 0 0 500px;
+}
+
+.merchandise-visual img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Typography section */
+.typography-content {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.typography-content:first-child {
+  margin-top: 0;
+}
+
+.typography-text {
+  flex: 0 0 300px;
+}
+
+.typography-text h4 {
+  color: #2c5aa0;
+}
+
+.typography-text p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.typography-text p:last-child {
+  margin-bottom: 0;
+}
+
+.typography-visual img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Responsive Design - Following common.css patterns */
+@media screen and (max-width: 1024px) {
+  #titleArea {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .logo-section {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .logo-visual {
+    flex: none;
+  }
+  
+  .imagery-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .imagery-visual {
+    flex: none;
+  }
+  
+  .color-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .color-visual {
+    flex: none;
+  }
+  
+  .color-content:first-child .color-visual {
+    flex: none;
+  }
+  
+  .merchandise-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .merchandise-visual {
+    flex: none;
+  }
+  
+  .typography-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .typography-visual {
+    flex: none;
+  }
+  
+  .posters-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #titleArea {
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 2%;
+    margin-bottom: 32px;
+  }
+  
+  .value-item {
+    padding: 20px;
+  }
+  
+  .poster-item img {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #titleArea {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  
+  .values-grid {
+    gap: 15px;
+  }
+  
+  .value-item {
+    padding: 16px;
+  }
+  
+  .posters-grid {
+    gap: 20px;
+  }
+}

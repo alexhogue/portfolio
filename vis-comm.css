@@ -273,10 +273,8 @@ li:not(:last-child) {
 
 /* Reflection section styling */
 #conc-writing {
-  background: #f8f9fa;
   padding: 24px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 /* #website styles moved to common.css for consistency */
