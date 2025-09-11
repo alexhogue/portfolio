@@ -143,9 +143,9 @@ a {
 
 /* Work section container */
 #work-section {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
   margin-top: 2%;
   margin-left: 15%;
   margin-right: 15%;
@@ -170,13 +170,20 @@ a {
   color: rgb(78, 120, 165);
 }
 
+/* Number styling */
+.number {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 0;
+}
+
 /* Work content layout */
 .work-content {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
-  flex-direction: row;
-  gap: 40px;
+  flex-direction: column;
+  /* gap: 20px; */
   cursor: url("assets/eye3.png") 35 30, auto;
 }
 
@@ -184,13 +191,15 @@ a {
 .work-desc {
   display: flex;
   align-items: flex-end;
+  justify-content: flex-start;
   gap: 25px;
   flex: 1;
+  /* text-align: center; */
 }
 
 /* Project title styling */
 .project-title {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   margin-top: 4px;
 }
 
@@ -207,21 +216,24 @@ a {
 #warp-vid, #hack-vid, #chatgpt-img {
   width: 475px;
   min-width: 300px;
+  height: 300px;
   border-radius: 15px;
   transition: transform .2s;
   flex-shrink: 0;
+  object-fit: cover;
 }
 
 /* Bordered media elements */
 #voyage-gif, #vis-img, #adobe-img {
   width: 475px;
-  height: fit-content;
-  padding: 15px;
+  height: 300px;
+  /* padding: 15px; */
   min-width: 300px;
   border-radius: 15px;
   border: 1.5px solid rgb(229, 229, 229);
   transition: transform .2s;
   flex-shrink: 0;
+  object-fit: cover;
 }
 
 /* ========================================
@@ -236,6 +248,18 @@ a {
   top: 55%;
   left: 65%;
 }
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablet breakpoint */
+@media screen and (max-width: 1024px) {
+  #work-section {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
 /* ========================================
    RESPONSIVE DESIGN - MOBILE
    ======================================== */
@@ -267,7 +291,8 @@ a {
   
   /* Work section mobile layout */
   #work-section {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 20px;
     align-items: center;
     padding: 0 2%;
     max-width: none;
