@@ -292,12 +292,13 @@ a {
   /* Work section mobile layout */
   #work-section {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 25px;
     align-items: center;
-    padding: 0 2%;
+    padding: 0 4%;
     max-width: none;
     margin-left: 0;
     margin-right: 0;
+    margin-top: 4%;
   }
   
   /* Work content mobile layout */
@@ -308,12 +309,48 @@ a {
     margin-bottom: 10px;
     justify-content: center;
     align-items: center;
+    text-align: center;
+  }
+  
+  /* Work description mobile adjustments */
+  .work-desc {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+  }
+  
+  .project-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .project-tags {
+    font-size: 14px;
+    line-height: 1.4;
   }
   
   /* Media elements mobile sizing */
-  #warp-vid, #hack-vid, #voyage-gif, #vis-img, #chatgpt-im, #adobe-img {
-    width: 90%;
-    min-width: 250px;
+  #warp-vid, #hack-vid, #voyage-gif, #vis-img, #chatgpt-img, #adobe-img {
+    width: 100% !important;
+    min-width: 280px;
+    max-width: none;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Specific fix for hack video to ensure it matches other images */
+  #hack-vid {
+    width: 100% !important;
+    min-width: 280px;
+    max-width: none;
+    /* height: 200px; */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
   }
   
   /* UI elements mobile adjustments */
@@ -323,5 +360,46 @@ a {
   
   #plane {
     display: none;
+  }
+}
+
+/* Extra small mobile breakpoint */
+@media screen and (max-width: 480px) {
+  /* Work section extra small mobile */
+  #work-section {
+    padding: 0 2%;
+    gap: 20px;
+  }
+  
+  /* Media elements extra small mobile */
+  #warp-vid, #hack-vid, #voyage-gif, #vis-img, #chatgpt-img, #adobe-img {
+    width: 100% !important;
+    min-width: 250px;
+    max-width: none;
+    /* height: 180px; */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Specific fix for hack video extra small mobile */
+  #hack-vid {
+    width: 100% !important;
+    min-width: 250px;
+    max-width: none;
+    /* height: 180px; */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+  }
+  
+  /* Typography adjustments for extra small screens */
+  .project-title {
+    font-size: 16px;
+  }
+  
+  .project-tags {
+    font-size: 13px;
   }
 }

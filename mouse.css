@@ -2,6 +2,7 @@ i {
   position: absolute;
   width: 4px;
   height: 4px;
+  border-radius: 10px;
   background: var(--random-color);
   pointer-events: none;
   animation: animate 2s linear forwards;
