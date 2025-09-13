@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Narrative</title>
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="navigation.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="mouse.css" />
+    <link rel="stylesheet" href="data-narrative.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body id="website">
+    <div id="nav-bar" class="collapsed">
+    </div>
+    <script>
+      $(function(){
+        $("#nav-bar").load("nav.html");
+      });
+    </script>
+
+    <div id="titleArea">
+        <h1>Data Narrative</h1>
+        <p>A data narrative produced with R to capture name trends in the US, exploring patterns and insights through visual storytelling.</p>
+    </div>
+
+    <div id="centered-sec">
+      <div class="section">
+        <div class="data-narrative-container">
+          <img src="assets/art/data-narrative.png" alt="Data Narrative visualization showing interactive charts and data insights" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" />
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <hr>
+      <div id="footer-text">
+        <div id="spacer"></div>
+        <div id="main-text">
+          <h4>Thanks for browsing!</h4>
+          <label>Designed + built with <3 and iced vanilla lattes</label>
+        </div>
+        <a href="#titleArea">
+          <div id="to-top">
+              <p id="up-text">Back to top</p>
+              <img id="up" src="assets/solar_arrow-up-outline.png" alt="return to top of page"/>
+          </div>
+        </a>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

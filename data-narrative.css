@@ -1,0 +1,43 @@
+/* ========================================
+   DATA NARRATIVE PAGE STYLES
+   ======================================== */
+
+/* Override section margins to match header width */
+.section {
+  width: 70%;
+}
+
+#centered-sec {
+    width: 100%;
+}
+/* Data narrative container */
+.data-narrative-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+/* Data narrative image */
+.data-narrative-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Mobile breakpoint */
+@media screen and (max-width: 768px) {
+  .data-narrative-container {
+    margin: 10px 0;
+  }
+  
+  .data-narrative-container img {
+    border-radius: 6px;
+  }
+}
