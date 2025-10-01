@@ -83,6 +83,11 @@
   color: #666;
 }
 
+#pres-img {
+  max-width: 600px;
+  min-width: 250px;
+}
+
 /* Adobe-specific responsive enhancements */
 @media (max-width: 768px) {
   #features-section {

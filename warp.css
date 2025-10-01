@@ -1,10 +1,4 @@
-/* Warp-specific enhancements - Typography now handled by common.css */
 
-/* Warp-specific link styling */
-.link:hover {
-  color: #4a90e2;
-  text-decoration: underline;
-}
 
 /* Warp-specific tools section styling */
 #tools {
@@ -18,22 +12,19 @@
   background: #ffffff;
   padding: 24px;
   border-radius: 12px;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
-  border: 1px solid #f0f0f0;
+  border: 1.5px solid #f0f0f0;
   margin: 20px 0;
 }
 
 #carousel-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
   min-width: 250px;
   width: 50%;
   background: #ffffff;
   padding: 24px;
   border-radius: 12px;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
-  border: 1px solid #f0f0f0;
+  /* border: 1.5px solid #f0f0f0; */
 }
 
 #sketch-writing {
