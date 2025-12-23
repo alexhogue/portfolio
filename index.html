@@ -33,45 +33,70 @@
       });
     </script>
 
+    <div class="circle-area" id="top-circle-area">
+      <div class="circle top back"></div>
+      <div class="circle top front"></div>
+    </div>
+    <div class="circle-area" id="mid-circle-area">
+      <div class="circle mid back"></div>
+      <div class="circle mid front"></div>
+    </div>
+
     <!-- Hero Section -->
     <header id="title-cont">
-      <div id="headingArea">
-        <div id="star"></div>
         
         <!-- Main heading -->
-        <h1 id="title">Hello- I'm <a href="about.html"><span id="name">Alex(andra) Hogue</span></a>!</h1>
-      
-        <!-- Hero content -->
-        <section id="main-sec">
-          <div id="sketch-cont">
-            <img id="me-sketch" src="assets/me-sketch.png" alt="Illustration of Alex waving from a window">
-          </div>
+        <!-- <h1 id="title">Hello- I'm <a href="about.html"><span id="name">Alex(andra) Hogue</span></a>!</h1> -->
+        <svg id="title-curve" viewBox="-50 -150 1000 550" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <!-- Define the curved path (invisible) -->
+          <path id="curve-path" d="M0.142578 0.479248C141.643 42.4792 167.143 256.979 445.643 256.979C734.643 256.979 881.643 331.979 947.143 495.479" fill="none"/>
           
-          <div id="bio-cont">
-            <p id="bio-text">I'm a designer at the intersection of <span class="highlighted">visual communication</span>, <span class="highlighted">technology</span>, and <span class="highlighted">cognitive science</span> 
-              focused on accessibility and inclusion. I design tools and experiences that make people and their needs truly seen.</p>
-            
-            <div id="more">
-              <a href="about.html" aria-label="Learn more about Alex">
-                <div id="about-link">
-                  <p id="about-me">More about me</p>
-                  <img id="arrow" src="assets/arrow.png" alt="">
-                </div>
-              </a>
-              <img id="plane" src="assets/paper-plane.png" alt="Illustrated flying paper airplane">
-            </div>
+          <!-- Text following the path -->
+          <text font-family="Instrument-serif, serif" font-size="96">
+            <textPath id="main-title" href="#curve-path" startOffset="0%">
+              Hello- I'm <a id="name" href="about.html">Alex(andra) Hogue</a>!
+            </textPath>
+          </text>
+        </svg>
+        <div>
+          <div class="fact-area" id="fact1">
+            <svg class="fact-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" fill="none">
+              <path d="M23.9427 14.5628L25.6756 20.7194C25.7433 20.9732 25.8887 21.1994 26.0915 21.3664C26.2943 21.5334 26.5443 21.6326 26.8064 21.6503C27.0685 21.6679 27.3296 21.6031 27.5529 21.4648C27.7763 21.3265 27.9507 21.1218 28.0518 20.8794L30.1624 15.4987L36.0075 15.5451C36.2493 15.5588 36.4893 15.4976 36.6949 15.3697C36.9005 15.2419 37.0616 15.0538 37.1563 14.831C37.251 14.6082 37.2746 14.3616 37.224 14.1249C37.1733 13.8882 37.0508 13.6729 36.8732 13.5084L33.4794 10.1133L35.4939 4.61112C35.5624 4.38873 35.569 4.15188 35.5129 3.92604C35.4568 3.70021 35.3402 3.49393 35.1757 3.32939C35.0111 3.16485 34.8048 3.04828 34.5789 2.99221C34.3531 2.93614 34.1162 2.9427 33.8938 3.01118L28.3878 5.02231L24.9924 1.62882C24.8278 1.45035 24.612 1.32718 24.3747 1.27621C24.1373 1.22524 23.89 1.24898 23.6666 1.34416C23.4433 1.43935 23.2549 1.60131 23.1273 1.80782C22.9996 2.01434 22.9391 2.25529 22.9539 2.49759L23.0003 8.34219L17.6191 10.4589C17.376 10.5596 17.1707 10.7341 17.0319 10.9576C16.8932 11.1812 16.8281 11.4426 16.8458 11.7051C16.8634 11.9676 16.963 12.2179 17.1304 12.4209C17.2979 12.6239 17.5247 12.7692 17.7791 12.8364L23.9427 14.5628ZM23.9427 14.5628L1.25 37.25" stroke="#202020" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p id="text1" class="bio-text">An interdisciplinary designer and researcher at the intersection of visual communication and 
+              technology.</p>
           </div>
-        </section>
-      </div>
+          <div class="fact-area" id="fact2">
+            <svg class="fact-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <path d="M18 27V7.49995M18 7.49995C18 6.80969 18.1587 6.12867 18.464 5.50959C18.7693 4.8905 19.2129 4.34994 19.7605 3.92972C20.3081 3.50951 20.9451 3.2209 21.6221 3.08623C22.2991 2.95156 22.998 2.97444 23.6647 3.15309C24.3314 3.33175 24.9481 3.66139 25.4671 4.11652C25.9861 4.57165 26.3934 5.14007 26.6575 5.77779C26.9216 6.41552 27.0355 7.10546 26.9904 7.79425C26.9452 8.48303 26.7422 9.15219 26.397 9.74995M18 7.49995C18 6.80969 17.8413 6.12867 17.536 5.50959C17.2307 4.8905 16.7871 4.34994 16.2395 3.92972C15.6919 3.50951 15.0549 3.2209 14.3779 3.08623C13.7009 2.95156 13.002 2.97444 12.3353 3.15309C11.6686 3.33175 11.0519 3.66139 10.5329 4.11652C10.0139 4.57165 9.60663 5.14007 9.3425 5.77779C9.07836 6.41552 8.96447 7.10546 9.00965 7.79425C9.05482 8.48303 9.25784 9.15219 9.603 9.74995M22.5 19.5C21.2022 19.1206 20.0623 18.3309 19.251 17.2492C18.4397 16.1675 18.0008 14.8521 18 13.5C17.9992 14.8521 17.5603 16.1675 16.749 17.2492C15.9377 18.3309 14.7978 19.1206 13.5 19.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M26.9951 7.6875C27.8768 7.91421 28.6954 8.33857 29.3888 8.92847C30.0822 9.51836 30.6323 10.2583 30.9974 11.0923C31.3624 11.9262 31.533 12.8323 31.496 13.742C31.4591 14.6516 31.2156 15.5409 30.7841 16.3425" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M27 27C28.3208 26.9999 29.6046 26.564 30.6524 25.76C31.7002 24.956 32.4534 23.8286 32.7953 22.5529C33.1371 21.2771 33.0485 19.9242 32.5431 18.704C32.0377 17.4838 31.1438 16.4644 30 15.804" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M29.9505 26.2244C30.0556 27.0377 29.9929 27.864 29.7662 28.6522C29.5394 29.4403 29.1536 30.1736 28.6323 30.8068C28.1111 31.44 27.4656 31.9596 26.7357 32.3335C26.0058 32.7074 25.2069 32.9278 24.3885 32.9809C23.5701 33.034 22.7495 32.9187 21.9774 32.6423C21.2053 32.3658 20.4981 31.934 19.8994 31.3735C19.3007 30.813 18.8232 30.1357 18.4966 29.3835C18.1699 28.6312 18.0009 27.82 18 26.9999C17.9991 27.82 17.8301 28.6312 17.5034 29.3835C17.1768 30.1357 16.6993 30.813 16.1006 31.3735C15.5019 31.934 14.7947 32.3658 14.0226 32.6423C13.2505 32.9187 12.4299 33.034 11.6115 32.9809C10.7931 32.9278 9.99424 32.7074 9.26433 32.3335C8.53441 31.9596 7.88891 31.44 7.36767 30.8068C6.84644 30.1736 6.46055 29.4403 6.23383 28.6522C6.00711 27.864 5.94437 27.0377 6.0495 26.2244" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8.99974 27C7.67898 26.9999 6.39515 26.564 5.34734 25.76C4.29953 24.956 3.54629 23.8286 3.20445 22.5529C2.86261 21.2771 2.95126 19.9242 3.45666 18.704C3.96206 17.4838 4.85596 16.4644 5.99974 15.804" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.00391 7.6875C8.12221 7.91421 7.30366 8.33857 6.61025 8.92847C5.91685 9.51836 5.36677 10.2583 5.00167 11.0923C4.63658 11.9262 4.46605 12.8323 4.50299 13.742C4.53993 14.6516 4.78339 15.5409 5.21491 16.3425" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p id="text2" class="bio-text">Grounded in cognitive science. Driven by accessibility.</p>
+          </div>
+          <div class="fact-area" id="fact3">
+            <svg class="fact-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <path d="M21.9255 7.1506C23.4405 4.7491 24.1995 3.5491 25.1925 3.1861C25.8756 2.93732 26.6244 2.93732 27.3075 3.1861C28.3005 3.5491 29.0595 4.7491 30.5745 7.1506C32.28 9.8521 33.1335 11.2036 32.9835 12.3181C32.88 13.0831 32.4945 13.7821 31.9035 14.2771C31.0425 15.0001 29.445 15.0001 26.25 15.0001C23.055 15.0001 21.4575 15.0001 20.595 14.2771C20.0035 13.7817 19.6188 13.0828 19.5165 12.3181C19.3665 11.2036 20.22 9.8521 21.9255 7.1506ZM3 9.0001C3 6.4996 3 5.2501 3.636 4.3741C3.843 4.0891 4.089 3.8431 4.374 3.6361C5.25 3.0001 6.4995 3.0001 9 3.0001C11.5005 3.0001 12.75 3.0001 13.626 3.6361C13.911 3.8431 14.157 4.0891 14.364 4.3741C15 5.2501 15 6.4996 15 9.0001C15 11.5006 15 12.7501 14.364 13.6261C14.1587 13.9097 13.9096 14.1588 13.626 14.3641C12.75 15.0001 11.5005 15.0001 9 15.0001C6.4995 15.0001 5.25 15.0001 4.374 14.3641C4.09041 14.1588 3.8413 13.9097 3.636 13.6261C3 12.7501 3 11.5006 3 9.0001Z" stroke="black" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M26.25 33C29.5637 33 32.25 30.3137 32.25 27C32.25 23.6863 29.5637 21 26.25 21C22.9363 21 20.25 23.6863 20.25 27C20.25 30.3137 22.9363 33 26.25 33Z" stroke="black" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M14.25 21.75L3.75 32.25M3.75 21.75L14.25 32.25" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p id="text3" class="bio-text">Designing human-centered tools for complex systems.</p>
+          </div>
+        </div>
+      
+       
     </header>
     
     <!-- Portfolio Section -->
     <main>
       <section id="selected">
         <h2>Selected Works:</h2>
+        <hr>
       </section>
       
-      <hr>
       
       <!-- Portfolio Grid -->
       <section id="work-section" aria-label="Portfolio projects">
@@ -80,12 +105,18 @@
         <article class="work">
           <a href="adobe.html" aria-label="View Adobe Learn project details">
             <div class="work-content">
-              <img id="adobe-img" src="assets/Adobe_logo.png" alt="Adobe company logo">
+              <img id="adobe-img" class="work-img" src="assets/Adobe_logo.png" alt="Adobe company logo">
               <div class="work-desc">
-                <span class="number" aria-hidden="true"><h1>1.</h1></span>
+                <!-- <span class="number" aria-hidden="true"><h1>1.</h1></span> -->
                 <div>
                   <h3 class="project-title">Agentic Experience for Learn</h3>
-                  <p class="project-tags">end-to-end design | industry | development | AI | user research</p>
+                  <p class="work-description">Designing an agentic experience to support users learning Adobe products</p>
+                  <div class="project-tags">
+                    <p class="project-tag">0-1 design</p>
+                    <p class="project-tag">industry project</p>
+                    <p class="project-tag">AI</p>
+                    <p class="project-tag">user research</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -96,15 +127,19 @@
         <article class="work">
           <a href="warp.html" aria-label="View Warp Home project details">
             <div class="work-content">
-              <video loop autoplay muted id="warp-vid" aria-label="Warp Home project preview video">
+              <video loop autoplay muted id="warp-vid" class="work-img" aria-label="Warp Home project preview video">
                 <source src="assets/warp/highfi.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
               <div class="work-desc">
-                <span class="number" aria-hidden="true"><h1>2.</h1></span>
+                <!-- <span class="number" aria-hidden="true"><h1>2.</h1></span> -->
                 <div>
                   <h3 class="project-title">Warp Home</h3>
-                  <p class="project-tags">product design | industry project | collaboration</p>
+                  <p>Design a home page for the startup Warp that serves as an aggregator to allow for increased discovery of Warp's features</p>
+                  <div class="project-tags">
+                    <p class="project-tag">product design</p>
+                    <p class="project-tag">industry project</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -115,15 +150,20 @@
         <article class="work">
           <a href="hack.html" aria-label="View Hack@Brown project details">
             <div class="work-content">
-              <video loop autoplay muted id="hack-vid" aria-label="Hack@Brown project preview video">
+              <video loop autoplay muted id="hack-vid" class="work-img" aria-label="Hack@Brown project preview video">
                 <source src="assets/hack-cropped.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
               <div class="work-desc">
-                <span class="number" aria-hidden="true"><h1>3.</h1></span>
+                <!-- <span class="number" aria-hidden="true"><h1>3.</h1></span> -->
                 <div>
                   <h3 class="project-title">Hack@Brown</h3>
-                  <p class="project-tags">web design | brand identity | leadership</p>
+                  <p>Design leader to design the webpage and branding for a student organization</p>
+                  <div class="project-tags">
+                    <p class="project-tag">web design</p>
+                    <p class="project-tag">leadership</p>
+                    <p class="project-tag">brand identity</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -134,17 +174,42 @@
         <article class="work">
           <a href="chatgpt.html" aria-label="View ChatGPT privacy redesign project details">
             <div class="work-content">
-              <img id="chatgpt-img" src="assets/chatgpt/current-interface.png" alt="ChatGPT privacy redesign interface mockup">
+              <img id="chatgpt-img" class="work-img" src="assets/chatgpt/current-interface.png" alt="ChatGPT privacy redesign interface mockup">
               <div class="work-desc">
-                <span class="number" aria-hidden="true"><h1>4.</h1></span>
+                <!-- <span class="number" aria-hidden="true"><h1>4.</h1></span> -->
                 <div>
                   <h3 class="project-title">ChatGPT Privacy Design</h3>
-                  <p class="project-tags">UX research | digital safety | privacy | user interviews</p>
+                  <p>Developing privacy-centered design recommendations for AI chat interfaces</p>
+                  <div class="project-tags">
+                    <p class="project-tag">UX research</p>
+                    <p class="project-tag">digital safety</p>
+                  </div>
                 </div>
               </div>
             </div>
           </a>
         </article>
+
+        <!-- <article class="work">
+          <a href="chatgpt.html" aria-label="View ChatGPT privacy redesign project details">
+            <div class="work-content">
+              <img id="chatgpt-img" class="work-img" src="assets/chatgpt/current-interface.png" alt="ChatGPT privacy redesign interface mockup">
+              <div class="work-desc"> -->
+                <!-- <span class="number" aria-hidden="true"><h1>4.</h1></span> -->
+                <!-- <div>
+                  <h3 class="project-title">Socially Responsible Computing Handbook</h3>
+                  <p>Developing privacy-centered design recommendations for AI chat interfaces</p>
+                  <div class="project-tags">
+                    <p class="project-tag">product design</p>
+                    <p class="project-tag">development</p>
+                    <p class="project-tag">leadership</p>
+                    <p class="project-tag">accessibility</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </article> -->
         
         <!-- Project 5: Voyage Vault -->
         <!-- <article class="work">
@@ -178,23 +243,30 @@
           </a>
         </article> -->
       </section>
+
+      <section id="art-section">
+        <!-- <hr> -->
+        <img id="art-blob" src="assets/art_blob.svg"/>
+      </section>
+      
     </main>
+    <div class="mouse-follower"></div>
     <!-- Footer -->
     <footer id="footer">
       <hr>
       <div id="footer-text">
-        <div id="spacer" aria-hidden="true"></div>
         <div id="main-text">
           <p>Thanks for browsing!</p>
           <p class="footer-note">Designed + built with &lt;3 and iced vanilla lattes</p>
         </div>
         <a href="#title-cont" id="to-top" aria-label="Return to top of page">
-          <p id="up-text">Back to top</p>
+          <!-- <p id="up-text">Back to top</p> -->
           <img id="up" src="assets/solar_arrow-up-outline.png" alt="">
         </a>
       </div>
     </footer>
     <!-- Scripts -->
+    <script src="nav.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
     <script src="mouse.js"></script>

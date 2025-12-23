@@ -17,7 +17,8 @@
   align-items: center;
   background: #ffffff;
   border-radius: 12px;
-  margin: 20px 0;
+  margin: 24px 0;
+  padding: 0 24px;
 }
 
 #adobe-icon {
