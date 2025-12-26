@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="mouse.css" />
     <link rel="stylesheet" href="pages-art/lightbox.min.css" />
     <link rel="stylesheet" href="art.css" />
+    <link rel="stylesheet" href="main.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="pages-art/lightbox-plus-jquery.min.js"></script>
   </head>
@@ -22,66 +23,70 @@
     </script>
 
     <div id="titleArea">
-        <h1>Explore my personal artistic work!</h1>
+        <h1>Explore my extra artistic work!</h1>
         <p>This page is primarily personal work, including graphic design, illustration, and fun personal projects.</p>
     </div>
     <div id="art-sec">
-      <div id="art-photo-sec">
+      <article class="work">
         <a href="vis-comm.html">
-            <div class="work">
-              <div class="work-content">
-                <img id="main-img" src="assets/petra-thumbnail.png" alt="Visual communication design samples"> 
-                <div class="work-desc">
-                  <h3 class="project-title">Visual Communication Projects</h3>
-                </div>
-              </div>
+          <div class="work-content">
+            <img id="main-img" class="work-img" src="assets/petra-thumbnail.png" alt="Visual communication design samples"> 
+            <div class="work-desc">
+              <h3 class="project-title">Visual Communication Projects</h3>
             </div>
+          </div>
         </a>
+      </article>
+      <article class="work">
         <a href="gd.html">
-            <div class="work">
-              <div class="work-content">
-                <img id="main-img" src="assets/art/GD/posters.png" alt="Graphic design work featuring typography and layout design"/>
-                <div class="work-desc">
-                  <h3 class="project-title">Festival Brand Identity</h3>
-                </div>
-              </div>
+          <div class="work-content">
+            <img id="main-img" class="work-img" src="assets/art/GD/posters.png" alt="Graphic design work featuring typography and layout design"/>
+            <div class="work-desc">
+              <h3 class="project-title">Festival Brand Identity</h3>
             </div>
+          </div>
         </a>
-      </div>
-      <div id="art-photo-sec">
+      </article>
+      <article class="work">
+        <a href="https://alexhogue.github.io/project1/index.html">
+          <div class="work-content">
+            <img id="main-img" class="work-img" src="assets/away-we-go.png" alt="Away we Go Homepage displaying Vintage travel posters"/>
+            <div class="work-desc">
+              <h3 class="project-title">"Away We Go"</h3>
+            </div>
+          </div>
+        </a>
+      </article>
+      <article class="work">
         <a href="data-narrative.html">
-            <div class="work">
-              <div class="work-content">
-                <img id="main-img" src="assets/art/data_narrative_thumbnail.png" alt="Data narrative visualization showing interactive charts and graphs"/>
-                <div class="work-desc">
-                  <h3 class="project-title">Data Narrative</h3>
-                </div>
-              </div>
+          <div class="work-content">
+            <img id="main-img" class="work-img" src="assets/art/data_narrative_thumbnail.png" alt="Data narrative visualization showing interactive charts and graphs"/>
+            <div class="work-desc">
+              <h3 class="project-title">Data Narrative</h3>
             </div>
+          </div>
         </a>
+      </article>
+      <article class="work">
         <a href="pages-art/vis-art.html">
-            <div class="work">
-              <div class="work-content">
-                <img id="main-img" src="assets/art/Warped-copyright.jpg" alt="Warped - a black and white artistic photograph"/>
-                <div class="work-desc">
-                  <h3 class="project-title">Visual Art</h3>
-                </div>
-              </div>
+          <div class="work-content">
+            <img id="main-img" class="work-img" src="assets/art/Warped-copyright.jpg" alt="Warped - a black and white artistic photograph"/>
+            <div class="work-desc">
+              <h3 class="project-title">Visual Art</h3>
             </div>
+          </div>
         </a>
-    </div>
-    <div id="photo-sec">
-      <a href="pages-art/photography.html">
-            <div class="work">
-              <div class="work-content">
-                <img id="main-img" src="assets/art/photography/Plastic-copyright.jpg" alt="Plastic - an artistic photograph featuring plastic materials"/>
-                <div class="work-desc">
-                  <h3 class="project-title">Photography</h3>
-                </div>
-              </div>
+      </article>
+      <article class="work">
+        <a href="pages-art/photography.html">
+          <div class="work-content">
+            <img id="main-img" class="work-img" src="assets/art/photography/Plastic-copyright.jpg" alt="Plastic - an artistic photograph featuring plastic materials"/>
+            <div class="work-desc">
+              <h3 class="project-title">Photography</h3>
             </div>
+          </div>
         </a>
-    </div>
+      </article>
     </div>
     <div id="footer">
       <hr>
@@ -102,4 +107,5 @@
     <script src="script.js"></script>
   </body>
     <!-- <script src="/path/to/masonry.pkgd.min.js"></script> -->
+  <script src="nav.js"></script>
 </html>

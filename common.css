@@ -80,6 +80,13 @@ button {
   line-height: 30px;
 }
 
+/* Link styling */
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+
 /* Project tags styling */
 .project-tags {
   font-size: 14px;
@@ -162,11 +169,13 @@ hr {
 .link {
   color: inherit;
   border-bottom: 1px dotted #000;
-  text-decoration: none;
+  text-decoration: underline dotted;
+  color: #87004d;
 }
 
 .link:hover {
-  color: #e7436d;
+  color: #a5005d;
+  text-decoration: underline;
 }
 
 .highlighted {
@@ -462,9 +471,9 @@ img {
 
 .mouse-follower {
     position: fixed; 
-    width: 1000px;
-    height: 1000px;
-    background-color: rgba(149, 255, 253, 0.4); /* Blue color for the shape */
+    width: 900px;
+    height: 900px;
+    background-color: rgba(149, 255, 253, 0.35); /* Blue color for the shape */
     border-radius: 50%; /* Makes it a circle */
     pointer-events: none; /* Allows clicks to pass through the follower to elements beneath */
     /* transform: translate(-50%, -50%);  */

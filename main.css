@@ -207,6 +207,7 @@ main {
   justify-content: flex-start;
   gap: 24px;
   margin-left: 28px;
+  min-width: 300px;
   /* text-align: center; */
 }
 
