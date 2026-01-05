@@ -168,7 +168,7 @@ hr {
 /* Link styling */
 .link {
   color: inherit;
-  border-bottom: 1px dotted #000;
+  /* border-bottom: 1px dotted #000; */
   text-decoration: underline dotted;
   color: #87004d;
 }
