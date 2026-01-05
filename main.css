@@ -2,9 +2,11 @@
    MAIN PAGE STYLES
    ======================================== */
 
-/* ========================================
-   GLOBAL ELEMENTS
-   ======================================== */
+
+
+body {
+  overflow-x: hidden;
+}
 
 /* List styling */
 li:not(:last-child) {
@@ -23,9 +25,6 @@ a {
 
 /* Title container */
 #title-cont {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom right;
   scroll-margin-top: 80px; /* Extra space above title when scrolling from "Back to top" */
 }
 
@@ -33,16 +32,60 @@ a {
 #headingArea {
   display: flex;
   flex-direction: column;
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  z-index: 100;
 }
 
-/* Title curve element */
-#title-curve {
-  margin-left: 80px;
-  min-width: 270px;
+header {
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+#title-curve {
+  max-width: 1200px;
+  height: auto;
+}
+
+#main-title {
+  font-family: "Instrument-serif";
+  z-index: 100;
+  font-size: 96px;
+}
+
+.fact-area{
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  gap: 18px;
+  max-width: 315px;
+}
+#fact1{
+  left: 75vw;
+  top: 40vh;
+}
+#fact2 {
+  left: 40vw;
+  top: 15vh;
+}
+#fact3 {
+  left: 8vw;
+  top: 70vh;
+}
+
+.bio-text {
+  max-width: 280px;
+  line-height: 26px;
+}
+.fact-icon {
+  width: 36px;
+  min-width: 36px;
+  max-width: 36px;
+}
+
 
 /* Main title styling */
 #title {
@@ -52,12 +95,16 @@ a {
   filter: inset 0 0 0 0 #54b3d6;
   transition: fill .3s ease-in-out, filter .3s ease-in-out;
   cursor: auto;
+  z-index: 100;
 }
-
+#name{
+  transition: fill .3s ease-in-out, filter .3s ease-in-out;
+}
 /* Name hover effect */
 #name:hover {
-  filter: drop-shadow(3px 3px 3px #54b3d6);
-  color: rgb(78, 120, 165);
+  filter: drop-shadow(2px 1px 3px #ffcb3b);
+  color: rgb(249, 179, 74);
+  transition: fill .3s ease-in-out, filter .3s ease-in-out;
 }
 /* ========================================
    MAIN CONTENT SECTION
@@ -67,49 +114,13 @@ a {
 #main-sec {
   display: flex;
   gap: 5%;
-  padding-top: 5vh;
+  padding-top: 2vh;
   padding-bottom: 1vh;
+  z-index: 100;
 }
 
-/* Bio container */
-#bio-cont {
-  min-width: 220px;
-}
-
-/* Profile sketch image */
-#me-sketch {
-  width: 35vh;
-  min-width: 100px;
-  transition: fill .3s ease-in-out, filter .3s ease-in-out;
-}
-
-/* Paper plane element */
-#plane {
-  width: 50%;
-}
-
-/* More info section */
-#more {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-/* Arrow icon */
-#arrow {
-  width: 25px;
-  height: fit-content;
-}
-
-/* About link styling */
-#about-link {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-#about-link:hover {
-  opacity: 50%;
+main {
+  z-index: 100;
 }
 
 /* ========================================
@@ -118,8 +129,8 @@ a {
 
 /* Selected work container */
 #selected {
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 4%;
+  margin-right: 4%;
   margin-top: 4%;
   margin-bottom: 0;
 }
@@ -143,26 +154,29 @@ a {
 
 /* Work section container */
 #work-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   margin-top: 2%;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 4%;
+  margin-right: 4%;
+  z-index: 100;
+
 }
 
 /* Individual work item */
 .work {
   display: flex;
   border-radius: 15px;
-  padding: 20px;
+  padding: 24px;
   transition: transform .2s;
-  cursor: url("assets/eye3.png") 35 30, auto;
+  z-index: 100;
 }
 
 .work:hover {
-  box-shadow: 0 0 10px #d0d0d0;
-  transform: scale(1.04);
+  box-shadow: 0 0 10px #0000001a;
+  transform: scale(1.02);
+  border: 1px solid #393939;
 }
 
 .work:hover .number {
@@ -180,11 +194,10 @@ a {
 /* Work content layout */
 .work-content {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  flex-direction: column;
-  /* gap: 20px; */
-  cursor: url("assets/eye3.png") 35 30, auto;
+  /* cursor: url("assets/eye3.png") 35 30, auto; */
 }
 
 /* Work description container */
@@ -192,8 +205,9 @@ a {
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  gap: 25px;
-  flex: 1;
+  gap: 24px;
+  margin-left: 28px;
+  min-width: 300px;
   /* text-align: center; */
 }
 
@@ -201,6 +215,20 @@ a {
 .project-title {
   margin-bottom: 4px;
   margin-top: 4px;
+  font-size: 48px;
+  font-family: "Instrument-sans-reg";
+  font-weight: 500;
+}
+.project-tags {
+  display: flex;
+  gap: 18px;
+}
+.project-tag {
+  padding: 6px 12px;
+  border: 1px solid black;
+  font-size: 14px;
+  border-radius: 16px;
+  margin:0;
 }
 
 /* Work divider */
@@ -236,18 +264,95 @@ a {
   object-fit: cover;
 }
 
+.circle {
+  position: absolute;
+}
+.circle.top.front {
+  width: 1313px;
+  height: 1093px;
+  right:-650px;
+  top:-550px;
+  z-index: 0;
+  background-color: #EEBAFF;
+  border-radius: 1000px;
+  filter: blur(125px);
+}
+.circle.top.back {
+  width: 1313px;
+  height: 1093px;
+  right:-600px;
+  top:-500px;
+  z-index: 0;
+  background-color: #A1C5FF;
+  border-radius: 1000px;
+  filter: blur(125px);
+}
+.circle.mid.front {
+  width: 1313px;
+  height: 1093px;
+  left:-650px;
+  top:850px;
+  z-index: 0;
+  background-color: #FFE6A1;
+  border-radius: 1000px;
+  filter: blur(125px);
+}
+.circle.mid.back {
+  width: 1313px;
+  height: 1093px;
+  left:-600px;
+  top:800px;
+  z-index: 0;
+  background-color: #F7FFA1;
+  border-radius: 1000px;
+  filter: blur(125px);
+}
+#art-section {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 8%;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-bottom: 0;
+  z-index: 100;
+}
+hr {
+  width: 100%;
+}
+#art-blob {
+  width: 40vw;
+  min-width: 300px;
+  transition: animation .3s ease;
+}
+#art-blob:hover {
+  transition: animation .3s ease;
+  animation: spin-back-forth 1s ease-in-out infinite;
+}
+@keyframes spin-back-forth {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(5deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(0deg) scale(1.1);
+  }
+  75% {
+    transform: rotate(-5deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(0deg) scale(1); /* Rotates 180 degrees in one direction */
+  }
+}
+
 /* ========================================
    INTERACTIVE ELEMENTS
    ======================================== */
 
-/* Draggable cloud element */
-#cloud {
-  cursor: move;
-  position: absolute;
-  width: 30%;
-  top: 55%;
-  left: 65%;
-}
 /* ========================================
    RESPONSIVE DESIGN
    ======================================== */
@@ -258,6 +363,49 @@ a {
     grid-template-columns: 1fr;
     gap: 25px;
   }
+  
+  .bio-text {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    line-height: 22px;
+  }
+  .fact-area:hover .bio-text, 
+  .fact-area:focus-within .bio-text {
+    opacity: 1;
+  }
+  #fact1{
+    left: 35vw;
+    top: 30vh;
+    transition: top 0.3s ease, left 0.3s ease;
+    flex-direction: row-reverse;
+    gap: 8px;
+  }
+  #fact2 {
+    left: 20vw;
+    top: 15vh;
+    transition: top 0.3s ease, left 0.3s ease;
+  }
+  #fact3 {
+    left: 8vw;
+    top: 60vh;
+    transition: top 0.3s ease, left 0.3s ease;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+  }
+
+  .work-img {
+    max-width: 300px;
+  }
+
+  .project-title {
+    font-size: 36px;
+  }
+
 }
 
 /* ========================================
@@ -267,11 +415,22 @@ a {
 @media screen and (max-width: 768px) {
   /* Header adjustments */
   #headingArea {
-    margin-top: 10%;
+    margin-top: 4%;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  .bio-text {
+    position: relative;
+    display: flex;
+    max-width: 100%;
     margin-left: 4%;
     margin-right: 4%;
   }
   
+  #text1, #text2, #text3 {
+    left: auto;
+    top: auto;
+  }
   #title {
     font-size: 36px;
     margin-top: 25px;
@@ -310,6 +469,7 @@ a {
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 100%; 
   }
   
   /* Work description mobile adjustments */
@@ -318,10 +478,11 @@ a {
     align-items: center;
     gap: 15px;
     text-align: left;
+    margin-left: 0;
   }
   
   .project-title {
-    font-size: 18px;
+    font-size: 24px;
     margin-bottom: 5px;
   }
   
@@ -402,4 +563,17 @@ a {
   .project-tags {
     font-size: 13px;
   }
+}
+
+.mouse-follower {
+    position: fixed; 
+    width: 900px;
+    height: 900px;
+    background-color: rgba(149, 255, 253, 0.35); /* Blue color for the shape */
+    border-radius: 50%; /* Makes it a circle */
+    pointer-events: none; /* Allows clicks to pass through the follower to elements beneath */
+    /* transform: translate(-50%, -50%);  */
+    transition: transform 0.1s ease-out, background-color 0.3s ease; /* Adds smooth movement and color transition */
+    /* z-index: -10; */
+    filter: blur(125px);
 }

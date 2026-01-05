@@ -11,8 +11,8 @@ a{
 #titleArea {
   display: flex;
   flex-direction: column;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 4%;
+  margin-right: 4%;
   margin-top: 4% !important;
   padding-top: 0 !important;
   scroll-margin-top: 80px; /* Extra space above title when scrolling from "Back to top" */
@@ -20,16 +20,10 @@ a{
 #art-sec{
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 12px;
   margin-top: 2%;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-#art-photo-sec{
-  display: flex;
-  gap: 20px;
-  flex-direction: row;
-  justify-content: center;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 .column{
   display: flex;
@@ -37,82 +31,102 @@ a{
   gap:10px;
   min-width: 300px;
 }
-.work-content{
-  display: flex;
-  align-items: center;
-  width: 100%;
-  flex-direction: column;
-  cursor: url("assets/eye3.png") 35 30, auto;
-}
-.work-desc{
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-.work{
-  display: flex;
-  height: auto;
-  margin: auto;
-  /* height: 100%; */
-  max-width: 700px;
-  border-radius: 15px;
-  padding: 20px;
-  transition: transform .2s;
-  cursor: url("assets/eye3.png") 35 30, auto;
-}
-.work:hover{
-  box-shadow: 0 0 10px #d0d0d0;
-  transform: scale(1.04);
-}
 #main-img {
-  width: 100%;
-  max-height: 500px;
-  height:auto;
-  min-width: 225px;
-  border-radius: 15px;
+  width: 475px;
+  min-width: 300px;
+  height: 300px;
   transition: transform .2s;
-}
-.project-title{
-  margin-bottom: 8px;
-  margin-top: 8px;
+  border-radius: 15px;
+  object-fit: cover;
+  flex-wrap: wrap;
 }
 .project-title:hover {
   color: #8a8a8a;
 }
 
+.circle2 {
+  position: absolute;
+}
+.circle2.top.front {
+  width: 1313px;
+  height: 1093px;
+  right:-650px;
+  top:-550px;
+  z-index: 0;
+  background-color: #ffffaa;
+  border-radius: 1000px;
+  filter: blur(125px);
+}
+.circle2.top.back {
+  width: 1313px;
+  height: 1093px;
+  right:-600px;
+  top:-500px;
+  z-index: 0;
+  background-color: #ceffab;
+  border-radius: 1000px;
+  filter: blur(125px);
+}
+.circle2.mid.front {
+  width: 1313px;
+  height: 1093px;
+  left:-650px;
+  top:800px;
+  z-index: 0;
+  background-color: #c6ceff;
+  border-radius: 1000px;
+  filter: blur(125px);
+}
+.circle2.mid.back {
+  width: 1313px;
+  height: 1093px;
+  left:-600px;
+  top:750px;
+  z-index: 0;
+  background-color: #aefffa;
+  border-radius: 1000px;
+  filter: blur(125px);
+}
+
+
 @media screen and (max-width: 768px) {
-  #art-sec{
-    flex-direction: column;
-    margin-left: 4%;
-    margin-right: 4%;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  #art-photo-sec{
+  .work-content {
     flex-direction: column;
     gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 100%;
-  }
-  
-  .work{
-    cursor: auto;
-    width: 100%;
-  }
-  .work-content{
-    cursor: auto;
+    min-width: 300px;
   }
   #main-img {
-    width: 95%;
-    height:fit-content;
-    border-radius: 15px;
-    transition: transform .2s;
+    width: 100% !important;
+    min-width: auto;
+    max-width: none;
+    min-height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  
   }
   #titleArea{
     margin-top: 40px;
-    margin-left: 4%;
-    margin-right: 4%;
   }
+  .work-desc {
+    margin-left: 0 !important;
+    padding-left: 0;
+    text-align: left;
+  }
+}
+
+.mouse-follower {
+    position: fixed; 
+    width: 900px;
+    height: 900px;
+    background-color: rgba(255, 149, 248, 0.3); /* Blue color for the shape */
+    border-radius: 50%; /* Makes it a circle */
+    pointer-events: none; /* Allows clicks to pass through the follower to elements beneath */
+    /* transform: translate(-50%, -50%);  */
+    transition: transform 0.1s ease-out, background-color 0.3s ease; /* Adds smooth movement and color transition */
+    /* z-index: -10; */
+    filter: blur(125px);
 }

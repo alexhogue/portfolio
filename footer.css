@@ -8,17 +8,18 @@
 
 /* Footer container */
 #footer {
+  z-index: 0;
   margin-bottom: 2%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 8%;
-  width: 76%; /* Equivalent to 12% margins on each side */
+  width: 92%; /* Equivalent to 12% margins on each side */
 }
 
 /* Footer content layout */
 #footer-text {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 
@@ -41,9 +42,10 @@
 
 /* Back to top link */
 #to-top {
+  position: absolute;
   display: flex;
-  align-items: center;
-  gap: 5px;
+  right: 10vw;
+  /* gap: 5px; */
   text-decoration: none;
   color: inherit;
 }
@@ -54,7 +56,7 @@
 
 /* Up arrow icon */
 #up {
-  width: 15%;
+  width: 36px;
   height: fit-content;
 }
 /* ========================================

@@ -25,7 +25,7 @@
         $("#nav-bar").load("nav.html");
       });
     </script>
-
+    <!-- <div class="mouse-follower"></div> -->
     <div id=about-page>
         <div id="about-area">
             <h1>A Little About <span id="name">Me</span></h1>
@@ -69,23 +69,20 @@
             </div>
         </div>
     </div>
-    <div id="footer">
+    <footer id="footer">
       <hr>
       <div id="footer-text">
-        <div id="spacer"></div>
         <div id="main-text">
-          <h4>Thanks for browsing!</h4>
-          <label>Designed + built with <3 and iced vanilla lattes</label>
+          <p>Thanks for browsing!</p>
+          <p class="footer-note">Designed + built with &lt;3 and iced vanilla lattes</p>
         </div>
-        <a href="#about-area">
-          <div id="to-top">
-              <p id="up-text">Back to top</p>
-              <img id="up" src="assets/solar_arrow-up-outline.png" alt="return to top of page"/>
-          </div>
+        <a href="#about-page" id="to-top" aria-label="Return to top of page">
+          <!-- <p id="up-text">Back to top</p> -->
+          <img id="up" src="assets/solar_arrow-up-outline.png" alt="">
         </a>
       </div>
-    </div>
-    <script>
+    </footer>
+    <!-- <script>
       const titleArea = document.getElementById("about-page");
       const footerArea = document.getElementById("footer");
 
@@ -120,8 +117,9 @@
 
       titleArea.addEventListener("mousemove", spark);
       footerArea.addEventListener("mousemove", spark);
-    </script>
+    </script> -->
     <script src="script.js"></script>
+    <!-- <script src="mouse.js"></script> -->
+    <script src="nav.js"></script>
   </body>
-  <script src="mouse.js"></script>
 </html>

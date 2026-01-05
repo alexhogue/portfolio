@@ -75,7 +75,11 @@ function mouseUp(e) {
  * Toggle mobile navigation menu
  * @param {HTMLElement} menu - Menu element to toggle
  */
+
 function toggleMobileMenu(menu) {
-  menu.classList.toggle("open");
-  document.getElementById("nav-bar").classList.toggle("expanded");
+  let viewportWidth = window.innerWidth;
+  if (viewportWidth <= 1024) {
+    document.getElementById("nav-bar").classList.toggle("expanded");
+    menu.classList.toggle("open");
+  }
 }

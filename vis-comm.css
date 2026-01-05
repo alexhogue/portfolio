@@ -2,8 +2,8 @@
 
 /* Major section headers - make them more prominent */
 .section h2 {
-  font-size: 32px;
-  font-weight: 700;
+  /* font-size: 32px; */
+  /* font-weight: 700; */
   color: #2c2c2c;
   margin-bottom: 30px;
   margin-top: 0;
@@ -13,8 +13,8 @@
 
 /* Ensure reflection h2 matches other section h2s */
 #reflection h2 {
-  font-size: 32px;
-  font-weight: 700;
+  /* font-size: 32px;
+  font-weight: 700; */
   color: #2c2c2c;
   margin-bottom: 30px;
   margin-top: 0;
@@ -24,8 +24,8 @@
 
 /* Subsection headers - clear hierarchy */
 .section h3, .h3-section h3 {
-  font-size: 24px;
-  font-weight: 600;
+  /* font-size: 24px;
+  font-weight: 600; */
   color: #2c2c2c;
   margin-bottom: 20px;
   margin-top: 40px;
@@ -35,8 +35,8 @@
 
 /* Sub-subsection headers */
 .section h4 {
-  font-size: 20px;
-  font-weight: 600;
+  /* font-size: 20px;
+  font-weight: 600; */
   color: #4a4a4a;
   margin-bottom: 16px;
   margin-top: 32px;
@@ -52,8 +52,8 @@ p {
 
 /* Enhanced overview text styling - match hack.css */
 .overview-text {
-  font-size: 14px;
-  font-weight: 700;
+  /* font-size: 14px;
+  font-weight: 700; */
   color: #666;
   text-transform: uppercase;
   letter-spacing: 0.8px;
@@ -284,7 +284,7 @@ li:not(:last-child) {
   align-items: center;
 }
 
-.highlighted{
+.highlighted {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   font-weight: 500;
   color: #87004d;

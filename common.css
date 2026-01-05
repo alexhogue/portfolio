@@ -32,6 +32,15 @@
   src: url("typefaces/GT-Walsheim-Pro-Regular.otf");
 }
 
+@font-face {
+  font-family: "Instrument-serif";
+  src: url("typefaces/InstrumentSerif-Regular.ttf");
+}
+@font-face {
+  font-family: "Instrument-sans-reg";
+  src: url("typefaces/InstrumentSans-VariableFont_wdth,wght.ttf");
+}
+
 /* ========================================
    GLOBAL LAYOUT & RESET
    ======================================== */
@@ -47,7 +56,9 @@
 html, body {
   margin: 0;
   padding: 0;
+  z-index: -10;
   scroll-behavior: smooth;
+  background-color: #F7F6F3;
 }
 
 /* Body padding for fixed navigation */
@@ -64,15 +75,22 @@ li,
 th, 
 button {
   font-size: 18px;
-  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-family: "Instrument-sans-reg", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   font-weight: 400;
   line-height: 30px;
 }
 
+/* Link styling */
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+
 /* Project tags styling */
 .project-tags {
   font-size: 14px;
-  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-family: "Instrument-sans-reg", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   font-weight: 400;
   line-height: 24px;
   color: #474747;
@@ -81,28 +99,28 @@ button {
 /* Footer note styling */
 .footer-note {
   font-size: 14px;
-  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-family: "Instrument-sans-reg", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   font-weight: 400;
   line-height: 24px;
 }
 
 /* Heading styles */
 h1 {
-  font-size: 44px;
-  font-family: "GT-reg";
-  font-weight: 400;
+  font-size: 48px;
+  font-family: "Instrument-sans-reg";
+  font-weight: 500;
 }
 
 h2 {
-  font-size: 20px;
-  font-family: "GoodSans";
-  font-weight: 300;
+  font-size: 24px;
+  font-family: "Instrument-sans-reg";
+  font-weight: 400;
   color: #474747;
 }
 
 h3 {
-  font-size: 28px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-size: 18px;
+  font-family: "Instrument-sans-reg", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   font-weight: 500;
   min-width: 150px;
   color: #1e1e1e;
@@ -110,15 +128,15 @@ h3 {
 
 h4 {
   font-size: 18px;
-  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-family: "Instrument-sans-reg", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   font-weight: 400;
   min-width: 150px;
   color: #474747;
 }
 
 h5 {
-  font-size: 20px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-size: 24px;
+  font-family: "Instrument-sans-reg", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   font-weight: 500;
 }
 
@@ -126,7 +144,7 @@ h5 {
 label, 
 button {
   font-size: 14px;
-  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-family: "Instrument-sans-reg", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   font-weight: 400;
   line-height: 24px;
 }
@@ -135,6 +153,7 @@ button {
 hr {
   margin-top: 0em;
   margin-bottom: 0em;
+  border: 0.75px solid #282828;
 }
 /* ========================================
    UTILITY CLASSES
@@ -142,24 +161,26 @@ hr {
 
 /* Important text styling */
 .important {
-  font-family: "GT-med";
-  font-weight: bold;
+  font-family: "Instrument-sans-reg";
+  font-weight: 500;
 }
 
 /* Link styling */
 .link {
   color: inherit;
-  border-bottom: 1px dotted #000;
-  text-decoration: none;
+  /* border-bottom: 1px dotted #000; */
+  text-decoration: underline dotted;
+  color: #87004d;
 }
 
 .link:hover {
-  color: #e7436d;
+  color: #a5005d;
+  text-decoration: underline;
 }
 
-.highlighted{
+.highlighted {
   font-weight: 600;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-family: "Instrument-sans-reg", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   color: #87004d;
 }
 
@@ -169,9 +190,9 @@ hr {
 
 /* Title area styling */
 #titleArea h1 {
-  font-size: 48px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-  font-weight: 600;
+  font-size: 64px;
+  font-family: "Instrument-sans-reg", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-weight: 400;
   line-height: 1.2;
   letter-spacing: -0.02em;
   margin-bottom: 16px;
@@ -180,7 +201,7 @@ hr {
 
 #titleArea h4 {
   font-size: 18px;
-  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-family: "Instrument-sans-reg", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   font-weight: 400;
   color: #666;
   line-height: 1.5;
@@ -190,8 +211,8 @@ hr {
 /* Enhanced section headers */
 .section h2 {
   font-size: 36px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-  font-weight: 700;
+  font-family: "Instrument-sans-reg", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-weight: 500;
   color: #2c2c2c;
   margin-bottom: 32px;
   margin-top: 0;
@@ -200,19 +221,19 @@ hr {
 }
 
 .section h3, .h3-section h3 {
-  font-size: 28px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-  font-weight: 600;
-  color: #2c2c2c;
+  font-size: 18px;
+  font-family: "Instrument-sans-reg", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-weight: 500;
+  color: #565656;
   margin-bottom: 24px;
   margin-top: 48px;
   line-height: 1.3;
-  letter-spacing: -0.01em;
+  text-transform: uppercase;
 }
 
 .section h4 {
   font-size: 22px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-family: "Instrument-sans-reg", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   font-weight: 600;
   color: #4a4a4a;
   margin-bottom: 20px;
@@ -231,6 +252,10 @@ li {
   line-height: 1.6;
   margin-bottom: 12px;
   color: #404040;
+}
+
+.project-blurb {
+  line-height: 28px;
 }
 
 /* ========================================
