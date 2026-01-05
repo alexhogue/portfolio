@@ -49,6 +49,7 @@
 #website {
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
   /* Removed align-items: center to prevent nav shifting */
 }
 
@@ -59,11 +60,15 @@ html, body {
   z-index: -10;
   scroll-behavior: smooth;
   background-color: #F7F6F3;
+  overflow-x: hidden; 
+  max-width: 100%;
+  width: 100%;
 }
 
 /* Body padding for fixed navigation */
 body {
   padding-top: 41px; /* Account for fixed nav height (40px + 1px border) */
+  width: 100%;
 }
 /* ========================================
    TYPOGRAPHY STYLES

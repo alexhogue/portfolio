@@ -263,7 +263,10 @@ main {
   flex-shrink: 0;
   object-fit: cover;
 }
-
+.circle-area{
+  overflow: hidden;
+  pointer-events: none;
+}
 .circle {
   position: absolute;
 }
@@ -374,8 +377,8 @@ hr {
     opacity: 1;
   }
   #fact1{
-    left: 35vw;
-    top: 30vh;
+    left: 40vw;
+    top: 28vh;
     transition: top 0.3s ease, left 0.3s ease;
     flex-direction: row-reverse;
     gap: 8px;
@@ -576,4 +579,5 @@ hr {
     transition: transform 0.1s ease-out, background-color 0.3s ease; /* Adds smooth movement and color transition */
     /* z-index: -10; */
     filter: blur(125px);
+    overflow-x: hidden;
 }
