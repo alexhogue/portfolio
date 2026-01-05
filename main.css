@@ -564,3 +564,16 @@ hr {
     font-size: 13px;
   }
 }
+
+.mouse-follower {
+    position: fixed; 
+    width: 900px;
+    height: 900px;
+    background-color: rgba(149, 255, 253, 0.35); /* Blue color for the shape */
+    border-radius: 50%; /* Makes it a circle */
+    pointer-events: none; /* Allows clicks to pass through the follower to elements beneath */
+    /* transform: translate(-50%, -50%);  */
+    transition: transform 0.1s ease-out, background-color 0.3s ease; /* Adds smooth movement and color transition */
+    /* z-index: -10; */
+    filter: blur(125px);
+}

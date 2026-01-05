@@ -44,6 +44,50 @@ a{
   color: #8a8a8a;
 }
 
+.circle2 {
+  position: absolute;
+}
+.circle2.top.front {
+  width: 1313px;
+  height: 1093px;
+  right:-650px;
+  top:-550px;
+  z-index: 0;
+  background-color: #ffffaa;
+  border-radius: 1000px;
+  filter: blur(125px);
+}
+.circle2.top.back {
+  width: 1313px;
+  height: 1093px;
+  right:-600px;
+  top:-500px;
+  z-index: 0;
+  background-color: #ceffab;
+  border-radius: 1000px;
+  filter: blur(125px);
+}
+.circle2.mid.front {
+  width: 1313px;
+  height: 1093px;
+  left:-650px;
+  top:800px;
+  z-index: 0;
+  background-color: #c6ceff;
+  border-radius: 1000px;
+  filter: blur(125px);
+}
+.circle2.mid.back {
+  width: 1313px;
+  height: 1093px;
+  left:-600px;
+  top:750px;
+  z-index: 0;
+  background-color: #aefffa;
+  border-radius: 1000px;
+  filter: blur(125px);
+}
+
 
 @media screen and (max-width: 768px) {
   .work-content {
@@ -72,4 +116,17 @@ a{
     padding-left: 0;
     text-align: left;
   }
+}
+
+.mouse-follower {
+    position: fixed; 
+    width: 900px;
+    height: 900px;
+    background-color: rgba(255, 149, 248, 0.3); /* Blue color for the shape */
+    border-radius: 50%; /* Makes it a circle */
+    pointer-events: none; /* Allows clicks to pass through the follower to elements beneath */
+    /* transform: translate(-50%, -50%);  */
+    transition: transform 0.1s ease-out, background-color 0.3s ease; /* Adds smooth movement and color transition */
+    /* z-index: -10; */
+    filter: blur(125px);
 }

@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="footer.css" />
     <link rel="stylesheet" href="mouse.css" />
     <link rel="stylesheet" href="pages-art/lightbox.min.css" />
-    <link rel="stylesheet" href="art.css" />
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="art.css" />
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="pages-art/lightbox-plus-jquery.min.js"></script>
   </head>
@@ -22,17 +22,42 @@
       });
     </script>
 
-    <div id="titleArea">
-        <h1>Explore my extra artistic work!</h1>
-        <p>This page is primarily personal work, including graphic design, illustration, and fun personal projects.</p>
+    <div class="circle-area" id="top-circle-area2">
+      <div class="circle2 top back"></div>
+      <div class="circle2 top front"></div>
     </div>
+    <div class="circle-area" id="mid-circle-area2">
+      <div class="circle2 mid back"></div>
+      <div class="circle2 mid front"></div>
+    </div>
+
+    <div class="mouse-follower"></div>
+
+    <header id="title-cont">
+      <svg id="title-curve" viewBox="-50 -120 1100 500" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <!-- Define the curved path (invisible) -->
+          <path id="curve-path" d="M0.170898 345.661C192.171 275.661 212.671 26.6609 516.171 154.661C819.671 282.661 1002.17 154.661 1054.67 0.160889" fill="none"/>
+          
+          <!-- Text following the path -->
+          <text font-family="Instrument-serif, serif" font-size="96">
+            <textPath id="main-title" href="#curve-path" startOffset="0%">
+              Explore my additional creative work!
+            </textPath>
+          </text>
+        </svg>
+        <!-- <h1>Explore my extra artistic work!</h1>
+        <p>This page is primarily personal work, including graphic design, illustration, and fun personal projects.</p> -->
+    </header>
     <div id="art-sec">
       <article class="work">
         <a href="vis-comm.html">
           <div class="work-content">
             <img id="main-img" class="work-img" src="assets/petra-thumbnail.png" alt="Visual communication design samples"> 
             <div class="work-desc">
-              <h3 class="project-title">Visual Communication Projects</h3>
+              <div>
+                <h3 class="project-title">Visual Communication Projects</h3>
+                <p class="project-blurb">Translating medical and scientific concepts into clear, compelling visual tools</p>
+              </div>
             </div>
           </div>
         </a>
@@ -42,7 +67,10 @@
           <div class="work-content">
             <img id="main-img" class="work-img" src="assets/art/GD/posters.png" alt="Graphic design work featuring typography and layout design"/>
             <div class="work-desc">
-              <h3 class="project-title">Festival Brand Identity</h3>
+              <div>
+                <h3 class="project-title">Festival Brand Identity</h3>
+                <p class="project-blurb">A cohesive visual identity, design system, and brand guidelines for a vibrant music festival</p>
+              </div>
             </div>
           </div>
         </a>
@@ -58,7 +86,7 @@
             <div class="work-desc">
               <div>
                 <h3 class="project-title">Away We Go</h3>
-                <p>A collection of vintage travel posters from around the world</p>
+                <p class="project-blurb">A collection of vintage travel posters from around the world</p>
               </div>
             </div>
           </div>
@@ -74,8 +102,8 @@
             <div class="work-desc">
               <div>
                 <h3 class="project-title">The Heart Rate Atlas</h3>
-                <p>An interactive heart rate visualizer I designed and coded, translating biometric data 
-                  into an intuitive, expressive visual experience.</p>
+                <p class="project-blurb">An interactive heart rate visualizer I designed and coded, translating biometric data 
+                  into an intuitive, expressive visual experience</p>
               </div>
             </div>
           </div>
@@ -86,7 +114,10 @@
           <div class="work-content">
             <img id="main-img" class="work-img" src="assets/art/data_narrative_thumbnail.png" alt="Data narrative visualization showing interactive charts and graphs"/>
             <div class="work-desc">
-              <h3 class="project-title">Data Narrative</h3>
+              <div>
+                <h3 class="project-title">Data Narrative</h3>
+                <p class="project-blurb">A data narrative telling the story of U.S. name trends through visualization, coded in R</p>
+              </div>
             </div>
           </div>
         </a>
@@ -112,24 +143,22 @@
         </a>
       </article>
     </div>
-    <div id="footer">
+    <footer id="footer">
       <hr>
       <div id="footer-text">
-        <div id="spacer"></div>
         <div id="main-text">
-          <h4>Thanks for browsing!</h4>
-          <label>Designed + built with <3 and iced vanilla lattes</label>
+          <p>Thanks for browsing!</p>
+          <p class="footer-note">Designed + built with &lt;3 and iced vanilla lattes</p>
         </div>
-        <a href="#titleArea">
-          <div id="to-top">
-              <p id="up-text">Back to top</p>
-              <img id="up" src="assets/solar_arrow-up-outline.png" alt="return to top of page"/>
-          </div>
+        <a href="#title-cont" id="to-top" aria-label="Return to top of page">
+          <!-- <p id="up-text">Back to top</p> -->
+          <img id="up" src="assets/solar_arrow-up-outline.png" alt="">
         </a>
       </div>
-    </div>
+    </footer>
     <script src="script.js"></script>
   </body>
     <!-- <script src="/path/to/masonry.pkgd.min.js"></script> -->
   <script src="nav.js"></script>
+  <script src="mouse.js"></script>
 </html>
