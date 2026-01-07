@@ -1,11 +1,5 @@
 /* Adobe Project Page Styles - Typography now handled by common.css */
 
-/* Adobe-specific link styling */
-.link:hover {
-  color: #4a90e2;
-  text-decoration: underline;
-}
-
 /* Adobe-specific tools section styling */
 #tools {
   border-left: 4px solid #4a90e2;
@@ -103,6 +97,9 @@
   max-width: 600px;
   min-width: 250px;
 }
+
+
+
 
 /* Adobe-specific responsive enhancements */
 @media (max-width: 768px) {
@@ -220,4 +217,19 @@
   align-items: center;
   gap: 12px;
   margin-bottom: 16px;
+}
+
+#problem-frame {
+  border-radius: 18px;
+  border: 2px solid #ED457E;
+  background: #F7F6F3;
+  padding: 18px 48px;
+  /* background: linear-gradient(98deg, #7E3CF9 -4.21%, #E243E7 35.46%, #ED457E 59.11%, #4618FF 103.91%); */
+}
+#opportunity-frame {
+  border-radius: 18px;
+  border: 2px solid #7E3CF9;
+  background: #F7F6F3;
+  padding: 18px 48px;
+  /* background: linear-gradient(98deg, #7E3CF9 -4.21%, #E243E7 35.46%, #ED457E 59.11%, #4618FF 103.91%); */
 }

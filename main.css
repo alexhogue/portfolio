@@ -43,6 +43,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 #title-curve {
@@ -228,6 +230,7 @@ main {
   border: 1px solid black;
   font-size: 14px;
   border-radius: 16px;
+  line-height: 16px;
   margin:0;
 }
 
@@ -264,8 +267,8 @@ main {
   object-fit: cover;
 }
 .circle-area{
-  overflow: hidden;
   pointer-events: none;
+  overflow: hidden !important; 
 }
 .circle {
   position: absolute;
@@ -376,9 +379,12 @@ hr {
   .fact-area:focus-within .bio-text {
     opacity: 1;
   }
+  .fact-area{
+    gap: 8px;
+  }
   #fact1{
-    left: 40vw;
-    top: 28vh;
+    left: 20vw;
+    top: 24vh;
     transition: top 0.3s ease, left 0.3s ease;
     flex-direction: row-reverse;
     gap: 8px;
@@ -565,6 +571,14 @@ hr {
   
   .project-tags {
     font-size: 13px;
+  }
+
+  .circle-area{
+    overflow-x: hidden;
+    display: none;
+  }
+  .circle{
+    overflow-x: hidden;
   }
 }
 
