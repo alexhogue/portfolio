@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="mouse.css">
     <link rel="stylesheet" href="adobe.css">
+    <link rel="stylesheet" href="adobe-video.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body id="website">
@@ -101,6 +102,10 @@
             <div class="section">
                 <h2>Initial Website State</h2>
                 <div class="h3-section">
+                    <video class="adobe-video" id="old-learn" loop autoplay muted>
+                        <source src="assets/adobe/flows/old_learn.mov" type="video/mp4" alt="current Adobe Learn home page">
+                        Your browser does not support the video tag.
+                    </video>
                     <h3>The problem</h3>
                     <div id="problem-frame">
                         <p>Creative learners—beginners, hobbyists, and aspiring professionals—are eager to grow 
@@ -122,21 +127,224 @@
             <div class="section">
                 <h2>Research</h2>
                 <div class="h3-section">
-
+                    <h3>Competitive Analysis</h3>
+                    <p>I analyzed existing learning platforms to understand current patterns and identify opportunities for improvement.</p>
+                        
+                    <div id="research-grid">
+                        <div class="research-item">
+                            <img src="assets/adobe/research/coursera_research.png" alt="Coursera platform research" class="research-img"/>
+                            <h4>Coursera</h4>
+                            <p>Structured course format</p>
+                        </div>
+                        <div class="research-item">
+                            <img src="assets/adobe/research/duolingo_research.png" alt="Duolingo learning experience research" class="research-img"/>
+                            <h4>Duolingo</h4>
+                            <p>Gamified learning patterns</p>
+                        </div>
+                        <div class="research-item">
+                            <img src="assets/adobe/research/linkedin_research.png" alt="LinkedIn Learning research" class="research-img"/>
+                            <h4>LinkedIn Learning</h4>
+                            <p>Professional development focus</p>
+                        </div>
+                        <div class="research-item">
+                            <img src="assets/adobe/research/acrobat_research.png" alt="Adobe Acrobat learning research" class="research-img"/>
+                            <h4>Adobe Acrobat</h4>
+                            <p>Current Adobe Learn patterns</p>
+                        </div>
+                    </div>
+                    <h3>Internal Research, Past Studies, & User Interviews</h3>
+                    <p>Confidential - Adobe internal research and past study analysis</p>
+                    <div id="internal-research-grid">
+                        <div class="blurred-research-item">
+                            <img src="assets/adobe/research/blurred_research1.png" alt="Internal research - confidential" class="blurred-research-img"/>
+                            <p class="research-label">Past Study Analysis</p>
+                        </div>
+                        <div class="blurred-research-item">
+                            <img src="assets/adobe/research/blurred_research2.png" alt="Internal research - confidential" class="blurred-research-img"/>
+                            <p class="research-label">Internal User Data</p>
+                        </div>
+                        <div class="blurred-research-item">
+                            <img src="assets/adobe/research/blurred_research3.png" alt="Internal research - confidential" class="blurred-research-img"/>
+                            <p class="research-label">Usage Patterns</p>
+                        </div>
+                        <div class="blurred-research-item">
+                            <img src="assets/adobe/research/blurred_research6.png" alt="Internal research - confidential" class="blurred-research-img"/>
+                            <p class="research-label">Previous Research Findings</p>
+                        </div>
+                    </div>
+                     <div class="research-insights">
+                        <h3>Key Insights from Research</h4>
+                        <div class="insight-list">
+                            <div class="insight-item">
+                                <p><strong>1 </strong> Users struggle with information overload when discovering learning content</p>
+                            </div>
+                            <div class="insight-item">
+                                <p><strong>2 </strong> Personalization is critical for engagement and retention</p>
+                            </div>
+                            <div class="insight-item">
+                                <p><strong>3 </strong> Goal-oriented learning paths increase completion rates</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="key-point-sec">
+                        <img id="asterisk" src="assets/adobe/icons/asterisk.svg"/>
+                        <p id="key-point">Creative learners are eager to grow their skills and build careers, but they face a 
+                            fragmented and overwhelming learning landscape.</p>
+                    </div>
                 </div>
             </div>
 
             <div class="section">
                 <h2>Sketching</h2>
                 <div class="h3-section">
-                    
+                    <p>I began by exploring different concepts and approaches through brainstorming sessions 
+                        and rapid ideation.</p>
+                    <div id="brainstorm-section">
+                        <img src="assets/adobe/brainstorm_cards.jpg" alt="Brainstorming cards and ideation process" class="brainstorm-img"/>
+                    </div>
+
+                    <h3>Concept Exploration</h3>
+                    <p>I explored multiple directions, including conversational interfaces, dashboard-based 
+                        learning, and gamified experiences.</p>
+                    <div id="sketch-section">
+                        <div class="sketch-idea">
+                            <img src="assets/adobe/sketch3.png" alt="Gamified learning concept sketch" class="sketch-img"/>
+                            <h4>Gamified Experience</h4>
+                            <p>Interactive, game-like learning journey</p>
+                        </div>
+                        <div class="sketch-idea">
+                            <img src="assets/adobe/sketch2.png" alt="Dashboard learning concept sketch" class="sketch-img"/>
+                            <h4>Dashboard Approach</h4>
+                            <p>Centralized learning hub with progress tracking</p>
+                        </div>
+                        <div class="sketch-idea">
+                            <img src="assets/adobe/sketch1.png" alt="Conversational interface concept sketch" class="sketch-img"/>
+                            <h4>Conversational Interface</h4>
+                            <p>AI-powered chat-based learning experience</p>
+                        </div>
+                    </div>
+
+                    <h3>User Personas & Journey Maps</h3>
+                    <p>Based on research findings, I developed personas and mapped their learning journeys to 
+                        inform the design direction.</p>
+                    <div id="personas-section">
+                        <div class="persona-card" id="christie_persona">
+                            <h4>Christie</h4>
+                            <p class="persona-role">Career-switcher & Aspiring Professional</p>
+                            <div class="persona-content">
+                                 <div class="persona-item">
+                                    <img src="assets/adobe/christie_persona.png" alt="Christie persona profile" class="persona-img"/>
+                                    <p class="persona-label">Persona</p>
+                                </div>
+                                <div class="persona-item">
+                                    <img src="assets/adobe/christie_journey.png" alt="Christie's learning journey map" class="persona-img"/>
+                                    <p class="persona-label">Journey Map</p>
+                                </div>
+                                <div class="persona-item">
+                                    <img src="assets/adobe/christie_sketched_flow.png" alt="Christie's user flow sketch" class="persona-img"/>
+                                    <p class="persona-label">User Flow</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="persona-card" id="ethan-persona">
+                            <h4>Ethan</h4>
+                            <p class="persona-role">Student Learner</p>
+                            <div class="persona-content">
+                                <div class="persona-item">
+                                    <img src="assets/adobe/ethan_persona.png" alt="Ethan persona profile" class="persona-img"/>
+                                    <p class="persona-label">Persona</p>
+                                </div>
+                                <div class="persona-item">
+                                    <img src="assets/adobe/ethan_journey.png" alt="Ethan's learning journey map" class="persona-img"/>
+                                    <p class="persona-label">Journey Map</p>
+                                </div>
+                                <div class="persona-item">
+                                    <img src="assets/adobe/ethan_sketched_flow.png" alt="Ethan's user flow sketch" class="persona-img"/>
+                                    <p class="persona-label">User Flow</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>       
                 </div>
             </div>
 
             <div class="section">
                 <h2>Prototyping</h2>
                 <div class="h3-section">
+                    <h3>Home Page Exploration</h3>
+                    <p>I explored different approaches for the main entry point, considering both new and returning 
+                        user experiences.</p>
+                    <div id="home-placement">
+                        <div class="prototype-item">
+                            <h4>Main Home Experience</h4>
+                            <p>Initial home page design for new users</p>
+                            <video class="adobe-video" id="main-home-vid" loop autoplay muted>
+                                <source src="assets/adobe/flows/main_home.mov" type="video/mp4" alt="current Adobe Learn home page">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="prototype-item">
+                            <h4>In-App Home Experience</h4>
+                            <p>Home interface for users already engaged with learning content</p>
+                            <video class="adobe-video" id="in-app-home-vid" loop autoplay muted>
+                                <source src="assets/adobe/flows/in-app_home.mov" type="video/mp4" alt="current Adobe Learn home page">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+
+                    <h3>Persona-Driven Prototypes</h3>
+                    <p>I developed tailored experiences based on the personas and their unique learning goals.</p>
+                    <div id="persona-prototypes">
+                        <div class="prototype-item persona-prototype">
+                            <h4>Christie's Learning Path</h4>
+                            <p>Designed for aspiring professionals seeking structured, goal-oriented learning experiences</p>
+                            <video class="adobe-video" id="christie-prototype-vid" loop autoplay muted>
+                                <source src="assets/adobe/flows/christie_video_small.mp4" type="video/mp4" alt="current Adobe Learn home page">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="prototype-item persona-prototype">
+                            <h4>Ethan's Learning Path</h4>
+                            <p>Designed for hobbyist learners who prefer flexible, exploratory learning journeys</p>
+                            <video class="adobe-video" id="ethan-prototype-vid" loop autoplay muted>
+                                <source src="assets/adobe/flows/ethan_path.mov" type="video/mp4" alt="current Adobe Learn home page">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+
+                    <h3>Iteration & Refinement</h3>
+                    <div id="revised-prototype">
+                        <h4>Dual Learning Options</h4>
+                        <p>After initial user testing, I discovered that not all users want or have time for a complete guided learning path. Many prefer shorter, bite-sized content they can consume on-demand. I designed two parallel experiences to accommodate different learning preferences.</p>
                     
+                        <div id="learning-options">
+                            <div class="prototype-item learning-option">
+                                <h4>Learning Path Option</h4>
+                                <p>Structured, guided journeys for users who want comprehensive learning experiences with clear progression and goals.</p>
+                                <img src="assets/adobe/flows/learning_path_option.png" alt="Learning path option interface" class="prototype-img"/>
+                                <div class="tutorial-detail">
+                                    <p class="tutorial-label">Full option flow</p>
+                                    <video class="adobe-video" id="learning-path-vid" loop autoplay muted>
+                                        <source src="assets/adobe/flows/whole_path.mov" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            
+                            <div class="prototype-item tutorial-option">
+                                <h4>Tutorials Option</h4>
+                                <p>Quick, bite-sized tutorials for users who want to learn specific skills without committing to a full learning path.</p>
+                                <img src="assets/adobe/flows/tutorials_option.png" alt="Tutorials option interface" class="prototype-img"/>
+                                <div class="tutorial-detail">
+                                    <p class="tutorial-label">Tutorial Page Experience</p>
+                                    <img src="assets/adobe/flows/tutorial_page.png" alt="Tutorial page interface" class="prototype-img"/>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
             
@@ -248,5 +456,79 @@
     <script src="carosel.js"></script>
     <script src="mouse.js"></script>
     <script src="nav.js"></script>
+    <!-- Media Modal (Images & Videos) -->
+    <div id="media-modal">
+        <span id="media-modal-close">&times;</span>
+        <div id="media-modal-content">
+            <img id="modal-image" style="display: none;" />
+            <video id="modal-video" controls autoplay style="display: none;">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        // Video expansion modal functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('media-modal');
+            const modalImage = document.getElementById('modal-image');
+            const modalVideo = document.getElementById('modal-video');
+            const closeBtn = document.getElementById('media-modal-close');
+            const adobeVideos = document.querySelectorAll('.adobe-video');
+            const expandableImages = document.querySelectorAll('.sketch-img, .persona-img, .research-img, .brainstorm-img, .blurred-research-img');
+            
+            // Open modal when video is clicked
+            adobeVideos.forEach(function(video) {
+                video.addEventListener('click', function() {
+                    const source = video.querySelector('source');
+                    if (source) {
+                        modalImage.style.display = 'none';
+                        modalVideo.style.display = 'block';
+                        modalVideo.src = source.src;
+                        modal.classList.add('active');
+                        modalVideo.play();
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+
+            // Open modal for images
+            expandableImages.forEach(function(img) {
+                img.style.cursor = 'pointer';
+                img.addEventListener('click', function() {
+                    modalVideo.style.display = 'none';
+                    modalImage.style.display = 'block';
+                    modalImage.src = img.src;
+                    modalImage.alt = img.alt || 'Expanded image';
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+            
+            // Close modal
+            function closeModal() {
+                modal.classList.remove('active');
+                modalVideo.pause();
+                modalVideo.src = '';
+                document.body.style.overflow = '';
+            }
+            
+            closeBtn.addEventListener('click', closeModal);
+            
+            // Close on background click
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+            
+            // Close on ESC key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
 </body>
 </html>

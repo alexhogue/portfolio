@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study - Update in Progress</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="footer.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+        #update-container {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        #update-content {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .update-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 40px;
+            opacity: 0.8;
+        }
+
+        #update-content h1 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #4a4a4a;
+            margin-bottom: 16px;
+        }
+
+        #update-content p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 12px 24px;
+            border: 2px solid #4a90e2;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .back-link:hover {
+            background: #4a90e2;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            #update-content h1 {
+                font-size: 24px;
+            }
+
+            #update-content p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body id="website">
+    <div id="nav-bar" class="collapsed"></div>
+    <script>
+      $(function(){
+        $("#nav-bar").load("nav.html");
+      });
+    </script>
+
+    <div id="update-container">
+        <div id="update-content">
+            
+            <h1>Update in Progress</h1>
+            <p>This case study is currently being updated with new content and improvements. Check back soon!</p>
+            
+            <a href="index.html" class="back-link">Back to Portfolio</a>
+        </div>
+    </div>
+    
+    <footer id="footer">
+      <hr>
+      <div id="footer-text">
+        <div id="main-text">
+          <p>Thanks for browsing!</p>
+          <p class="footer-note">Designed + built with &lt;3 and iced vanilla lattes</p>
+        </div>
+        <a href="#titleArea" id="to-top" aria-label="Return to top of page">
+          <img id="up" src="assets/solar_arrow-up-outline.png" alt="">
+        </a>
+      </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script src="nav.js"></script>
+</body>
+</html>

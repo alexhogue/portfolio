@@ -244,7 +244,7 @@ main {
    ======================================== */
 
 /* Video and image elements for projects */
-#warp-vid, #hack-vid, #chatgpt-img {
+#warp-vid, #hack-vid, #chatgpt-img, #srch-vid {
   width: 475px;
   min-width: 300px;
   height: 300px;
@@ -501,7 +501,7 @@ hr {
   }
   
   /* Media elements mobile sizing */
-  #warp-vid, #hack-vid, #voyage-gif, #vis-img, #chatgpt-img, #adobe-img {
+  #warp-vid, #hack-vid, #voyage-gif, #vis-img, #chatgpt-img, #adobe-img, #srch-vid {
     width: 100% !important;
     min-width: 280px;
     max-width: none;
@@ -542,7 +542,7 @@ hr {
   }
   
   /* Media elements extra small mobile */
-  #warp-vid, #hack-vid, #voyage-gif, #vis-img, #chatgpt-img, #adobe-img {
+  #warp-vid, #hack-vid, #voyage-gif, #vis-img, #chatgpt-img, #adobe-img, #srch-vid {
     width: 100% !important;
     min-width: 250px;
     max-width: none;
