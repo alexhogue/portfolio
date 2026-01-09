@@ -1,3 +1,22 @@
+// ========================================
+// MOBILE NAVIGATION
+// ========================================
+
+/**
+ * Toggle mobile navigation menu
+ * @param {HTMLElement} menu - Menu element to toggle
+ */
+const navBar = document.getElementById("nav-bar");
+
+function toggleMobileMenu(menu) {
+  let viewportWidth = window.innerWidth;
+  if (viewportWidth <= 1024) {
+    document.getElementById("nav-bar").classList.toggle("expanded");
+    menu.classList.toggle("open");
+    navBar.style.backgroundColor = "rgba(247, 246, 243, 1)";
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const navBar = document.getElementById("nav-bar");
 
@@ -24,7 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       // Update background color based on scroll position
       const currentScrollPos = window.scrollY;
-      if (currentScrollPos >= viewportHeight / 3) {
+      if (
+        currentScrollPos >= viewportHeight / 3 ||
+        navBar.classList.contains("expanded")
+      ) {
         navBar.style.backgroundColor = "rgba(247, 246, 243, 1)";
       } else {
         navBar.style.backgroundColor = "transparent";

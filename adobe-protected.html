@@ -97,6 +97,15 @@
                     </div>
                 </div>
                 <br>
+                <!-- Jump to Prototype Button -->
+                <!-- <div class="jump-to-prototype">
+                    <a href="#prototyping-section" class="jump-button">
+                        <span>View Prototypes</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                        </svg>
+                    </a>
+                </div> -->
             </div>
 
             <div class="section">
@@ -217,10 +226,15 @@
                             <h4>Dashboard Approach</h4>
                             <p>Centralized learning hub with progress tracking</p>
                         </div>
-                        <div class="sketch-idea">
+                        <div class="sketch-idea" id="chosen-design-sec">
                             <img src="assets/adobe/sketch1.png" alt="Conversational interface concept sketch" class="sketch-img"/>
-                            <h4>Conversational Interface</h4>
+                                <h4 id="chosen-design-text">Conversational Interface</h4>
+                            
                             <p>AI-powered chat-based learning experience</p>
+                            <div id="chosen-design">
+                                <img src="assets/adobe/icons/asterisk.svg" id="asterisk-small"/>
+                                <p id="reasoning">Selected for flexible, intuitive, adaptable experience</p>
+                            </div>
                         </div>
                     </div>
 
@@ -268,16 +282,16 @@
                 </div>
             </div>
 
-            <div class="section">
+            <div class="section" id="prototyping-section">
                 <h2>Prototyping</h2>
                 <div class="h3-section">
-                    <h3>Home Page Exploration</h3>
+                    <h3>Home Page Incorperation</h3>
                     <p>I explored different approaches for the main entry point, considering both new and returning 
                         user experiences.</p>
                     <div id="home-placement">
                         <div class="prototype-item">
-                            <h4>Main Home Experience</h4>
-                            <p>Initial home page design for new users</p>
+                            <h4>Main Home Experience on Learn</h4>
+                            <p>Guided learning path experience incorperated onto Adobe Learn home page for new and returning user visability</p>
                             <video class="adobe-video" id="main-home-vid" loop autoplay muted>
                                 <source src="assets/adobe/flows/main_home.mov" type="video/mp4" alt="current Adobe Learn home page">
                                 Your browser does not support the video tag.
@@ -285,11 +299,75 @@
                         </div>
                         <div class="prototype-item">
                             <h4>In-App Home Experience</h4>
-                            <p>Home interface for users already engaged with learning content</p>
+                            <p>Users in the app can easily engage with learning content</p>
                             <video class="adobe-video" id="in-app-home-vid" loop autoplay muted>
                                 <source src="assets/adobe/flows/in-app_home.mov" type="video/mp4" alt="current Adobe Learn home page">
                                 Your browser does not support the video tag.
                             </video>
+                        </div>
+                    </div>
+
+                    <h3>Key Design Elements</h3>
+                    <div class="key-screen-sec">
+                        <!-- Conversational Interface -->
+                        <div class="design-screen-card">
+                            <div class="screen-visual">
+                                <img src="assets/adobe/flows/conversational_interface.png" alt="Conversational interface design" class="key-screen"/>
+                            </div>
+                            <div class="design-rationale">
+                                <h4>Conversational Interface</h4>
+                                <p class="design-decision"><strong>Why this approach:</strong> Users are already familiar with conversational interfaces from tools like ChatGPT. By leveraging this familiar pattern, we reduce cognitive load and make the learning experience feel natural and approachable.</p>
+                                <p class="design-benefit"><strong>Key benefit:</strong> The flexible conversational format allows users to express their goals in their own words, while the AI can pull from Adobe Learn's extensive content library to build customized learning paths tailored to their experience level and objectives.</p>
+                            </div>
+                        </div>
+
+                        <!-- Custom Path Building -->
+                        <div class="design-screen-card reverse">
+                            <div class="screen-visual">
+                                <img src="assets/adobe/flows/custom_path.png" alt="Custom learning path design" class="key-screen"/>
+                            </div>
+                            <div class="design-rationale">
+                                <h4>Personalized Learning Paths</h4>
+                                <p class="design-decision"><strong>Why this approach:</strong> Instead of forcing users to navigate through predefined categories, the conversational interface allows them to describe their goals naturally—whether that's "I want to create a portfolio website" or "learn photo editing for my business."</p>
+                                <p class="design-benefit"><strong>Key benefit:</strong> The AI dynamically constructs learning paths by curating relevant content from Adobe Learn, ensuring each path is unique to the user's stated goals, skill level, and available time commitment.</p>
+                            </div>
+                        </div>
+                        <!-- FAB Interaction -->
+                        <div class="design-screen-card">
+                            <div class="screen-visual">
+                                <img src="assets/adobe/flows/ask_fab.png" alt="Floating action button for asking questions" class="key-screen"/>
+                            </div>
+                            <div class="design-rationale">
+                                <h4>Always-Available Assistant</h4>
+                                <p class="design-decision"><strong>Why this approach:</strong> Learning doesn't happen in isolation—users have questions while actively working in Adobe products. A floating action button (FAB) provides immediate access to the assistant without disrupting their workflow.</p>
+                                <p class="design-benefit"><strong>Key benefit:</strong> Users can ask context-specific questions at any moment, whether they're stuck on a technique or want to explore a related skill. The FAB maintains visibility while staying out of the way until needed.</p>
+                            </div>
+                        </div>
+
+                        <!-- In-App Integration -->
+                        <div class="design-screen-card reverse">
+                            <div class="screen-visual">
+                                <img src="assets/adobe/flows/in-app_interface.png" alt="In-app interface integration" class="key-screen"/>
+                                <!-- <div class="screen-label">Seamless Integration</div> -->
+                            </div>
+                            <div class="design-rationale">
+                                <h4>Contextual Learning Within Adobe Products</h4>
+                                <p class="design-decision"><strong>Why this approach:</strong> Learning happens best when it's contextual to the user's current task. Rather than forcing users to switch between separate apps, the interface integrates directly within Adobe's creative tools.</p>
+                                <p class="design-benefit"><strong>Key benefit:</strong> Users can learn and apply new techniques immediately without leaving their creative flow, reducing friction and increasing retention by connecting learning to real-world application.</p>
+                            </div>
+                        </div>
+
+                        <!-- Image Examples -->
+                        <div class="design-screen-card">
+                            <div class="screen-visual">
+                                <img src="assets/adobe/flows/upload_images.png" alt="Image-based interaction examples" class="key-screen"/>
+                                <!-- <div class="screen-label">Visual Communication</div> -->
+                            </div>
+                            <div class="design-rationale">
+                                <h4>Multimodal Input Support</h4>
+                                <p class="design-decision"><strong>Why this approach:</strong> Creative learners often think visually—they might want to show what they're working on or ask questions about specific visual elements. Supporting image uploads enables richer, more intuitive interactions.</p>
+                                <p class="design-benefit"><strong>Key benefit:</strong> Users can upload screenshots or project files to get tailored feedback and recommendations, making the learning experience more contextual and personalized to their actual work.</p>
+                            </div>
                         </div>
                     </div>
 
@@ -416,6 +494,45 @@
     </div>
     </footer>
 
+    <!-- Floating Jump to Prototype Button -->
+    <a href="#prototyping-section" class="floating-jump-button" id="floating-jump">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
+        <span>View Prototypes</span>
+    </a>
+
+        <script>
+        // Floating jump button visibility
+        document.addEventListener('DOMContentLoaded', function() {
+            const floatingButton = document.getElementById('floating-jump');
+            const prototypingSection = document.getElementById('prototyping-section');
+            
+            if (floatingButton && prototypingSection) {
+                function updateButtonVisibility() {
+                    const scrollPosition = window.scrollY + window.innerHeight / 2;
+                    const prototypeTop = prototypingSection.offsetTop;
+                    const prototypeBottom = prototypingSection.offsetTop + prototypingSection.offsetHeight;
+                    
+                    // Show button when user scrolls past first section but hasn't reached prototype
+                    if (scrollPosition < prototypeTop - 100) {
+                        floatingButton.classList.add('visible');
+                        floatingButton.classList.remove('hidden');
+                    } else if (scrollPosition >= prototypeTop && scrollPosition < prototypeBottom) {
+                        floatingButton.classList.add('hidden');
+                        floatingButton.classList.remove('visible');
+                    } else if (scrollPosition < prototypeTop) {
+                        floatingButton.classList.add('visible');
+                        floatingButton.classList.remove('hidden');
+                    }
+                }
+                
+                window.addEventListener('scroll', updateButtonVisibility);
+                updateButtonVisibility(); // Initial check
+            }
+        });
+    </script>
+
     <script>
         // Password protection
         const CORRECT_PASSWORD = "hogue.protected"; // Change this to your desired password
@@ -475,7 +592,7 @@
             const modalVideo = document.getElementById('modal-video');
             const closeBtn = document.getElementById('media-modal-close');
             const adobeVideos = document.querySelectorAll('.adobe-video');
-            const expandableImages = document.querySelectorAll('.sketch-img, .persona-img, .research-img, .brainstorm-img, .blurred-research-img');
+            const expandableImages = document.querySelectorAll('.sketch-img, .persona-img, .research-img, .brainstorm-img, .blurred-research-img, .key-screen');
             
             // Open modal when video is clicked
             adobeVideos.forEach(function(video) {

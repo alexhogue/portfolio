@@ -186,6 +186,7 @@ main {
   color: rgb(78, 120, 165);
 }
 
+
 /* Number styling */
 .number {
   display: flex;
@@ -224,6 +225,7 @@ main {
 .project-tags {
   display: flex;
   gap: 18px;
+  flex-wrap: wrap;
 }
 .project-tag {
   padding: 6px 12px;
@@ -504,8 +506,7 @@ hr {
   #warp-vid, #hack-vid, #voyage-gif, #vis-img, #chatgpt-img, #adobe-img, #srch-vid {
     width: 100% !important;
     min-width: 280px;
-    max-width: none;
-    height: 200px;
+    height: auto;
     object-fit: cover;
     display: block;
     margin: 0 auto;

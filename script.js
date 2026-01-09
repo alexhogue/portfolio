@@ -67,19 +67,3 @@ function mouseUp(e) {
   document.removeEventListener("mousemove", mouseMove);
 }
 
-// ========================================
-// MOBILE NAVIGATION
-// ========================================
-
-/**
- * Toggle mobile navigation menu
- * @param {HTMLElement} menu - Menu element to toggle
- */
-
-function toggleMobileMenu(menu) {
-  let viewportWidth = window.innerWidth;
-  if (viewportWidth <= 1024) {
-    document.getElementById("nav-bar").classList.toggle("expanded");
-    menu.classList.toggle("open");
-  }
-}

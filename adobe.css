@@ -268,6 +268,24 @@
 #asterisk {
   width: 48px;
 }
+#asterisk-small{
+  width: 28px;
+}
+#reasoning {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #e31a85;
+}
+#chosen-design-sec{
+  border: 2px solid #ec3788;
+}
+#chosen-design {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
 #key-point {
   font-weight: 600;
   font-size: 24px;
@@ -336,7 +354,7 @@
 }
 
 .insight-item strong {
-  color: #ae0046;
+  color: #c7135b;
   font-size: 24px;
   font-weight: 600;
 }
@@ -461,18 +479,22 @@
 
 /* Persona prototypes */
 #persona-prototypes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 32px;
   margin-top: 32px;
   margin-bottom: 48px;
+}
+
+#prototyping-section {
+  scroll-margin-top: 64px;
 }
 
 /* Prototype item styling */
 .prototype-item {
   background: #ffffff;
   border-radius: 12px;
-  padding: 24px;
+  padding: 36px 48px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.06);
   border: 1px solid #f0f0f0;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -552,5 +574,218 @@
   
   .tutorial-detail {
     padding: 16px;
+  }
+}
+
+/* ========================================
+   KEY DESIGN SCREENS SECTION
+   ======================================== */
+
+#key-screens-section {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: 32px;
+  margin-bottom: 48px;
+}
+
+.design-screen-card {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  border: 1px solid #f0f0f0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.design-screen-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.design-screen-card.reverse {
+  direction: rtl;
+}
+
+.design-screen-card.reverse > * {
+  direction: ltr;
+}
+
+.screen-visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.key-screen {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.key-screen:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.screen-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #4a90e2;
+  text-align: center;
+}
+
+.design-rationale {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.design-rationale h4 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #4a4a4a;
+}
+
+.design-decision,
+.design-benefit {
+  margin: 0;
+  line-height: 1.6;
+  color: #4a4a4a;
+}
+
+.design-decision {
+  font-size: 15px;
+}
+
+.design-benefit {
+  font-size: 14px;
+  color: #666;
+  padding-left: 16px;
+  border-left: 3px solid #4a90e2;
+}
+
+.design-decision strong,
+.design-benefit strong {
+  color: #4a90e2;
+  font-weight: 600;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  #key-screens-section {
+    gap: 32px;
+  }
+  
+  .design-screen-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px;
+  }
+  
+  .design-screen-card.reverse {
+    direction: ltr;
+  }
+  
+  .design-rationale h4 {
+    font-size: 20px;
+  }
+  
+  .design-decision,
+  .design-benefit {
+    font-size: 14px;
+  }
+}
+/* ========================================
+   FLOATING JUMP TO PROTOTYPE BUTTON
+   ======================================== */
+
+.floating-jump-button {
+  position: fixed;
+  bottom: 25px;
+  right: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background: #4a90e2;
+  color: white;
+  text-decoration: none;
+  border-radius: 48px;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Instrument-sans-reg";
+  box-shadow: 0 4px 10px rgba(74, 145, 226, 0.305);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+}
+
+.floating-jump-button.visible {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.floating-jump-button:hover {
+  background: #357abd;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 24px rgba(74, 144, 226, 0.5);
+}
+
+.floating-jump-button.visible:hover {
+  transform: translateY(-4px);
+}
+
+.floating-jump-button svg {
+  transition: transform 0.3s ease;
+}
+
+.floating-jump-button:hover svg {
+  transform: translateY(2px);
+}
+
+/* Hide when scrolled past prototype section */
+.floating-jump-button.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .floating-jump-button {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    font-size: 14px;
+    gap: 8px;
+  }
+  
+  .floating-jump-button span {
+    display: none;
+  }
+  
+  .floating-jump-button {
+    padding: 16px;
+    border-radius: 50%;
   }
 }
