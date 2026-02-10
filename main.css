@@ -419,6 +419,30 @@ hr {
 
 }
 
+@media screen and (min-width: 1600px) {
+  #fact1{
+    left: 80vw;
+    top: 10vh;
+    transition: top 0.3s ease, left 0.3s ease;
+    flex-direction: row-reverse;
+    gap: 8px;
+  }
+  #fact2 {
+    left: 42vw;
+    top: 4vh;
+    transition: top 0.3s ease, left 0.3s ease;
+  }
+  #fact3 {
+    left: 10vw;
+    top: 14vh;
+    transition: top 0.3s ease, left 0.3s ease;
+  }
+
+  .bio-text {
+    min-width: 300px;
+  }
+  
+}
 /* ========================================
    RESPONSIVE DESIGN - MOBILE
    ======================================== */
