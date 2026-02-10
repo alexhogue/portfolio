@@ -1,30 +1,134 @@
 /* Hack@Brown-specific enhancements - Typography now handled by common.css */
 
+/* ========================================
+   HERO SNAPSHOT (TOOLS + VIDEO)
+   ======================================== */
+
+#hack-hero {
+  width: 100%;
+  padding: 28px 5% 32px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #ffffff 0%, #bfd2e4 100%);
+  margin-bottom: 40px;
+}
+
+#hack-hero-meta {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.hero-meta-item h4 {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #87004d;
+  margin: 0 0 4px;
+}
+
+.hero-meta-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #4a4a4a;
+}
+
+.hero-meta-item .link p {
+  margin: 0;
+}
+
+#hero-desktop-vid {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  height: 350px;          /* snippet height */
+  max-height: 350px;
+  object-fit: cover;      /* crop instead of squish */
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  margin: 0 auto;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+  #hack-hero {
+    padding: 20px 4% 24px;
+    margin-bottom: 32px;
+  }
+
+  #hack-hero-meta {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  #hero-desktop-vid {
+    height: 220px;
+    max-height: 220px;
+  }
+}
+
 /* Problem/Solution specific styling */
 #problem h3 {
   font-size: 20px;
   font-weight: 700;
   color: #87004d;
-  margin-bottom: 12px;
+  margin-top: 0;
+  margin-bottom: 8px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 #problem {
-  margin-top: 40px;
+  margin-top: 24px;
+}
+
+#problem-solution-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.problem-card,
+.solution-card {
+  flex: 1 1 260px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  border: 1px solid #e5e7eb;
+}
+
+.problem-card p,
+.solution-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  #problem-solution-grid {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 
 /* Enhanced banner text styling */
 #banner-text h4 {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   line-height: 1.6;
   color: #2c2c2c;
   margin-bottom: 20px;
 }
 
 #banner-text h5 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   color: #87004d;
   margin-top: 10px;
@@ -57,9 +161,19 @@
   align-items: center;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   padding: 40px 20px;
-  border-radius: 20px;
-  margin-left: 5%;
-  margin-right: 5%;
+  border-radius: 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+#banner-inner {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #banner-text {
@@ -113,16 +227,22 @@
 
 /* Brain list styling */
 #brain-list {
-  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 0 0 0;
   border-radius: 8px;
   margin-top: 16px;
-  padding-left: 50px;
+  list-style: none;
 }
 
 #brain-list li {
   font-style: italic;
   color: #555;
-  padding-left: 10px;
+  padding: 6px 10px;
+  background: #fff7cc;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
 /* Image styling improvements */
