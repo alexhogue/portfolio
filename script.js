@@ -67,3 +67,54 @@ function mouseUp(e) {
   document.removeEventListener("mousemove", mouseMove);
 }
 
+// ========================================
+// MOBILE FACT ICON TOGGLES
+// ========================================
+
+const mobileFactQuery = window.matchMedia("(max-width: 768px)");
+const factAreas = document.querySelectorAll(".fact-area");
+
+function closeAllFacts() {
+  factAreas.forEach((fact) => {
+    fact.classList.remove("is-open");
+    const trigger = fact.querySelector(".fact-trigger");
+    if (trigger) {
+      trigger.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
+function setupFactToggles() {
+  factAreas.forEach((fact) => {
+    const trigger = fact.querySelector(".fact-trigger");
+    if (!trigger || trigger.dataset.bound === "true") return;
+
+    trigger.dataset.bound = "true";
+    trigger.addEventListener("click", (event) => {
+      if (!mobileFactQuery.matches) return;
+
+      event.stopPropagation();
+      const isOpen = fact.classList.contains("is-open");
+      closeAllFacts();
+
+      if (!isOpen) {
+        fact.classList.add("is-open");
+        trigger.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+}
+
+document.addEventListener("click", (event) => {
+  if (!mobileFactQuery.matches) return;
+  if (event.target.closest(".fact-area")) return;
+  closeAllFacts();
+});
+
+mobileFactQuery.addEventListener("change", (event) => {
+  if (!event.matches) {
+    closeAllFacts();
+  }
+});
+
+setupFactToggles();

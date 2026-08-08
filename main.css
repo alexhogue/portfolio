@@ -23,9 +23,18 @@ a {
    HEADER SECTION
    ======================================== */
 
-/* Title container */
+/* Title container — facts positioned relative to this box to sit in
+   the open pockets around the full-width title curve. */
 #title-cont {
-  scroll-margin-top: 80px; /* Extra space above title when scrolling from "Back to top" */
+  position: relative;
+  scroll-margin-top: 80px;
+  width: 100%;
+  min-height: 0;
+  padding: clamp(16px, 3vh, 40px) 0 clamp(28px, 5vh, 64px);
+  display: block;
+  max-width: 100%;
+  overflow: visible;
+  z-index: 100;
 }
 
 /* Main heading area */
@@ -37,19 +46,19 @@ a {
   z-index: 100;
 }
 
-header {
-  z-index: 100;
+/* Full-bleed title curve across the window */
+#title-curve {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 100%;
-  overflow-x: hidden;
+  max-width: none;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
 }
 
-#title-curve {
-  max-width: 1200px;
-  height: auto;
+#title-curve a {
+  pointer-events: auto;
 }
 
 #main-title {
@@ -58,34 +67,73 @@ header {
   font-size: 96px;
 }
 
-.fact-area{
+.facts {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.fact-area {
   display: flex;
   position: absolute;
   align-items: flex-start;
-  gap: 18px;
-  max-width: 315px;
+  gap: 14px;
+  pointer-events: auto;
+  z-index: 5;
 }
-#fact1{
-  left: 75vw;
-  top: 40vh;
+
+.fact-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  cursor: default;
+  flex-shrink: 0;
+  color: inherit;
 }
+
+/*
+  Fact placement maps to the open space around the U-curve:
+  - fact2: above the trough
+  - fact1: below the rising right arm (not beside the glyphs)
+  - fact3: under the left start of the curve
+*/
+#fact1 {
+  top: 36%;
+  right: clamp(16px, 3vw, 48px);
+  left: auto;
+  flex-direction: row-reverse;
+  max-width: min(280px, 22vw);
+}
+
 #fact2 {
-  left: 40vw;
-  top: 15vh;
+  top: 8%;
+  left: 40%;
+  max-width: min(280px, 24vw);
 }
+
 #fact3 {
-  left: 8vw;
-  top: 70vh;
+  top: auto;
+  bottom: 16%;
+  left: clamp(16px, 4vw, 56px);
+  max-width: min(300px, 26vw);
 }
 
 .bio-text {
-  max-width: 280px;
-  line-height: 26px;
+  max-width: 100%;
+  line-height: 1.45;
+  margin: 0;
+  font-size: clamp(14px, 1.05vw, 18px);
 }
 .fact-icon {
   width: 36px;
   min-width: 36px;
   max-width: 36px;
+  display: block;
 }
 
 
@@ -365,107 +413,168 @@ hr {
    RESPONSIVE DESIGN
    ======================================== */
 
-/* Tablet breakpoint */
-@media screen and (max-width: 1024px) {
-  #work-section {
-    grid-template-columns: 1fr;
-    gap: 25px;
+/* Mid desktops / tablets: same full-width title, facts stay in clear pockets */
+@media screen and (max-width: 1200px) and (min-width: 769px) {
+  #title-cont {
+    padding: clamp(12px, 2vh, 28px) 0 clamp(24px, 4vh, 48px);
   }
-  
+
+  #title-curve {
+    width: 100%;
+    max-width: none;
+  }
+
+  .fact-area {
+    gap: 10px;
+  }
+
   .bio-text {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 1.4;
   }
-  .fact-area:hover .bio-text, 
-  .fact-area:focus-within .bio-text {
-    opacity: 1;
+
+  #fact1 {
+    top: 34%;
+    right: clamp(12px, 2.5vw, 28px);
+    max-width: min(240px, 24vw);
   }
-  .fact-area{
-    gap: 8px;
-  }
-  #fact1{
-    left: 20vw;
-    top: 24vh;
-    transition: top 0.3s ease, left 0.3s ease;
-    flex-direction: row-reverse;
-    gap: 8px;
-  }
+
   #fact2 {
-    left: 20vw;
-    top: 15vh;
-    transition: top 0.3s ease, left 0.3s ease;
+    top: 6%;
+    left: 38%;
+    max-width: min(240px, 26vw);
   }
+
   #fact3 {
-    left: 8vw;
-    top: 60vh;
-    transition: top 0.3s ease, left 0.3s ease;
-  }
-
-  header {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 600px;
-  }
-
-  .work-img {
-    max-width: 300px;
+    left: clamp(12px, 3vw, 36px);
+    bottom: 12%;
+    max-width: min(260px, 28vw);
   }
 
   .project-title {
     font-size: 36px;
   }
 
+  #warp-vid, #hack-vid, #chatgpt-img, #srch-vid,
+  #voyage-gif, #vis-img, #adobe-img {
+    width: 380px;
+    min-width: 260px;
+    height: 240px;
+  }
 }
 
-@media screen and (min-width: 1600px) {
-  #fact1{
-    left: 80vw;
-    top: 10vh;
-    transition: top 0.3s ease, left 0.3s ease;
-    flex-direction: row-reverse;
-    gap: 8px;
+@media screen and (min-width: 1400px) {
+  #title-curve {
+    width: 100%;
+    max-width: none;
   }
+
+  #fact1 {
+    top: 34%;
+    right: clamp(24px, 4vw, 64px);
+    max-width: 300px;
+  }
+
   #fact2 {
-    left: 42vw;
-    top: 4vh;
-    transition: top 0.3s ease, left 0.3s ease;
-  }
-  #fact3 {
-    left: 10vw;
-    top: 14vh;
-    transition: top 0.3s ease, left 0.3s ease;
+    top: 7%;
+    left: 42%;
+    max-width: 300px;
   }
 
-  .bio-text {
-    min-width: 300px;
+  #fact3 {
+    left: clamp(24px, 5vw, 72px);
+    bottom: 14%;
+    max-width: 320px;
   }
-  
 }
+
 /* ========================================
    RESPONSIVE DESIGN - MOBILE
    ======================================== */
 
 @media screen and (max-width: 768px) {
+  #title-cont {
+    padding: 12px 0 40px;
+    min-height: 0;
+  }
+
+  #title-curve {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .fact-area {
+    gap: 8px;
+    align-items: flex-start;
+    max-width: none;
+  }
+
+  .fact-trigger {
+    cursor: pointer;
+    touch-action: manipulation;
+    padding: 6px;
+    margin: -6px;
+    border-radius: 8px;
+  }
+
+  .fact-trigger:focus-visible {
+    outline: 2px solid #202020;
+    outline-offset: 2px;
+  }
+
+  .bio-text {
+    max-width: min(180px, 42vw);
+    font-size: 12px;
+    line-height: 1.35;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(4px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+    pointer-events: none;
+    background: rgba(247, 246, 243, 0.95);
+    padding: 8px 10px;
+    border-radius: 8px;
+  }
+
+  .fact-area.is-open .bio-text {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* Same clear pockets as desktop; text only expands inside those pockets */
+  #fact1 {
+    top: 32%;
+    right: 2%;
+    left: auto;
+    flex-direction: row-reverse;
+    max-width: 46vw;
+  }
+
+  #fact2 {
+    top: 4%;
+    left: 36%;
+    right: auto;
+    max-width: 46vw;
+  }
+
+  #fact3 {
+    top: auto;
+    bottom: 10%;
+    left: 2%;
+    max-width: 56vw;
+  }
+
   /* Header adjustments */
   #headingArea {
     margin-top: 4%;
     margin-left: 4%;
     margin-right: 4%;
   }
-  .bio-text {
-    position: relative;
-    display: flex;
-    max-width: 100%;
-    margin-left: 4%;
-    margin-right: 4%;
-  }
   
-  #text1, #text2, #text3 {
-    left: auto;
-    top: auto;
-  }
   #title {
     font-size: 36px;
     margin-top: 25px;
@@ -514,6 +623,7 @@ hr {
     gap: 15px;
     text-align: left;
     margin-left: 0;
+    min-width: 0;
   }
   
   .project-title {
@@ -541,7 +651,6 @@ hr {
     width: 100% !important;
     min-width: 280px;
     max-width: none;
-    /* height: 200px; */
     object-fit: cover;
     display: block;
     margin: 0 auto;
@@ -556,10 +665,73 @@ hr {
   #plane {
     display: none;
   }
+
+  .work {
+    padding: 16px;
+  }
+
+  .work:hover {
+    transform: none;
+  }
+
+  #art-section {
+    margin-left: 4%;
+    margin-right: 4%;
+    width: auto;
+    align-items: stretch;
+  }
+
+  #art-section > a {
+    display: block;
+    width: 100%;
+  }
+
+  #art-blob {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
 }
 
 /* Extra small mobile breakpoint */
 @media screen and (max-width: 480px) {
+  #title-cont {
+    padding: 8px 0 36px;
+  }
+
+  #title-curve {
+    width: 100%;
+    max-width: none;
+  }
+
+  #fact1 {
+    top: 30%;
+    right: 1%;
+  }
+
+  #fact2 {
+    top: 2%;
+    left: 32%;
+  }
+
+  #fact3 {
+    bottom: 8%;
+    left: 1%;
+  }
+
+  .fact-icon {
+    width: 28px;
+    min-width: 28px;
+    max-width: 28px;
+  }
+
+  .bio-text {
+    font-size: 11px;
+    max-width: min(160px, 40vw);
+  }
+
   /* Work section extra small mobile */
   #work-section {
     padding: 0 2%;
@@ -571,7 +743,6 @@ hr {
     width: 100% !important;
     min-width: 250px;
     max-width: none;
-    /* height: 180px; */
     object-fit: cover;
     display: block;
     margin: 0 auto;
@@ -582,7 +753,6 @@ hr {
     width: 100% !important;
     min-width: 250px;
     max-width: none;
-    /* height: 180px; */
     object-fit: cover;
     display: block;
     margin: 0 auto;
@@ -593,7 +763,7 @@ hr {
   .project-title {
     font-size: 16px;
   }
-  
+
   .project-tags {
     font-size: 13px;
   }
