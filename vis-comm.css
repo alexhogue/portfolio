@@ -285,7 +285,7 @@ li:not(:last-child) {
 }
 
 .highlighted {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-family: "Instrument-sans-reg", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   font-weight: 500;
   color: #87004d;
 }

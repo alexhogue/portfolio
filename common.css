@@ -3,8 +3,8 @@
    ======================================== */
 
 /* ========================================
-   FONTS NOW LOADED VIA GOOGLE FONTS IN HTML
-   Custom font files replaced with Inter & Manrope
+   LOCAL FONTS (@font-face below)
+   Instrument Sans / Serif are the site fonts.
    ======================================== */
 
 @font-face {
