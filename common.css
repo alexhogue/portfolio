@@ -195,6 +195,19 @@ hr {
   color: #87004d;
 }
 
+a.highlighted {
+  text-decoration: none;
+  border-radius: 3px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  transition: background-color 0.2s ease;
+}
+
+a.highlighted:hover {
+  background-color: #FFF3A8;
+  color: #87004d;
+}
+
 /* ========================================
    ENHANCED TYPOGRAPHY HIERARCHY
    ======================================== */

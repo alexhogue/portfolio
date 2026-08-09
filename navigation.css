@@ -101,7 +101,8 @@ a {
 }
 
 #link:hover {
-  color: #8a8a8a;
+  background-color: #FFF3A8;
+  color: #87004d;
 }
 /* ========================================
    MENU STRUCTURES
