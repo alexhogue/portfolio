@@ -59,7 +59,7 @@
         <div id="role" class="h3-section">
           <h3>My Role</h3>
           <p>
-            I started as a staff designer shaping the brand direction, then stepped into the lead product
+            I started as a staff designer, then stepped into the lead product
             designer role—refining the branding, building the design system, developing assets, and
             supporting development.
           </p>
@@ -101,64 +101,53 @@
         </div>
       </div>
 
-      <div id="decisions" class="section">
+      <div id="design-decisions" class="section">
         <h2>Design Decisions</h2>
         <p class="section-lede">
-          Each block below follows the same skim path: <strong>Decision</strong> → <strong>Why</strong> → <strong>Evidence</strong>.
+          Each section below follows the same skim path: <strong>decision</strong>, <strong>why</strong>, and <strong>evidence</strong>.
           Accessibility was treated as a starting constraint—not a polish step at the end.
         </p>
 
-        <!-- 1. Structure / low-fis -->
+      <div id="structure" class="decision-section">
+        <h3 class="decision-section-title">Structure</h3>
+        <p class="section-intro">Focused on page hierarchy and readability—and room for the handbook to grow over time.</p>
         <article class="decision">
-          <header class="decision-head">
-            <span class="decision-kicker">01 · Structure</span>
-            <h3 class="decision-title">Chose lo-fi 3 as the product direction</h3>
-          </header>
-          <div class="decision-why">
-            <span class="why-kicker">Why</span>
-            <p>
-              I selected lo-fi 3 to focus on page hierarchy and readability—so the handbook feels
-              approachable rather than overwhelming—and to leave room for the content to grow and
-              expand in the coming years.
-            </p>
-          </div>
           <div class="decision-evidence">
-            <span class="evidence-kicker">Evidence · options explored</span>
+            <span class="evidence-kicker">Options explored</span>
             <div class="option-grid">
               <figure class="option-card">
                 <img class="case-img" src="assets/srch/low-fis/lowfi1.png" alt="Low-fi option 1">
-                <figcaption><span class="option-tag">Option A</span> lo-fi 1</figcaption>
+                <figcaption><span class="option-tag">Option A</span></figcaption>
               </figure>
               <figure class="option-card">
                 <img class="case-img" src="assets/srch/low-fis/lowfi2.png" alt="Low-fi option 2">
-                <figcaption><span class="option-tag">Option B</span> lo-fi 2</figcaption>
+                <figcaption><span class="option-tag">Option B</span></figcaption>
               </figure>
               <figure class="option-card option-card--chosen">
                 <img class="case-img" src="assets/srch/low-fis/lowfi3-chosen.png" alt="Chosen low-fi direction">
-                <figcaption><span class="option-tag option-tag--chosen">Chosen</span> lo-fi 3</figcaption>
+                <figcaption><span class="option-tag option-tag--chosen">Chosen</span></figcaption>
               </figure>
               <figure class="option-card">
                 <img class="case-img" src="assets/srch/low-fis/lowfi4.png" alt="Low-fi option 4">
-                <figcaption><span class="option-tag">Option D</span> lo-fi 4</figcaption>
+                <figcaption><span class="option-tag">Option D</span></figcaption>
               </figure>
+            </div>
+            <div class="decision-why">
+                <span class="why-kicker">Why</span>
+                <p>
+                I selected lo-fi 3 to focus on page hierarchy and readability—so the handbook feels
+                approachable rather than overwhelming—and to leave room for the content to grow and
+                expand in the coming years.
+                </p>
             </div>
           </div>
         </article>
+      </div>
 
-        <!-- 2. Accessibility -->
+      <div id="accessibility" class="decision-section">
+        <h3 class="decision-section-title">Accessibility</h3>
+        <p class="section-intro">Built in from the start—not as a late fix. Contrast, color-vision checks, and readable modes led palette and UI decisions.</p>
         <article class="decision">
-          <header class="decision-head">
-            <span class="decision-kicker">02 · Accessibility</span>
-            <h3 class="decision-title">Built accessibility in from the start—not as a late fix</h3>
-          </header>
-          <div class="decision-why">
-            <span class="why-kicker">Why</span>
-            <p>
-              SRC content is meant for a broad academic audience. If color, contrast, or mode choices
-              exclude readers, the handbook fails its educational purpose. Accessibility led palette,
-              UI state design, and light/dark reading modes.
-            </p>
-          </div>
           <div class="decision-evidence">
             <span class="evidence-kicker">What that meant in practice</span>
             <ul class="strategy-list">
@@ -175,6 +164,14 @@
                 preferences and lighting conditions, using the same contrast standards in both.
               </li>
             </ul>
+            <div class="decision-why">
+                <span class="why-kicker">Why</span>
+                <p>
+                SRC content is meant for a broad academic audience. If color, contrast, or mode choices
+                exclude readers, the handbook fails its educational purpose. Accessibility led palette,
+                UI state design, and light/dark reading modes.
+                </p>
+            </div>
 
             <div class="media-row">
               <div class="media-block">
@@ -220,111 +217,184 @@
             </div>
           </div>
         </article>
+      </div>
+      </div>
+      <div id="usability-section" class="section">
+        <h2>Usability Testing</h2>
+        <p class="section-lede">
+          
+        </p>
 
-        <!-- 3. Usability testing -->
+      <div id="usability" class="decision-section">
+        <!-- <h3 class="decision-section-title">Usability Testing</h3> -->
+        <p class="section-intro">Tested with students and assistive-technology users through TheWeCo—then iterated on what failed in practice.</p>
         <article class="decision">
-          <header class="decision-head">
-            <span class="decision-kicker">03 · Usability testing</span>
-            <h3 class="decision-title">Tested with students and assistive-technology users—then iterated</h3>
-          </header>
-          <div class="decision-why">
-            <span class="why-kicker">Why</span>
-            <p>
-              Contrast checks weren’t enough. We tested with the people the handbook is for—students—
-              and with assistive-technology users through TheWeCo, so both primary use and accessibility
-              showed up in practice.
-            </p>
-          </div>
           <div class="decision-evidence">
-            <span class="evidence-kicker">Two kinds of testing</span>
-            <div class="ux-methods">
-              <div class="ux-method">
-                <span class="ux-method-label">Primary users</span>
-                <h4>Student usability testing</h4>
+            <span class="evidence-kicker">How we tested</span>
+            <ul class="strategy-list">
+              <li>
+                <strong>Student usability testing</strong> — sessions with CS students (the handbook’s primary
+                users) to check approachability, findability, and classroom fit.
+              </li>
+              <li>
+                <strong>TheWeCo a11y testing</strong> — separate moderated sessions with people using NVDA,
+                JAWS, Dragon NaturallySpeaking, and sighted testers. I moderated and captured findings using
+                TheWeCo’s
+                <a class="link" href="assets/srch/guide-your-own-usability-test.pdf" target="_blank" rel="noopener">Guide Your Own Usability Test</a>.
+              </li>
+            </ul>
+
+            <div class="decision-why">
+                <span class="why-kicker">Why</span>
                 <p>
-                  Sessions with the actual use population—CS students—to check whether the handbook
-                  felt approachable, findable, and usable for teaching and learning.
+                Contrast checks weren’t enough. We tested with the people the handbook is for—students—
+                and with assistive-technology users through TheWeCo, so both primary use and accessibility
+                showed up in practice.
                 </p>
-              </div>
-              <div class="ux-method">
-                <span class="ux-method-label">Accessibility</span>
-                <h4>TheWeCo a11y testing</h4>
-                <p>
-                  Separate moderated accessibility sessions with people using assistive technology.
-                  I moderated and captured findings using TheWeCo’s
-                  <a class="link" href="assets/srch/guide-your-own-usability-test.pdf" target="_blank" rel="noopener">Guide Your Own Usability Test</a>.
-                </p>
-                <div class="ux-tags" aria-label="Assistive technologies represented">
-                  <span>NVDA</span>
-                  <span>JAWS</span>
-                  <span>Dragon</span>
-                  <span>Sighted testers</span>
+            </div>
+
+            <span class="evidence-kicker">TheWeCo findings</span>
+            <ul class="strategy-list">
+              <li>
+                <strong>Visual design &amp; dark mode</strong> — approachable overall; dark mode contrast
+                preferred. Hierarchy in dense primers still needed work.
+              </li>
+              <li>
+                <strong>Search</strong> — biggest blocker: hover-fragile nav search, weak AT feedback, and
+                results that were hard to tell apart.
+              </li>
+              <li>
+                <strong>Sidebar focus</strong> — case-study links often opened with no announcement and no
+                focus move into the panel.
+              </li>
+              <li>
+                <strong>Alt text</strong> — some graphics under-described, others over-described; testers
+                wanted short IDs with longer explanation nearby.
+              </li>
+              <li>
+                <strong>Wayfinding</strong> — missing page-load cues, link vs. button confusion, and
+                footer/sidebar traps.
+              </li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <div id="revisions" class="decision-section">
+        <h3 class="decision-section-title">Design Revisions</h3>
+        <p class="section-intro">
+          Student feedback and TheWeCo findings both informed iteration. Priorities included search
+          reliability and feedback, sidebar focus and announcements, clearer information hierarchy,
+          stronger alt text, and AT navigation fixes.
+        </p>
+        <article class="decision">
+          <div class="decision-evidence">
+            <div class="comparison-group">
+              <p class="comparison-title"><strong>Homepage scroll</strong> <span class="comparison-source">Student testing</span></p>
+              <p class="comparison-desc">Revised layout and content flow based on how students explored the site.</p>
+              <div class="media-block comparison-media">
+                <div class="ba-pair ba-pair-video">
+                  <figure class="ba-panel">
+                    <figcaption><span class="option-tag">Before</span></figcaption>
+                    <video class="ba-vid" loop autoplay muted playsinline>
+                      <source src="assets/srch/testing-comparison/home-scroll-old.mov" type="video/mp4">
+                    </video>
+                  </figure>
+                  <figure class="ba-panel">
+                    <figcaption><span class="option-tag option-tag--chosen">After</span></figcaption>
+                    <video class="ba-vid" loop autoplay muted playsinline>
+                      <source src="assets/srch/testing-comparison/home-scroll-new.mov" type="video/mp4">
+                    </video>
+                  </figure>
                 </div>
               </div>
             </div>
 
-            <span class="evidence-kicker">Findings from TheWeCo a11y testing</span>
-            <p class="ux-findings-note">
-              The issues below came from TheWeCo sessions—not from the student tests.
-            </p>
-            <div class="ux-findings">
-              <div class="ux-finding">
-                <span class="ux-finding-label worked">Worked</span>
-                <h4>Visual design &amp; dark mode</h4>
-                <p>Approachable overall; dark mode contrast preferred. Hierarchy in dense primers still needed work.</p>
-              </div>
-              <div class="ux-finding">
-                <span class="ux-finding-label blocker">Biggest blocker</span>
-                <h4>Search</h4>
-                <p>Hover-fragile nav search, weak AT feedback, and results that were hard to tell apart.</p>
-              </div>
-              <div class="ux-finding">
-                <span class="ux-finding-label issue">Issue</span>
-                <h4>Sidebar focus</h4>
-                <p>case-study links often opened with no announcement and no focus move into the panel.</p>
-              </div>
-              <div class="ux-finding">
-                <span class="ux-finding-label issue">Issue</span>
-                <h4>Alt text judgment</h4>
-                <p>Some graphics under-described, others over-described—testers wanted short IDs, longer explanation nearby.</p>
-              </div>
-              <div class="ux-finding">
-                <span class="ux-finding-label issue">Issue</span>
-                <h4>Wayfinding</h4>
-                <p>Missing page-load cues, link vs. button confusion, and footer/sidebar traps.</p>
+            <div class="comparison-group">
+              <p class="comparison-title"><strong>Curriculum focus cards</strong> <span class="comparison-source">Student testing</span></p>
+              <p class="comparison-desc">Numbered cards with module context replaced icon + one-liner tiles.</p>
+              <div class="media-block comparison-media">
+                <div class="ba-pair">
+                  <figure class="ba-panel">
+                    <figcaption><span class="option-tag">Before</span></figcaption>
+                    <img src="assets/srch/testing-comparison/curric-cards-old.png" alt="Homepage curriculum cards before revisions — simple icon grid">
+                  </figure>
+                  <figure class="ba-panel">
+                    <figcaption><span class="option-tag option-tag--chosen">After</span></figcaption>
+                    <img src="assets/srch/testing-comparison/curric-cards-new.png" alt="Homepage curriculum cards after revisions — numbered cards with descriptions">
+                  </figure>
+                </div>
               </div>
             </div>
 
-            <span class="evidence-kicker">What we changed</span>
-            <div class="ux-outcome">
-              <p class="ux-outcome-lead">
-                Student feedback and TheWeCo findings both informed iteration. From TheWeCo, we prioritized:
-              </p>
-              <ul class="ux-changes">
-                <li>Search reliability &amp; feedback</li>
-                <li>Sidebar focus &amp; announcements</li>
-                <li>Clearer information hierarchy</li>
-                <li>Stronger alt text</li>
-                <li>AT navigation fixes</li>
-              </ul>
+            <div class="comparison-group">
+              <p class="comparison-title"><strong>Modules dropdown</strong> <span class="comparison-source">TheWeCo a11y testing</span></p>
+              <p class="comparison-desc">Flat link list replaced with a mega-menu so users can scan primers before navigating.</p>
+              <div class="media-block comparison-media">
+                <div class="ba-pair">
+                  <figure class="ba-panel">
+                    <figcaption><span class="option-tag">Before</span></figcaption>
+                    <img src="assets/srch/testing-comparison/dropdown-old.png" alt="Modules dropdown before revisions — flat list of four modules">
+                  </figure>
+                  <figure class="ba-panel">
+                    <figcaption><span class="option-tag option-tag--chosen">After</span></figcaption>
+                    <img src="assets/srch/testing-comparison/dropdown-new.png" alt="Modules dropdown after revisions — mega-menu with primer links grouped by module">
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <div class="comparison-group">
+              <p class="comparison-title"><strong>Sidebar navigation</strong> <span class="comparison-source">TheWeCo a11y testing</span></p>
+              <p class="comparison-desc">Nested accordion sections replaced a flat list for clearer keyboard and screen reader paths.</p>
+              <div class="media-block comparison-media">
+                <div class="ba-pair ba-pair-narrow ba-pair-crop">
+                  <figure class="ba-panel">
+                    <figcaption><span class="option-tag">Before</span></figcaption>
+                    <img src="assets/srch/testing-comparison/nav-panel-old.png" alt="Sidebar navigation before revisions — flat module list">
+                  </figure>
+                  <figure class="ba-panel">
+                    <figcaption><span class="option-tag option-tag--chosen">After</span></figcaption>
+                    <img src="assets/srch/testing-comparison/nav-panel-new.png" alt="Sidebar navigation after revisions — nested accordion with sub-sections">
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <div class="comparison-group">
+              <p class="comparison-title"><strong>Primer layout</strong> <span class="comparison-source">TheWeCo a11y testing</span></p>
+              <p class="comparison-desc">Learning objectives, clearer hierarchy, and an updated sidebar tied to primer structure.</p>
+              <div class="media-block comparison-media">
+                <div class="ba-pair">
+                  <figure class="ba-panel">
+                    <figcaption><span class="option-tag">Before</span></figcaption>
+                    <img src="assets/srch/testing-comparison/primer-old.png" alt="Primer page before revisions">
+                  </figure>
+                  <figure class="ba-panel">
+                    <figcaption><span class="option-tag option-tag--chosen">After</span></figcaption>
+                    <img src="assets/srch/testing-comparison/primer-new.png" alt="Primer page after revisions — learning objectives and clearer hierarchy">
+                  </figure>
+                </div>
+              </div>
             </div>
           </div>
         </article>
+      </div>
+      </div>
 
-        <!-- 4. Navigation / finding -->
+      <div id="crafting" class="section">
+        <h2>Refining the Experience</h2>
+        <p class="section-lede">
+          
+        </p>
+
+      <div id="navigation" class="decision-section">
+        <h3 class="decision-section-title">Navigation</h3>
+        <p class="section-intro">Layered wayfinding so users can browse, jump to a topic, and never feel trapped in a primer.</p>
         <article class="decision">
           <header class="decision-head">
-            <span class="decision-kicker">04 · Navigation</span>
-            <h3 class="decision-title">Layered navigation so users can always find—and leave—content</h3>
+            <h3 class="decision-title">Multiple paths to find—and leave—content</h3>
           </header>
-          <div class="decision-why">
-            <span class="why-kicker">Why</span>
-            <p>
-              Instructors and students arrive with different goals: browse a module, jump to a topic, or
-              keep place while reading. One path isn’t enough—so finding and wayfinding were designed as
-              overlapping strategies, and primers stay reachable so users are never trapped.
-            </p>
-          </div>
           <div class="decision-evidence">
             <span class="evidence-kicker">Strategies</span>
             <ul class="strategy-list">
@@ -356,14 +426,26 @@
               </video>
               <label>Search across the handbook</label>
             </div>
+
+            <div class="decision-why">
+                <span class="why-kicker">Why</span>
+                <p>
+                Instructors and students arrive with different goals: browse a module, jump to a topic, or
+                keep place while reading. One path isn’t enough—so finding and wayfinding were designed as
+                overlapping strategies, and primers stay reachable so users are never trapped.
+                </p>
+            </div>
           </div>
         </article>
+      </div>
 
-        <!-- 5. Reading -->
+
+      <div id="reading" class="decision-section">
+        <h3 class="decision-section-title">Reading Experience</h3>
+        <p class="section-intro">Long-form primers needed clear pacing and in-context support without breaking reading flow.</p>
         <article class="decision">
           <header class="decision-head">
-            <span class="decision-kicker">05 · Reading</span>
-            <h3 class="decision-title">Designed the reading experience for clarity without interruption</h3>
+            <h3 class="decision-title">Clarity without interruption</h3>
           </header>
           <div class="decision-why">
             <span class="why-kicker">Why</span>
@@ -399,11 +481,14 @@
             </div>
           </div>
         </article>
+      </div>
 
+      <div id="assets" class="decision-section">
+        <h3 class="decision-section-title">Visual Assets</h3>
+        <p class="section-intro">Diagrams and illustrations alongside primers to clarify dense socioethics concepts.</p>
         <article class="decision">
           <header class="decision-head">
-            <span class="decision-kicker">06 · Assets</span>
-            <h3 class="decision-title">Created diagrams to make handbook concepts easier to understand</h3>
+            <h3 class="decision-title">Concepts easier to grasp at a glance</h3>
           </header>
           <div class="decision-why">
             <span class="why-kicker">Why</span>
@@ -450,6 +535,8 @@
             </div>
           </div>
         </article>
+      </div>
+
       </div>
 
 
@@ -518,6 +605,18 @@
             var card = btn.closest('.diagram-card');
             var caption = card && card.querySelector('figcaption');
             openLightbox(img, caption ? caption.textContent.trim() : '');
+          });
+        });
+
+        document.querySelectorAll('.ba-panel img').forEach(function (img) {
+          img.addEventListener('click', function () {
+            var panel = img.closest('.ba-panel');
+            var label = panel && panel.querySelector('figcaption');
+            var group = img.closest('.comparison-group');
+            var title = group && group.querySelector('.comparison-title');
+            var caption = (title ? title.textContent.trim() + ' — ' : '') +
+              (label ? label.textContent.trim() : '');
+            openLightbox(img, caption);
           });
         });
 
