@@ -1,110 +1,534 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Study - Update in Progress</title>
+    <meta name="description" content="Case study: Socially Responsible Computing Handbook — product design for Brown CS SRC program.">
+    <title>SRC Handbook — Alex Hogue</title>
 
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="navigation.css">
     <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="mouse.css">
+    <link rel="stylesheet" href="srch.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <style>
-        #update-container {
-            min-height: 70vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        #update-content {
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .update-icon {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 40px;
-            opacity: 0.8;
-        }
-
-        #update-content h1 {
-            font-size: 32px;
-            font-weight: 600;
-            color: #4a4a4a;
-            margin-bottom: 16px;
-        }
-
-        #update-content p {
-            font-size: 18px;
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 32px;
-        }
-
-        .back-link {
-            display: inline-block;
-            color: #4a90e2;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 12px 24px;
-            border: 2px solid #4a90e2;
-            border-radius: 6px;
-            transition: all 0.2s ease;
-        }
-
-        .back-link:hover {
-            background: #4a90e2;
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-            #update-content h1 {
-                font-size: 24px;
-            }
-
-            #update-content p {
-                font-size: 16px;
-            }
-        }
-    </style>
-</head>
-<body id="website">
+  </head>
+  <body id="website">
     <div id="nav-bar" class="collapsed"></div>
     <script>
-      $(function(){
+      $(function () {
         $("#nav-bar").load("nav.html");
       });
     </script>
 
-    <div id="update-container">
-        <div id="update-content">
-            
-            <h1>Update in Progress</h1>
-            <p>This case study is currently being updated with new content and improvements. Check back soon!</p>
-            
-            <a href="index.html" class="back-link">Back to Portfolio</a>
-        </div>
+    <div id="titleArea">
+      <h1>Socially Responsible Computing Handbook</h1>
+      <h4>Product design for Brown CS’s Socially Responsible Computing program</h4>
     </div>
-    
-    <footer id="footer">
-      <hr>
-      <div id="footer-text">
-        <div id="main-text">
-          <p>Thanks for browsing!</p>
-          <p class="footer-note">Designed + built by me with &lt;3 and iced vanilla lattes</p>
+
+    <section id="srch-hero">
+      <div id="srch-hero-meta">
+        <div class="hero-meta-item">
+          <h4>Project Focus</h4>
+          <p>Product design, accessibility, leadership</p>
         </div>
-        <a href="#titleArea" id="to-top" aria-label="Return to top of page">
-          <img id="up" src="assets/solar_arrow-up-outline.png" alt="">
-        </a>
+        <div class="hero-meta-item">
+          <h4>My Role</h4>
+          <p>Staff Designer → Lead Product Designer</p>
+        </div>
+        <div class="hero-meta-item">
+          <h4>Client</h4>
+          <p>Brown University CS Program</p>
+        </div>
       </div>
-    </footer>
-    
+      <video id="srch-hero-vid" loop autoplay muted playsinline>
+        <source src="assets/srch/home-scroll.mov" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <div id="centered-sec">
+      <div id="overview" class="section">
+        <h2>Overview</h2>
+        <p>
+          I was hired by Brown University’s Computer Science Department through the
+          Socially Responsible Computing (SRC) program to design the SRC Handbook—
+          a digital resource that helps CS students, TAs, and professors teach and learn a more
+          ethical, socially conscious computer science.
+        </p>
+        <div id="role" class="h3-section">
+          <h3>My Role</h3>
+          <p>
+            I started as a staff designer shaping the brand direction, then stepped into the lead product
+            designer role—refining the branding, building the design system, developing assets, and
+            supporting development.
+          </p>
+        </div>
+      </div>
+
+      <div id="src-program" class="section">
+        <h2>What is Socially Responsible Computing?</h2>
+        <p>
+          Socially Responsible Computing (SRC) is more than technology ethics. It is an interdisciplinary
+          effort to use the perspectives and tools of the humanities and social sciences to identify and
+          scrutinize the social impacts of computer science, in an effort to build technologies aligned
+          with human needs and values.
+        </p>
+        <p>SRC education at Brown aims to:</p>
+        <ul>
+          <li>Build awareness of the social, ethical, and political context of technology</li>
+          <li>Enable students to make concrete technical decisions informed by that analysis</li>
+          <li>Foster a socio-technical mindset as a standard part of computer science practice</li>
+        </ul>
+      </div>
+
+      <div id="problem" class="section">
+        <div id="problem-solution-grid">
+          <div class="problem-card">
+            <h3>Problem</h3>
+            <p>
+              Materials on ethics and social impact in CS are often scattered and hard to use in teaching.
+              How do we make them easier for students, TAs, and instructors to find and apply?
+            </p>
+          </div>
+          <div class="solution-card">
+            <h3>Solution</h3>
+            <p>
+              A modular digital handbook with clear navigation and approachable primers so socioethics
+              topics can be taught and learned without prior specialty knowledge.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="decisions" class="section">
+        <h2>Design Decisions</h2>
+        <p class="section-lede">
+          Each block below follows the same skim path: <strong>Decision</strong> → <strong>Why</strong> → <strong>Evidence</strong>.
+          Accessibility was treated as a starting constraint—not a polish step at the end.
+        </p>
+
+        <!-- 1. Structure / low-fis -->
+        <article class="decision">
+          <header class="decision-head">
+            <span class="decision-kicker">01 · Structure</span>
+            <h3 class="decision-title">Chose lo-fi 3 as the product direction</h3>
+          </header>
+          <div class="decision-why">
+            <span class="why-kicker">Why</span>
+            <p>
+              I selected lo-fi 3 to focus on page hierarchy and readability—so the handbook feels
+              approachable rather than overwhelming—and to leave room for the content to grow and
+              expand in the coming years.
+            </p>
+          </div>
+          <div class="decision-evidence">
+            <span class="evidence-kicker">Evidence · options explored</span>
+            <div class="option-grid">
+              <figure class="option-card">
+                <img class="case-img" src="assets/srch/low-fis/lowfi1.png" alt="Low-fi option 1">
+                <figcaption><span class="option-tag">Option A</span> lo-fi 1</figcaption>
+              </figure>
+              <figure class="option-card">
+                <img class="case-img" src="assets/srch/low-fis/lowfi2.png" alt="Low-fi option 2">
+                <figcaption><span class="option-tag">Option B</span> lo-fi 2</figcaption>
+              </figure>
+              <figure class="option-card option-card--chosen">
+                <img class="case-img" src="assets/srch/low-fis/lowfi3-chosen.png" alt="Chosen low-fi direction">
+                <figcaption><span class="option-tag option-tag--chosen">Chosen</span> lo-fi 3</figcaption>
+              </figure>
+              <figure class="option-card">
+                <img class="case-img" src="assets/srch/low-fis/lowfi4.png" alt="Low-fi option 4">
+                <figcaption><span class="option-tag">Option D</span> lo-fi 4</figcaption>
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Accessibility -->
+        <article class="decision">
+          <header class="decision-head">
+            <span class="decision-kicker">02 · Accessibility</span>
+            <h3 class="decision-title">Built accessibility in from the start—not as a late fix</h3>
+          </header>
+          <div class="decision-why">
+            <span class="why-kicker">Why</span>
+            <p>
+              SRC content is meant for a broad academic audience. If color, contrast, or mode choices
+              exclude readers, the handbook fails its educational purpose. Accessibility led palette,
+              UI state design, and light/dark reading modes.
+            </p>
+          </div>
+          <div class="decision-evidence">
+            <span class="evidence-kicker">What that meant in practice</span>
+            <ul class="strategy-list">
+              <li>
+                <strong>Accessible color palette</strong> — selected colors with sufficient contrast for
+                text and key UI elements.
+              </li>
+              <li>
+                <strong>Color-blindness checks</strong> — verified the palette remained usable under common
+                color-vision deficiencies, not only for “average” vision.
+              </li>
+              <li>
+                <strong>Light and dark modes</strong> — offered readable environments for different
+                preferences and lighting conditions, using the same contrast standards in both.
+              </li>
+            </ul>
+
+            <div class="media-row">
+              <div class="media-block">
+                <img class="case-img" src="assets/srch/final-lightmode-home.png" alt="SRCH homepage in light mode">
+                <label>Light mode — contrast-conscious reading UI</label>
+              </div>
+              <div class="media-block">
+                <img class="case-img" src="assets/srch/final-darkmode-home.png" alt="SRCH homepage in dark mode">
+                <label>Dark mode — same system, alternative reading environment</label>
+              </div>
+            </div>
+
+            <span class="evidence-kicker">WCAG contrast checks</span>
+            <div class="wcag-row">
+              <figure class="wcag-item">
+                <img src="assets/srch/color-contrast-checks/contrast-check-1.png" alt="WCAG color contrast check 1">
+                <figcaption>Contrast check 1</figcaption>
+              </figure>
+              <figure class="wcag-item">
+                <img src="assets/srch/color-contrast-checks/contrast-check-2.png" alt="WCAG color contrast check 2">
+                <figcaption>Contrast check 2</figcaption>
+              </figure>
+              <figure class="wcag-item">
+                <img src="assets/srch/color-contrast-checks/contrast-check-3.png" alt="WCAG color contrast check 3">
+                <figcaption>Contrast check 3</figcaption>
+              </figure>
+              <figure class="wcag-item">
+                <img src="assets/srch/color-contrast-checks/contrast-check-4.png" alt="WCAG color contrast check 4">
+                <figcaption>Contrast check 4</figcaption>
+              </figure>
+            </div>
+
+            <span class="evidence-kicker">Color-blindness checks</span>
+            <div class="media-row">
+              <div class="media-block">
+                <img class="case-img" src="assets/srch/colorblind-light.png" alt="Color-blindness simulation check in light mode">
+                <label>Color-blind check — light mode</label>
+              </div>
+              <div class="media-block">
+                <img class="case-img" src="assets/srch/colorblind-dark.png" alt="Color-blindness simulation check in dark mode">
+                <label>Color-blind check — dark mode</label>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Usability testing -->
+        <article class="decision">
+          <header class="decision-head">
+            <span class="decision-kicker">03 · Usability testing</span>
+            <h3 class="decision-title">Tested with students and assistive-technology users—then iterated</h3>
+          </header>
+          <div class="decision-why">
+            <span class="why-kicker">Why</span>
+            <p>
+              Contrast checks weren’t enough. We tested with the people the handbook is for—students—
+              and with assistive-technology users through TheWeCo, so both primary use and accessibility
+              showed up in practice.
+            </p>
+          </div>
+          <div class="decision-evidence">
+            <span class="evidence-kicker">Two kinds of testing</span>
+            <div class="ux-methods">
+              <div class="ux-method">
+                <span class="ux-method-label">Primary users</span>
+                <h4>Student usability testing</h4>
+                <p>
+                  Sessions with the actual use population—CS students—to check whether the handbook
+                  felt approachable, findable, and usable for teaching and learning.
+                </p>
+              </div>
+              <div class="ux-method">
+                <span class="ux-method-label">Accessibility</span>
+                <h4>TheWeCo a11y testing</h4>
+                <p>
+                  Separate moderated accessibility sessions with people using assistive technology.
+                  I moderated and captured findings using TheWeCo’s
+                  <a class="link" href="assets/srch/guide-your-own-usability-test.pdf" target="_blank" rel="noopener">Guide Your Own Usability Test</a>.
+                </p>
+                <div class="ux-tags" aria-label="Assistive technologies represented">
+                  <span>NVDA</span>
+                  <span>JAWS</span>
+                  <span>Dragon</span>
+                  <span>Sighted testers</span>
+                </div>
+              </div>
+            </div>
+
+            <span class="evidence-kicker">Findings from TheWeCo a11y testing</span>
+            <p class="ux-findings-note">
+              The issues below came from TheWeCo sessions—not from the student tests.
+            </p>
+            <div class="ux-findings">
+              <div class="ux-finding">
+                <span class="ux-finding-label worked">Worked</span>
+                <h4>Visual design &amp; dark mode</h4>
+                <p>Approachable overall; dark mode contrast preferred. Hierarchy in dense primers still needed work.</p>
+              </div>
+              <div class="ux-finding">
+                <span class="ux-finding-label blocker">Biggest blocker</span>
+                <h4>Search</h4>
+                <p>Hover-fragile nav search, weak AT feedback, and results that were hard to tell apart.</p>
+              </div>
+              <div class="ux-finding">
+                <span class="ux-finding-label issue">Issue</span>
+                <h4>Sidebar focus</h4>
+                <p>case-study links often opened with no announcement and no focus move into the panel.</p>
+              </div>
+              <div class="ux-finding">
+                <span class="ux-finding-label issue">Issue</span>
+                <h4>Alt text judgment</h4>
+                <p>Some graphics under-described, others over-described—testers wanted short IDs, longer explanation nearby.</p>
+              </div>
+              <div class="ux-finding">
+                <span class="ux-finding-label issue">Issue</span>
+                <h4>Wayfinding</h4>
+                <p>Missing page-load cues, link vs. button confusion, and footer/sidebar traps.</p>
+              </div>
+            </div>
+
+            <span class="evidence-kicker">What we changed</span>
+            <div class="ux-outcome">
+              <p class="ux-outcome-lead">
+                Student feedback and TheWeCo findings both informed iteration. From TheWeCo, we prioritized:
+              </p>
+              <ul class="ux-changes">
+                <li>Search reliability &amp; feedback</li>
+                <li>Sidebar focus &amp; announcements</li>
+                <li>Clearer information hierarchy</li>
+                <li>Stronger alt text</li>
+                <li>AT navigation fixes</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Navigation / finding -->
+        <article class="decision">
+          <header class="decision-head">
+            <span class="decision-kicker">04 · Navigation</span>
+            <h3 class="decision-title">Layered navigation so users can always find—and leave—content</h3>
+          </header>
+          <div class="decision-why">
+            <span class="why-kicker">Why</span>
+            <p>
+              Instructors and students arrive with different goals: browse a module, jump to a topic, or
+              keep place while reading. One path isn’t enough—so finding and wayfinding were designed as
+              overlapping strategies, and primers stay reachable so users are never trapped.
+            </p>
+          </div>
+          <div class="decision-evidence">
+            <span class="evidence-kicker">Strategies</span>
+            <ul class="strategy-list">
+              <li>
+                <strong>Handbook-wide search</strong> — find any primer or topic across the full handbook,
+                not only within the current page.
+              </li>
+              <li>
+                <strong>Collapsible sidebar</strong> — highlights the primer and section the user is in,
+                so orientation stays visible while reading.
+              </li>
+              <li>
+                <strong>Top progress bar</strong> — advances with scroll to show position within a long primer.
+              </li>
+              <li>
+                <strong>Modules dropdown in the nav</strong> — jump between core modules without backing out
+                of the reading experience.
+              </li>
+              <li>
+                <strong>Multiple entry points</strong> — open primers from the homepage, search, or from
+                within another primer so movement stays open in every direction.
+              </li>
+            </ul>
+
+            <div class="media-block">
+              <video class="case-vid" loop autoplay muted playsinline>
+                <source src="assets/srch/search-feature.mov" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <label>Search across the handbook</label>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Reading -->
+        <article class="decision">
+          <header class="decision-head">
+            <span class="decision-kicker">05 · Reading</span>
+            <h3 class="decision-title">Designed the reading experience for clarity without interruption</h3>
+          </header>
+          <div class="decision-why">
+            <span class="why-kicker">Why</span>
+            <p>
+              Primers are long-form and concept-heavy. The layout needed to keep the main text clear and
+              paced—and support unfamiliar terminology without breaking reading flow.
+            </p>
+          </div>
+          <div class="decision-evidence">
+            <span class="evidence-kicker">Reading decisions</span>
+            <ul class="strategy-list">
+              <li>
+                <strong>Sectioned structure</strong> — break content into scannable sections so readers can
+                pause, jump, and resume without losing the thread.
+              </li>
+              <li>
+                <strong>Type size &amp; hierarchy</strong> — size and weight tuned for sustained on-screen
+                reading of academic material.
+              </li>
+              <li>
+                <strong>Right-sidebar case studies</strong> — pop-up case study panels explain unfamiliar
+                terms and examples beside the primer, so support stays available without interrupting
+                the main narrative.
+              </li>
+            </ul>
+
+            <div class="media-block">
+              <video class="case-vid" loop autoplay muted playsinline>
+                <source src="assets/srch/primer-video.mov" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <label>Primer reading experience</label>
+            </div>
+          </div>
+        </article>
+
+        <article class="decision">
+          <header class="decision-head">
+            <span class="decision-kicker">06 · Assets</span>
+            <h3 class="decision-title">Created diagrams to make handbook concepts easier to understand</h3>
+          </header>
+          <div class="decision-why">
+            <span class="why-kicker">Why</span>
+            <p>
+              Dense socioethics concepts can be hard to grasp from text alone. I designed diagrams and
+              illustrations that sit alongside primers to clarify ideas, reduce cognitive load, and
+              visually support the written explanations.
+            </p>
+            <!-- Edit: add more detail about process or specific concepts if needed -->
+          </div>
+          <div class="decision-evidence">
+            <span class="evidence-kicker">Evidence</span>
+            <div class="diagram-gallery">
+              <figure class="diagram-card">
+                <button type="button" class="diagram-frame" aria-label="View Bias in data and model curation diagram larger">
+                  <img src="assets/srch/assets/bias-together.png" alt="Bias in data and model curation diagram">
+                </button>
+                <figcaption>Bias in data and model curation</figcaption>
+              </figure>
+              <figure class="diagram-card">
+                <button type="button" class="diagram-frame" aria-label="View Inclusive design granular control diagram larger">
+                  <img src="assets/srch/assets/inclusive-design.png" alt="Inclusive design granular control diagram">
+                </button>
+                <figcaption>Inclusive design: granular control</figcaption>
+              </figure>
+              <figure class="diagram-card">
+                <button type="button" class="diagram-frame" aria-label="View Stakeholder ecosystem diagram larger">
+                  <img src="assets/srch/assets/governance-diagram.png" alt="Stakeholder ecosystem diagram">
+                </button>
+                <figcaption>Stakeholder ecosystem</figcaption>
+              </figure>
+              <figure class="diagram-card">
+                <button type="button" class="diagram-frame" aria-label="View Ladder of citizen participation diagram larger">
+                  <img src="assets/srch/assets/ladder-of-citizen-participation.png" alt="Ladder of citizen participation diagram">
+                </button>
+                <figcaption>Ladder of citizen participation</figcaption>
+              </figure>
+              <figure class="diagram-card">
+                <button type="button" class="diagram-frame" aria-label="View Procedural justice pillars diagram larger">
+                  <img src="assets/srch/assets/justice-pillars.png" alt="Procedural justice pillars diagram">
+                </button>
+                <figcaption>Procedural justice pillars</figcaption>
+              </figure>
+            </div>
+          </div>
+        </article>
+      </div>
+
+
+
+      <div id="conclusion" class="section">
+        <h2>Reflections</h2>
+        <ul id="takeaway-list">
+          <li>Accessibility had to lead—contrast, color-vision checks, and readable modes—not land as a late visual polish step.</li>
+          <li>Testing with students and assistive-technology users surfaced issues automated checks couldn’t—then those findings drove concrete site improvements.</li>
+          <li>Moving from staff designer to lead meant owning brand, system, assets, and development support—not just mockups.</li>
+          <li>An educational product has to serve teaching workflows as clearly as it serves visual craft.</li>
+        </ul>
+      </div>
+
+      <footer id="footer">
+        <hr>
+        <div id="footer-text">
+          <div id="main-text">
+            <p>Thanks for browsing!</p>
+            <p class="footer-note">Designed + built by me with &lt;3 and iced vanilla lattes</p>
+          </div>
+          <a href="#titleArea" id="to-top" aria-label="Return to top of page">
+            <img id="up" src="assets/solar_arrow-up-outline.png" alt="">
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <div id="asset-lightbox" class="asset-lightbox" hidden>
+      <button type="button" class="asset-lightbox-close" aria-label="Close larger view">&times;</button>
+      <img class="asset-lightbox-img" alt="">
+      <p class="asset-lightbox-caption"></p>
+    </div>
+
     <script src="script.js"></script>
     <script src="nav.js"></script>
-</body>
+    <script src="mouse.js"></script>
+    <script>
+      (function () {
+        var lightbox = document.getElementById('asset-lightbox');
+        if (!lightbox) return;
+
+        var lbImg = lightbox.querySelector('.asset-lightbox-img');
+        var lbCaption = lightbox.querySelector('.asset-lightbox-caption');
+        var closeBtn = lightbox.querySelector('.asset-lightbox-close');
+
+        function openLightbox(img, caption) {
+          lbImg.src = img.currentSrc || img.src;
+          lbImg.alt = img.alt || '';
+          lbCaption.textContent = caption || '';
+          lightbox.hidden = false;
+          document.body.style.overflow = 'hidden';
+          closeBtn.focus();
+        }
+
+        function closeLightbox() {
+          lightbox.hidden = true;
+          lbImg.removeAttribute('src');
+          document.body.style.overflow = '';
+        }
+
+        document.querySelectorAll('.diagram-frame').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var img = btn.querySelector('img');
+            if (!img) return;
+            var card = btn.closest('.diagram-card');
+            var caption = card && card.querySelector('figcaption');
+            openLightbox(img, caption ? caption.textContent.trim() : '');
+          });
+        });
+
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function (e) {
+          if (e.target === lightbox) closeLightbox();
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && !lightbox.hidden) closeLightbox();
+        });
+      })();
+    </script>
+  </body>
 </html>
