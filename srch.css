@@ -761,6 +761,14 @@
   color: #404040;
 }
 
+.handoff-note {
+  margin-top: 32px;
+  max-width: 42em;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #505050;
+}
+
 @media screen and (max-width: 900px) {
   .option-grid {
     grid-template-columns: 1fr;

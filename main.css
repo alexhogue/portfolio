@@ -219,6 +219,7 @@ main {
   display: flex;
   border-radius: 15px;
   padding: 24px;
+  padding-right: 48px;
   transition: transform .2s;
   z-index: 100;
 }
