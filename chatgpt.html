@@ -3,23 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Privacy-Focused ChatGPT Design Recommendations</title>
+    <meta name="description" content="Privacy-centered design recommendations for AI chat interfaces.">
+    <title>ChatGPT Privacy Design — Alex Hogue</title>
 
     <link rel="stylesheet" href="common.css" />
     <link rel="stylesheet" href="navigation.css" />
     <link rel="stylesheet" href="footer.css" />
-    <link rel="stylesheet" href="mouse.css" />
     <link rel="stylesheet" href="chatgpt.css" />
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   </head>
   <body id="website">
-    <div id="nav-bar" class="collapsed">
-    </div>
-    <script>
-      $(function(){
-        $("#nav-bar").load("nav.html");
-      });
-    </script>
+    <div id="nav-bar" class="collapsed"></div>
 
     <div id="titleArea">
         <h1>Privacy-Focused ChatGPT Design Recommendations</h1>
@@ -180,7 +173,7 @@
                     </div>
                 </div>
                 <div style="flex: 1;">
-                    <img src="assets/chatgpt/policy-analysis.png" alt="Readability score analysis of OpenAI's privacy policy showing Flesch Reading-Ease Test results" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+                    <img src="assets/chatgpt/policy-analysis.png" alt="Readability score analysis of OpenAI's privacy policy showing Flesch Reading-Ease Test results" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;" loading="lazy" decoding="async">
                     <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center; font-style: italic;">Privacy policy readability analysis from Grammarly</p>
                 </div>
             </div>
@@ -319,7 +312,7 @@
                     </ul>
                 </div>
                 <div style="flex: 1;">
-                    <img src="assets/chatgpt/current-interface.png" alt="Current ChatGPT interface showing the main chat area with message input and sidebar navigation" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+                    <img src="assets/chatgpt/current-interface.png" alt="Current ChatGPT interface showing the main chat area with message input and sidebar navigation" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;" loading="lazy" decoding="async">
                     <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center; font-style: italic;">Existing ChatGPT interface analyzed for privacy design opportunities</p>
                 </div>
             </div>
@@ -350,12 +343,12 @@
             
             <div style="display: flex; gap: 40px; margin-top: 30px;">
                 <div style="flex: 1;">
-                    <img src="assets/chatgpt/memory-update.png" alt="UI design improvement: clickable memory update message" style="width: 100%; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+                    <img src="assets/chatgpt/memory-update.png" alt="UI design improvement: clickable memory update message" style="width: 100%; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;" loading="lazy" decoding="async">
                     <h4>1. Clickable Memory Update Message</h4>
                     <p>ChatGPT currently tells users that information was added to memory, but it's not immediately clear that this notification is clickable. We added visual cues to make it look like a button, with a pop-up that shows what information was added and allows users to manage their memories.</p>
                 </div>
                 <div style="flex: 1;">
-                    <img src="assets/chatgpt/accessible-policy.png" alt="UI design improvement: privacy policy accessible in settings" style="width: 100%; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+                    <img src="assets/chatgpt/accessible-policy.webp" alt="UI design improvement: privacy policy accessible in settings" style="width: 100%; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;" loading="lazy" decoding="async">
                     <h4>2. Privacy Policy Accessible in Settings</h4>
                     <p>Many interview participants immediately looked in settings for terms and policies. We added a direct link in the settings panel, in addition to the existing access point from the question mark icon in the main interface.</p>
                 </div>
@@ -373,7 +366,7 @@
                 <h4>Current Login Experience</h4>
                 <div style="display: flex; gap: 40px; align-items: flex-start; margin-top: 20px;">
                     <div style="flex: 1;">
-                        <img src="assets/chatgpt/login-sequence/existing-screen.png" alt="ChatGPT's existing single-page login experience with email input and small-font privacy policy text" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+                        <img src="assets/chatgpt/login-sequence/existing-screen.png" alt="ChatGPT's existing single-page login experience with email input and small-font privacy policy text" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;" loading="lazy" decoding="async">
                         <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center; font-style: italic;">Current single-page login with implicit agreement</p>
                     </div>
                     <div style="flex: 1;">
@@ -401,7 +394,7 @@
                 <!-- Step 1: Initial Login -->
                 <div style="display: flex; gap: 40px; align-items: flex-start; margin-bottom: 40px;">
                     <div style="flex: 1;">
-                        <img src="assets/chatgpt/login-sequence/login-1.png" alt="First step of revised login sequence with cleaner interface and no immediate agreement required" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+                        <img src="assets/chatgpt/login-sequence/login-1.png" alt="First step of revised login sequence with cleaner interface and no immediate agreement required" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;" loading="lazy" decoding="async">
                         <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center; font-style: italic;">Step 1: Clean login interface without pressure</p>
                     </div>
                     <div style="flex: 1;">
@@ -413,7 +406,7 @@
                 <!-- Step 2: Privacy Acknowledgment -->
                 <div style="display: flex; gap: 40px; align-items: flex-start; margin-bottom: 40px;">
                     <div style="flex: 1;">
-                        <img src="assets/chatgpt/login-sequence/acknowledgement.png" alt="Privacy acknowledgment page with explicit agree/disagree options and improved typography" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+                        <img src="assets/chatgpt/login-sequence/acknowledgement.webp" alt="Privacy acknowledgment page with explicit agree/disagree options and improved typography" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;" loading="lazy" decoding="async">
                         <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center; font-style: italic;">Step 2: Explicit privacy policy agreement</p>
                     </div>
                     <div style="flex: 1;">
@@ -425,7 +418,7 @@
                 <!-- Step 3: Data Controls -->
                 <div style="display: flex; gap: 40px; align-items: flex-start; margin-bottom: 40px;">
                     <div style="flex: 1;">
-                        <img src="assets/chatgpt/login-sequence/data-controls.png" alt="Data Controls page explaining ChatGPT terminology and data usage in clear language" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+                        <img src="assets/chatgpt/login-sequence/data-controls.png" alt="Data Controls page explaining ChatGPT terminology and data usage in clear language" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;" loading="lazy" decoding="async">
                         <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center; font-style: italic;">Step 3: Data terminology clarification</p>
                     </div>
                     <div style="flex: 1;">
@@ -437,7 +430,7 @@
                 <!-- Step 4: Memory Personalization -->
                 <div style="display: flex; gap: 40px; align-items: flex-start; margin-bottom: 40px;">
                     <div style="flex: 1;">
-                        <img src="assets/chatgpt/login-sequence/personalization.png" alt="Memory personalization page allowing users to choose whether ChatGPT tracks previous searches" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+                        <img src="assets/chatgpt/login-sequence/personalization.png" alt="Memory personalization page allowing users to choose whether ChatGPT tracks previous searches" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;" loading="lazy" decoding="async">
                         <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center; font-style: italic;">Step 4: Memory storage personalization</p>
                     </div>
                     <div style="flex: 1;">
@@ -449,7 +442,7 @@
                 <!-- Step 5: Multi-Factor Authentication -->
                 <div style="display: flex; gap: 40px; align-items: flex-start; margin-bottom: 40px;">
                     <div style="flex: 1;">
-                        <img src="assets/chatgpt/login-sequence/multi-factor.png" alt="Multi-factor authentication setup page with options for SMS, authentication app, or opting out" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+                        <img src="assets/chatgpt/login-sequence/multi-factor.png" alt="Multi-factor authentication setup page with options for SMS, authentication app, or opting out" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;" loading="lazy" decoding="async">
                         <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center; font-style: italic;">Step 5: Multi-factor authentication setup</p>
                     </div>
                     <div style="flex: 1;">
@@ -461,7 +454,7 @@
                 <!-- Step 6: Review Overview -->
                 <div style="display: flex; gap: 40px; align-items: flex-start; margin-bottom: 40px;">
                     <div style="flex: 1;">
-                        <img src="assets/chatgpt/login-sequence/review.png" alt="Review page showing overview of user's privacy and security selections before completing login" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+                        <img src="assets/chatgpt/login-sequence/review.png" alt="Review page showing overview of user's privacy and security selections before completing login" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;" loading="lazy" decoding="async">
                         <p style="font-size: 14px; color: #666; margin-top: 12px; text-align: center; font-style: italic;">Step 6: Review and finalize selections</p>
                     </div>
                     <div style="flex: 1;">
@@ -519,19 +512,19 @@
             <h4>Privacy Walkthrough Examples</h4>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px;">
                 <div>
-                    <img src="assets/chatgpt/privacy-walkthrough/settings-intro.png" alt="Settings introduction showing privacy-related settings locations" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0; margin-bottom: 12px;">
+                    <img src="assets/chatgpt/privacy-walkthrough/settings-intro.png" alt="Settings introduction showing privacy-related settings locations" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0; margin-bottom: 12px;" loading="lazy" decoding="async">
                     <p style="font-size: 14px; color: #666; text-align: center; font-style: italic;">Settings introduction and navigation</p>
                 </div>
                 <div>
-                    <img src="assets/chatgpt/privacy-walkthrough/data-controls.png" alt="Data controls settings explanation within the walkthrough" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0; margin-bottom: 12px;">
+                    <img src="assets/chatgpt/privacy-walkthrough/data-controls.png" alt="Data controls settings explanation within the walkthrough" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0; margin-bottom: 12px;" loading="lazy" decoding="async">
                     <p style="font-size: 14px; color: #666; text-align: center; font-style: italic;">Data controls guidance</p>
                 </div>
                 <div>
-                    <img src="assets/chatgpt/privacy-walkthrough/memory-update.png" alt="Memory update feature demonstration showing clickable memory notifications" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0; margin-bottom: 12px;">
+                    <img src="assets/chatgpt/privacy-walkthrough/memory-update.png" alt="Memory update feature demonstration showing clickable memory notifications" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0; margin-bottom: 12px;" loading="lazy" decoding="async">
                     <p style="font-size: 14px; color: #666; text-align: center; font-style: italic;">Memory update interaction</p>
                 </div>
                 <div>
-                    <img src="assets/chatgpt/privacy-walkthrough/temporary-chat.png" alt="Temporary chat access demonstration" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0; margin-bottom: 12px;">
+                    <img src="assets/chatgpt/privacy-walkthrough/temporary-chat.png" alt="Temporary chat access demonstration" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 1px solid #f0f0f0; margin-bottom: 12px;" loading="lazy" decoding="async">
                     <p style="font-size: 14px; color: #666; text-align: center; font-style: italic;">Temporary chat feature</p>
                 </div>
             </div>
@@ -566,6 +559,14 @@
     </div>
     </div>
 
+    <nav class="next-project" aria-label="More projects">
+      <a class="next-project-back" href="index.html#selected">← All work</a>
+      <a class="next-project-link" href="warp.html">
+        <span class="next-project-label">Next project</span>
+        <span class="next-project-title">Warp Home →</span>
+      </a>
+    </nav>
+
     <footer id="footer">
       <hr>
       <div id="footer-text">
@@ -573,15 +574,12 @@
           <p>Thanks for browsing!</p>
           <p class="footer-note">Designed + built by me with &lt;3 and iced vanilla lattes</p>
         </div>
-        <a href="#titleArea" id="to-top" aria-label="Return to top of page">
-          <!-- <p id="up-text">Back to top</p> -->
-          <img id="up" src="assets/solar_arrow-up-outline.png" alt="">
+        <a href="#top" id="to-top" aria-label="Back to top">
+          <img id="up" src="assets/solar_arrow-up-outline.png" alt="" loading="lazy" decoding="async">
         </a>
       </div>
     </footer>
     <script src="script.js"></script>
-    <script src="carosel.js"></script>
-    <script src="mouse.js"></script>
     <script src="nav.js"></script>
   </body>
 </html> 

@@ -68,21 +68,18 @@
 }
 
 /* LinkedIn icon styling */
+.nav-linkedin {
+  display: inline-flex;
+  align-items: center;
+}
+
 #linkedin-icon {
   width: 18px;
-  height: fit-content;
+  height: 18px;
 }
 
-#linkedin-icon:hover {
+.nav-linkedin:hover #linkedin-icon {
   opacity: 50%;
-}
-
-/* Text elements */
-text {
-  font-size: 18px;
-  font-family: 'Instrument-sans-reg', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-  font-weight: 400;
-  line-height: 1.2;
 }
 
 /* Navigation button text consistency */
@@ -92,6 +89,14 @@ text {
   font-weight: 400;
   line-height: 1.2;
   display: inline-block;
+  color: #1e1e1e;
+  text-decoration: none;
+}
+
+.nav-button[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 6px;
 }
 
 /* Link styling */
@@ -101,16 +106,15 @@ a {
 }
 
 #link:hover {
-  background-color: #FFF3A8;
-  color: #87004d;
+  background-color: var(--highlight);
+  color: var(--accent);
 }
 /* ========================================
    MENU STRUCTURES
    ======================================== */
 
-/* Main and mobile menu base styles */
-#main-menu, 
-.mobile-menu {
+/* Menu base styles */
+#main-menu {
   list-style: none;
   height: 100%;
   width: 100%;
@@ -144,15 +148,20 @@ hr {
    MOBILE MENU HAMBURGER ICON
    ======================================== */
 
-/* Hamburger menu icon */
+/* Hamburger menu button */
 #menu-icon {
   margin: auto 0;
   display: none;
   cursor: pointer;
+  background: none;
+  border: 0;
+  padding: 4px;
+  border-radius: 6px;
 }
 
 /* Hamburger menu bars */
-#menu-icon div {
+#menu-icon span {
+  display: block;
   width: 25px;
   height: 3px;
   background-color: rgb(34, 34, 34);
@@ -181,46 +190,44 @@ hr {
   transform: rotate(45deg) translate(-6px, -8px);
 }
 
-/* Mobile menu when opened */
-.open .mobile-menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 20px;
-  padding-top: 20px;
-  width: 100%;
-}
-
-/* Mobile menu container */
-.mobile-menu {
-  display: none;
-  position: absolute;
-  top: 40px;
-  left: 0;
-  height: calc(100vh - 40px);
-  width: 85vw;
-  margin-right: 15%;
-}
-
 /* ========================================
    RESPONSIVE NAVIGATION
    ======================================== */
 
 @media screen and (max-width: 700px) {
-  /* Hide main menu on mobile */
-  #main-menu {
-    display: none;
+  #nav-bar {
+    padding: 18px 24px;
   }
-  
-  /* Show hamburger menu icon on mobile */
+
+  #nav-bar.expanded {
+    height: 260px;
+  }
+
+  /* Show hamburger menu button on mobile */
   #menu-icon {
     display: block;
   }
-  
-  /* Adjust LinkedIn icon for mobile */
-  #linkedin-icon {
-    width: 18px;
+
+  /* Menu collapses into a dropdown panel under the bar */
+  #main-menu {
+    display: none;
+    position: absolute;
+    top: 58px;
+    left: 0;
+    right: 0;
     height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  #nav-bar.expanded #main-menu {
+    display: flex;
+  }
+
+  #main-menu li {
+    margin: 0;
   }
 }

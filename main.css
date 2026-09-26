@@ -46,6 +46,12 @@ a {
   z-index: 100;
 }
 
+.title-heading {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
 /* Full-bleed title curve across the window */
 #title-curve {
   width: 100%;
@@ -218,29 +224,29 @@ main {
 .work {
   display: flex;
   border-radius: 15px;
+  border: 1px solid transparent;
   padding: 24px;
   padding-right: 48px;
-  transition: transform .2s;
+  transition: transform .2s, border-color .2s, box-shadow .2s;
   z-index: 100;
 }
 
-.work:hover {
+.work > a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+.work:hover,
+.work:focus-within {
   box-shadow: 0 0 10px #0000001a;
   transform: scale(1.02);
-  border: 1px solid #393939;
+  border-color: #393939;
 }
 
-.work:hover .number {
-  filter: drop-shadow(3px 3px 3px #54b3d6);
-  color: rgb(78, 120, 165);
-}
-
-
-/* Number styling */
-.number {
-  display: flex;
-  align-items: flex-start;
-  margin-top: 0;
+.work > a:focus-visible {
+  outline: none;
 }
 
 /* Work content layout */
@@ -294,8 +300,8 @@ main {
    MEDIA ELEMENTS
    ======================================== */
 
-/* Video and image elements for projects */
-#warp-vid, #hack-vid, #chatgpt-img, #srch-vid {
+/* Video and image thumbnails for project cards */
+.work-img {
   width: 475px;
   min-width: 300px;
   height: 300px;
@@ -305,17 +311,8 @@ main {
   object-fit: cover;
 }
 
-/* Bordered media elements */
-#voyage-gif, #vis-img, #adobe-img {
-  width: 475px;
-  height: 300px;
-  /* padding: 15px; */
-  min-width: 300px;
-  border-radius: 15px;
+#adobe-img {
   border: 1.5px solid rgb(229, 229, 229);
-  transition: transform .2s;
-  flex-shrink: 0;
-  object-fit: cover;
 }
 .circle-area{
   pointer-events: none;
@@ -456,8 +453,7 @@ hr {
     font-size: 36px;
   }
 
-  #warp-vid, #hack-vid, #chatgpt-img, #srch-vid,
-  #voyage-gif, #vis-img, #adobe-img {
+  .work-img {
     width: 380px;
     min-width: 260px;
     height: 240px;
@@ -638,24 +634,14 @@ hr {
   }
   
   /* Media elements mobile sizing */
-  #warp-vid, #hack-vid, #voyage-gif, #vis-img, #chatgpt-img, #adobe-img, #srch-vid {
+  .work-img {
     width: 100% !important;
     min-width: 280px;
+    max-width: none;
     height: auto;
     object-fit: cover;
     display: block;
     margin: 0 auto;
-  }
-  
-  /* Specific fix for hack video to ensure it matches other images */
-  #hack-vid {
-    width: 100% !important;
-    min-width: 280px;
-    max-width: none;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-    border-radius: 15px;
   }
   
   /* UI elements mobile adjustments */
@@ -740,24 +726,8 @@ hr {
   }
   
   /* Media elements extra small mobile */
-  #warp-vid, #hack-vid, #voyage-gif, #vis-img, #chatgpt-img, #adobe-img, #srch-vid {
-    width: 100% !important;
+  .work-img {
     min-width: 250px;
-    max-width: none;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-  }
-  
-  /* Specific fix for hack video extra small mobile */
-  #hack-vid {
-    width: 100% !important;
-    min-width: 250px;
-    max-width: none;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-    border-radius: 15px;
   }
   
   /* Typography adjustments for extra small screens */

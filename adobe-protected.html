@@ -3,30 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adobe Learn Project - full case study</title>
+    <meta name="description" content="Full case study: designing an agentic learning experience for Adobe Learn.">
+    <title>Adobe Learn Full Case Study — Alex Hogue</title>
 
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="navigation.css">
     <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="mouse.css">
     <link rel="stylesheet" href="adobe.css">
     <link rel="stylesheet" href="adobe-video.css">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body id="website">
-    <div id="nav-bar" class="collapsed">
-    </div>
-    <script>
-      $(function(){
-        $("#nav-bar").load("nav.html");
-      });
-    </script>
+    <div id="nav-bar" class="collapsed"></div>
 
     <!-- Password Form (shown initially) -->
     <div id="password-form-container">
         <div id="password-form">
             <div id="password-form-header">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a90e2" stroke-width="2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                     <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                     <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                 </svg>
@@ -37,12 +30,13 @@
                 <input 
                     type="password" 
                     id="password-input" 
+                    aria-label="Password"
                     placeholder="Enter password" 
                     required
                     autofocus
                 />
                 <button type="submit" id="password-submit">Access Case Study</button>
-                <div id="error-message">Incorrect password. Please try again.</div>
+                <div id="error-message" role="alert">Incorrect password. Please try again.</div>
             </form>
         </div>
     </div>
@@ -73,8 +67,8 @@
                     <p>Testing and development</p>
                 </div>
             </div>
-            <video id="adobe-hero-vid" loop autoplay muted playsinline>
-                <source src="assets/adobe/flows/main_home.mov" type="video/mp4" alt="Final Adobe Learn guided home experience">
+            <video id="adobe-hero-vid" loop muted playsinline data-autoplay preload="none" poster="assets/adobe/flows/main_home-poster.jpg" aria-label="Final Adobe Learn guided home experience">
+                <source src="assets/adobe/flows/main_home.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </section>
@@ -92,7 +86,7 @@
                         <div id="project-brief" class="h3-section">
                             <h3>Project Brief</h3>
                             <p>
-                                <a class="link" href="https://www.adobe.com/learn" target="_blank">Adobe Learn</a> is Adobe's comprehensive learning platform that helps users master creative tools 
+                                <a class="link" href="https://www.adobe.com/learn" target="_blank" rel="noopener noreferrer">Adobe Learn</a> is Adobe's comprehensive learning platform that helps users master creative tools 
                                 and techniques. This project aims to enhance the platform with an AI-powered experience that 
                                 provide personalized learning resources and intelligent content recommendations tailored to users' goals.
                             </p>
@@ -135,8 +129,8 @@
             <div class="section">
                 <h2>Initial Website State</h2>
                 <div class="h3-section">
-                    <video class="adobe-video" id="old-learn" loop autoplay muted>
-                        <source src="assets/adobe/flows/old_learn.mov" type="video/mp4" alt="current Adobe Learn home page">
+                    <video class="adobe-video" id="old-learn" loop muted playsinline data-autoplay preload="none" poster="assets/adobe/flows/old_learn-poster.jpg" aria-label="current Adobe Learn home page">
+                        <source src="assets/adobe/flows/old_learn.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <div id="problem-solution-grid">
@@ -167,22 +161,22 @@
                         
                     <div id="research-grid">
                         <div class="research-item">
-                            <img src="assets/adobe/research/coursera_research.png" alt="Coursera platform research" class="research-img"/>
+                            <img src="assets/adobe/research/coursera_research.webp" alt="Coursera platform research" class="research-img" loading="lazy" decoding="async" />
                             <h4>Coursera</h4>
                             <p>Structured course format</p>
                         </div>
                         <div class="research-item">
-                            <img src="assets/adobe/research/duolingo_research.png" alt="Duolingo learning experience research" class="research-img"/>
+                            <img src="assets/adobe/research/duolingo_research.webp" alt="Duolingo learning experience research" class="research-img" loading="lazy" decoding="async" />
                             <h4>Duolingo</h4>
                             <p>Gamified learning patterns</p>
                         </div>
                         <div class="research-item">
-                            <img src="assets/adobe/research/linkedin_research.png" alt="LinkedIn Learning research" class="research-img"/>
+                            <img src="assets/adobe/research/linkedin_research.webp" alt="LinkedIn Learning research" class="research-img" loading="lazy" decoding="async" />
                             <h4>LinkedIn Learning</h4>
                             <p>Professional development focus</p>
                         </div>
                         <div class="research-item">
-                            <img src="assets/adobe/research/acrobat_research.png" alt="Adobe Acrobat learning research" class="research-img"/>
+                            <img src="assets/adobe/research/acrobat_research.webp" alt="Adobe Acrobat learning research" class="research-img" loading="lazy" decoding="async" />
                             <h4>Adobe Acrobat</h4>
                             <p>Current Adobe Learn patterns</p>
                         </div>
@@ -191,19 +185,19 @@
                     <p>Confidential - Adobe internal research and past study analysis</p>
                     <div id="internal-research-grid">
                         <div class="blurred-research-item">
-                            <img src="assets/adobe/research/blurred_research1.png" alt="Internal research - confidential" class="blurred-research-img"/>
+                            <img src="assets/adobe/research/blurred_research1.webp" alt="Internal research - confidential" class="blurred-research-img" loading="lazy" decoding="async" />
                             <p class="research-label">Past Study Analysis</p>
                         </div>
                         <div class="blurred-research-item">
-                            <img src="assets/adobe/research/blurred_research2.png" alt="Internal research - confidential" class="blurred-research-img"/>
+                            <img src="assets/adobe/research/blurred_research2.webp" alt="Internal research - confidential" class="blurred-research-img" loading="lazy" decoding="async" />
                             <p class="research-label">Internal User Data</p>
                         </div>
                         <div class="blurred-research-item">
-                            <img src="assets/adobe/research/blurred_research3.png" alt="Internal research - confidential" class="blurred-research-img"/>
+                            <img src="assets/adobe/research/blurred_research3.webp" alt="Internal research - confidential" class="blurred-research-img" loading="lazy" decoding="async" />
                             <p class="research-label">Usage Patterns</p>
                         </div>
                         <div class="blurred-research-item">
-                            <img src="assets/adobe/research/blurred_research6.png" alt="Internal research - confidential" class="blurred-research-img"/>
+                            <img src="assets/adobe/research/blurred_research6.webp" alt="Internal research - confidential" class="blurred-research-img" loading="lazy" decoding="async" />
                             <p class="research-label">Previous Research Findings</p>
                         </div>
                     </div>
@@ -222,7 +216,7 @@
                         </div>
                     </div>
                     <div id="key-point-sec">
-                        <img id="asterisk" src="assets/adobe/icons/asterisk.svg"/>
+                        <img id="asterisk" alt="" src="assets/adobe/icons/asterisk.svg" loading="lazy" decoding="async" />
                         <p id="key-point">Creative learners are eager to grow their skills and build careers, but they face a 
                             fragmented and overwhelming learning landscape.</p>
                     </div>
@@ -235,7 +229,7 @@
                     <p>I began by exploring different concepts and approaches through brainstorming sessions 
                         and rapid ideation.</p>
                     <div id="brainstorm-section">
-                        <img src="assets/adobe/brainstorm_cards.jpg" alt="Brainstorming cards and ideation process" class="brainstorm-img"/>
+                        <img src="assets/adobe/brainstorm_cards.jpg" alt="Brainstorming cards and ideation process" class="brainstorm-img" loading="lazy" decoding="async" />
                     </div>
 
                     <h3>Concept Exploration</h3>
@@ -243,22 +237,22 @@
                         learning, and gamified experiences.</p>
                     <div id="sketch-section">
                         <div class="sketch-idea">
-                            <img src="assets/adobe/sketch3.png" alt="Gamified learning concept sketch" class="sketch-img"/>
+                            <img src="assets/adobe/sketch3.png" alt="Gamified learning concept sketch" class="sketch-img" loading="lazy" decoding="async" />
                             <h4>Gamified Experience</h4>
                             <p>Interactive, game-like learning journey</p>
                         </div>
                         <div class="sketch-idea">
-                            <img src="assets/adobe/sketch2.png" alt="Dashboard learning concept sketch" class="sketch-img"/>
+                            <img src="assets/adobe/sketch2.png" alt="Dashboard learning concept sketch" class="sketch-img" loading="lazy" decoding="async" />
                             <h4>Dashboard Approach</h4>
                             <p>Centralized learning hub with progress tracking</p>
                         </div>
                         <div class="sketch-idea" id="chosen-design-sec">
-                            <img src="assets/adobe/sketch1.png" alt="Conversational interface concept sketch" class="sketch-img"/>
+                            <img src="assets/adobe/sketch1.png" alt="Conversational interface concept sketch" class="sketch-img" loading="lazy" decoding="async" />
                                 <h4 id="chosen-design-text">Conversational Interface</h4>
                             
                             <p>AI-powered chat-based learning experience</p>
                             <div id="chosen-design">
-                                <img src="assets/adobe/icons/asterisk.svg" id="asterisk-small"/>
+                                <img src="assets/adobe/icons/asterisk.svg" id="asterisk-small" alt="" loading="lazy" decoding="async" />
                                 <p id="reasoning">Selected for flexible, intuitive, adaptable experience</p>
                             </div>
                         </div>
@@ -273,15 +267,15 @@
                             <p class="persona-role">Career-switcher & Aspiring Professional</p>
                             <div class="persona-content">
                                  <div class="persona-item">
-                                    <img src="assets/adobe/christie_persona.png" alt="Christie persona profile" class="persona-img"/>
+                                    <img src="assets/adobe/christie_persona.png" alt="Christie persona profile" class="persona-img" loading="lazy" decoding="async" />
                                     <p class="persona-label">Persona</p>
                                 </div>
                                 <div class="persona-item">
-                                    <img src="assets/adobe/christie_journey.png" alt="Christie's learning journey map" class="persona-img"/>
+                                    <img src="assets/adobe/christie_journey.webp" alt="Christie's learning journey map" class="persona-img" loading="lazy" decoding="async" />
                                     <p class="persona-label">Journey Map</p>
                                 </div>
                                 <div class="persona-item">
-                                    <img src="assets/adobe/christie_sketched_flow.png" alt="Christie's user flow sketch" class="persona-img"/>
+                                    <img src="assets/adobe/christie_sketched_flow.webp" alt="Christie's user flow sketch" class="persona-img" loading="lazy" decoding="async" />
                                     <p class="persona-label">User Flow</p>
                                 </div>
                             </div>
@@ -291,15 +285,15 @@
                             <p class="persona-role">Student Learner</p>
                             <div class="persona-content">
                                 <div class="persona-item">
-                                    <img src="assets/adobe/ethan_persona.png" alt="Ethan persona profile" class="persona-img"/>
+                                    <img src="assets/adobe/ethan_persona.png" alt="Ethan persona profile" class="persona-img" loading="lazy" decoding="async" />
                                     <p class="persona-label">Persona</p>
                                 </div>
                                 <div class="persona-item">
-                                    <img src="assets/adobe/ethan_journey.png" alt="Ethan's learning journey map" class="persona-img"/>
+                                    <img src="assets/adobe/ethan_journey.webp" alt="Ethan's learning journey map" class="persona-img" loading="lazy" decoding="async" />
                                     <p class="persona-label">Journey Map</p>
                                 </div>
                                 <div class="persona-item">
-                                    <img src="assets/adobe/ethan_sketched_flow.png" alt="Ethan's user flow sketch" class="persona-img"/>
+                                    <img src="assets/adobe/ethan_sketched_flow.webp" alt="Ethan's user flow sketch" class="persona-img" loading="lazy" decoding="async" />
                                     <p class="persona-label">User Flow</p>
                                 </div>
                             </div>
@@ -318,16 +312,16 @@
                         <div class="prototype-item">
                             <h4>Main Home Experience on Learn</h4>
                             <p>Guided learning path experience incorperated onto Adobe Learn home page for new and returning user visability</p>
-                            <video class="adobe-video" id="main-home-vid" loop autoplay muted>
-                                <source src="assets/adobe/flows/main_home.mov" type="video/mp4" alt="current Adobe Learn home page">
+                            <video class="adobe-video" id="main-home-vid" loop muted playsinline data-autoplay preload="none" poster="assets/adobe/flows/main_home-poster.jpg" aria-label="Guided learning path experience on the Adobe Learn home page">
+                                <source src="assets/adobe/flows/main_home.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <div class="prototype-item">
                             <h4>In-App Home Experience</h4>
                             <p>Users in the app can easily engage with learning content</p>
-                            <video class="adobe-video" id="in-app-home-vid" loop autoplay muted>
-                                <source src="assets/adobe/flows/in-app_home.mov" type="video/mp4" alt="current Adobe Learn home page">
+                            <video class="adobe-video" id="in-app-home-vid" loop muted playsinline data-autoplay preload="none" poster="assets/adobe/flows/in-app_home-poster.jpg" aria-label="In-app home experience with learning content">
+                                <source src="assets/adobe/flows/in-app_home.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -338,7 +332,7 @@
                         <!-- Conversational Interface -->
                         <div class="design-screen-card">
                             <div class="screen-visual">
-                                <img src="assets/adobe/flows/conversational_interface.png" alt="Conversational interface design" class="key-screen"/>
+                                <img src="assets/adobe/flows/conversational_interface.webp" alt="Conversational interface design" class="key-screen" loading="lazy" decoding="async" />
                             </div>
                             <div class="design-rationale">
                                 <h4>Conversational Interface</h4>
@@ -350,7 +344,7 @@
                         <!-- Custom Path Building -->
                         <div class="design-screen-card reverse">
                             <div class="screen-visual">
-                                <img src="assets/adobe/flows/custom_path.png" alt="Custom learning path design" class="key-screen"/>
+                                <img src="assets/adobe/flows/custom_path.webp" alt="Custom learning path design" class="key-screen" loading="lazy" decoding="async" />
                             </div>
                             <div class="design-rationale">
                                 <h4>Personalized Learning Paths</h4>
@@ -361,7 +355,7 @@
                         <!-- FAB Interaction -->
                         <div class="design-screen-card">
                             <div class="screen-visual">
-                                <img src="assets/adobe/flows/ask_fab.png" alt="Floating action button for asking questions" class="key-screen"/>
+                                <img src="assets/adobe/flows/ask_fab.png" alt="Floating action button for asking questions" class="key-screen" loading="lazy" decoding="async" />
                             </div>
                             <div class="design-rationale">
                                 <h4>Always-Available Assistant</h4>
@@ -373,7 +367,7 @@
                         <!-- In-App Integration -->
                         <div class="design-screen-card reverse">
                             <div class="screen-visual">
-                                <img src="assets/adobe/flows/in-app_interface.png" alt="In-app interface integration" class="key-screen"/>
+                                <img src="assets/adobe/flows/in-app_interface.webp" alt="In-app interface integration" class="key-screen" loading="lazy" decoding="async" />
                                 <!-- <div class="screen-label">Seamless Integration</div> -->
                             </div>
                             <div class="design-rationale">
@@ -386,7 +380,7 @@
                         <!-- Image Examples -->
                         <div class="design-screen-card">
                             <div class="screen-visual">
-                                <img src="assets/adobe/flows/upload_images.png" alt="Image-based interaction examples" class="key-screen"/>
+                                <img src="assets/adobe/flows/upload_images.webp" alt="Image-based interaction examples" class="key-screen" loading="lazy" decoding="async" />
                                 <!-- <div class="screen-label">Visual Communication</div> -->
                             </div>
                             <div class="design-rationale">
@@ -403,16 +397,16 @@
                         <div class="prototype-item persona-prototype">
                             <h4>Christie's Learning Path</h4>
                             <p>Designed for aspiring professionals seeking structured, goal-oriented learning experiences</p>
-                            <video class="adobe-video" id="christie-prototype-vid" loop autoplay muted>
-                                <source src="assets/adobe/flows/christie_video_small.mp4" type="video/mp4" alt="current Adobe Learn home page">
+                            <video class="adobe-video" id="christie-prototype-vid" loop muted playsinline data-autoplay preload="none" poster="assets/adobe/flows/christie_video_small-poster.jpg" aria-label="Prototype walkthrough of Christie's structured learning path">
+                                <source src="assets/adobe/flows/christie_video_small.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <div class="prototype-item persona-prototype">
                             <h4>Ethan's Learning Path</h4>
                             <p>Designed for hobbyist learners who prefer flexible, exploratory learning journeys</p>
-                            <video class="adobe-video" id="ethan-prototype-vid" loop autoplay muted>
-                                <source src="assets/adobe/flows/ethan_path.mov" type="video/mp4" alt="current Adobe Learn home page">
+                            <video class="adobe-video" id="ethan-prototype-vid" loop muted playsinline data-autoplay preload="none" poster="assets/adobe/flows/ethan_path-poster.jpg" aria-label="Prototype walkthrough of Ethan's flexible learning path">
+                                <source src="assets/adobe/flows/ethan_path.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -427,11 +421,11 @@
                             <div class="prototype-item learning-option">
                                 <h4>Learning Path Option</h4>
                                 <p>Structured, guided journeys for users who want comprehensive learning experiences with clear progression and goals.</p>
-                                <img src="assets/adobe/flows/learning_path_option.png" alt="Learning path option interface" class="prototype-img"/>
+                                <img src="assets/adobe/flows/learning_path_option.webp" alt="Learning path option interface" class="prototype-img" loading="lazy" decoding="async" />
                                 <div class="tutorial-detail">
                                     <p class="tutorial-label">Full option flow</p>
-                                    <video class="adobe-video" id="learning-path-vid" loop autoplay muted>
-                                        <source src="assets/adobe/flows/whole_path.mov" type="video/mp4">
+                                    <video class="adobe-video" id="learning-path-vid" loop muted playsinline data-autoplay preload="none" poster="assets/adobe/flows/whole_path-poster.jpg" aria-label="Walkthrough of a complete learning path">
+                                        <source src="assets/adobe/flows/whole_path.mp4" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
@@ -440,10 +434,10 @@
                             <div class="prototype-item tutorial-option">
                                 <h4>Tutorials Option</h4>
                                 <p>Quick, bite-sized tutorials for users who want to learn specific skills without committing to a full learning path.</p>
-                                <img src="assets/adobe/flows/tutorials_option.png" alt="Tutorials option interface" class="prototype-img"/>
+                                <img src="assets/adobe/flows/tutorials_option.webp" alt="Tutorials option interface" class="prototype-img" loading="lazy" decoding="async" />
                                 <div class="tutorial-detail">
                                     <p class="tutorial-label">Tutorial Page Experience</p>
-                                    <img src="assets/adobe/flows/tutorial_page.png" alt="Tutorial page interface" class="prototype-img"/>
+                                    <img src="assets/adobe/flows/tutorial_page.webp" alt="Tutorial page interface" class="prototype-img" loading="lazy" decoding="async" />
                                 </div>
                             </div>
                         </div>
@@ -459,42 +453,42 @@
                     <div id="features-section">
                         <div class="feature-item">
                             <div class="icon-area">
-                                <img class="feature-icon" src="assets/adobe/icons/goal-oriented.svg"/>
+                                <img class="feature-icon" src="assets/adobe/icons/goal-oriented.svg" alt="" loading="lazy" decoding="async" />
                                 <h4>Goal-oriented</h4>
                             </div>
                             <p>Help users connect their creative goals to meaningful outcomes from the start</p>
                         </div>
                         <div class="feature-item">
                             <div class="icon-area">
-                                <img class="feature-icon" src="assets/adobe/icons/individualized.svg"/>
+                                <img class="feature-icon" src="assets/adobe/icons/individualized.svg" alt="" loading="lazy" decoding="async" />
                                 <h4>Individualized</h4>
                             </div>
                             <p>Adapt to each user's goals, skill level, and learning style</p>
                         </div>
                         <div class="feature-item">
                             <div class="icon-area">
-                                <img class="feature-icon" src="assets/adobe/icons/flexible.svg"/>
+                                <img class="feature-icon" src="assets/adobe/icons/flexible.svg" alt="" loading="lazy" decoding="async" />
                                 <h4>Flexible</h4>
                             </div>
                             <p>Offer structure without limiting exploration</p>
                         </div>
                         <div class="feature-item">
                             <div class="icon-area">
-                                <img class="feature-icon" src="assets/adobe/icons/motivating.svg"/>
+                                <img class="feature-icon" src="assets/adobe/icons/motivating.svg" alt="" loading="lazy" decoding="async" />
                                 <h4>Motivating</h4>
                             </div>
                             <p>Build momentum with small wins and visible growth</p>
                         </div>
                         <div class="feature-item">
                             <div class="icon-area">
-                                <img class="feature-icon" src="assets/adobe/icons/human.svg"/>
+                                <img class="feature-icon" src="assets/adobe/icons/human.svg" alt="" loading="lazy" decoding="async" />
                                 <h4>Human</h4>
                             </div>
                             <p>Leverage creator-made resources alongside AI, and provide community connection</p>
                         </div>
                         <div class="feature-item">
                             <div class="icon-area">
-                                <img class="feature-icon" src="assets/adobe/icons/transparent.svg"/>
+                                <img class="feature-icon" src="assets/adobe/icons/transparent.svg" alt="" loading="lazy" decoding="async" />
                                 <h4>Transparent</h4>
                             </div>
                             <p>Adobe is uniquely positioned to offer trustworthy, up-to-date content</p>
@@ -506,6 +500,14 @@
         </div>
     </div>
         
+    <nav class="next-project" aria-label="More projects">
+      <a class="next-project-back" href="index.html#selected">← All work</a>
+      <a class="next-project-link" href="srch.html">
+        <span class="next-project-label">Next project</span>
+        <span class="next-project-title">Socially Responsible Computing Handbook →</span>
+      </a>
+    </nav>
+
     <footer id="footer">
     <hr>
     <div id="footer-text">
@@ -513,9 +515,8 @@
         <p>Thanks for browsing!</p>
         <p class="footer-note">Designed + built by me with &lt;3 and iced vanilla lattes</p>
         </div>
-        <a href="#titleArea" id="to-top" aria-label="Return to top of page">
-        <!-- <p id="up-text">Back to top</p> -->
-        <img id="up" src="assets/solar_arrow-up-outline.png" alt="">
+        <a href="#top" id="to-top" aria-label="Back to top">
+        <img id="up" src="assets/solar_arrow-up-outline.png" alt="" loading="lazy" decoding="async">
         </a>
     </div>
     </footer>
@@ -596,14 +597,13 @@
     
     
     <script src="script.js"></script>
-    <script src="carosel.js"></script>
-    <script src="mouse.js"></script>
     <script src="nav.js"></script>
+    <script src="media.js"></script>
     <!-- Media Modal (Images & Videos) -->
     <div id="media-modal">
-        <span id="media-modal-close">&times;</span>
+        <button type="button" id="media-modal-close" aria-label="Close">&times;</button>
         <div id="media-modal-content">
-            <img id="modal-image" style="display: none;" />
+            <img id="modal-image" alt="" style="display: none;" />
             <video id="modal-video" controls autoplay style="display: none;">
                 Your browser does not support the video tag.
             </video>
@@ -620,44 +620,59 @@
             const adobeVideos = document.querySelectorAll('.adobe-video');
             const expandableImages = document.querySelectorAll('.sketch-img, .persona-img, .research-img, .brainstorm-img, .blurred-research-img, .key-screen');
             
-            // Open modal when video is clicked
-            adobeVideos.forEach(function(video) {
-                video.addEventListener('click', function() {
-                    const source = video.querySelector('source');
-                    if (source) {
-                        modalImage.style.display = 'none';
-                        modalVideo.style.display = 'block';
-                        modalVideo.src = source.src;
-                        modal.classList.add('active');
-                        modalVideo.play();
-                        document.body.style.overflow = 'hidden';
+            let lastTrigger = null;
+
+            function openModal(trigger) {
+                lastTrigger = trigger;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                closeBtn.focus();
+            }
+
+            function makeActivatable(el, open) {
+                el.setAttribute('tabindex', '0');
+                el.style.cursor = 'pointer';
+                el.addEventListener('click', open);
+                el.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        open();
                     }
+                });
+            }
+
+            adobeVideos.forEach(function(video) {
+                makeActivatable(video, function() {
+                    const source = video.querySelector('source');
+                    if (!source) return;
+                    modalImage.style.display = 'none';
+                    modalVideo.style.display = 'block';
+                    modalVideo.src = source.src;
+                    openModal(video);
+                    modalVideo.play();
                 });
             });
 
-            // Open modal for images
             expandableImages.forEach(function(img) {
-                img.style.cursor = 'pointer';
-                img.addEventListener('click', function() {
+                makeActivatable(img, function() {
                     modalVideo.style.display = 'none';
                     modalImage.style.display = 'block';
-                    modalImage.src = img.src;
+                    modalImage.src = img.currentSrc || img.src;
                     modalImage.alt = img.alt || 'Expanded image';
-                    modal.classList.add('active');
-                    document.body.style.overflow = 'hidden';
+                    openModal(img);
                 });
             });
-            
-            // Close modal
+
             function closeModal() {
                 modal.classList.remove('active');
                 modalVideo.pause();
-                modalVideo.src = '';
+                modalVideo.removeAttribute('src');
                 document.body.style.overflow = '';
+                if (lastTrigger) lastTrigger.focus();
             }
-            
+
             closeBtn.addEventListener('click', closeModal);
-            
+
             // Close on background click
             modal.addEventListener('click', function(e) {
                 if (e.target === modal) {

@@ -74,7 +74,9 @@ a{
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.hover:hover .hover-text {
+.hover:hover .hover-text,
+.hover:focus .hover-text,
+.hover:focus-within .hover-text {
   visibility: visible;
   opacity: 1;
 }
@@ -104,30 +106,9 @@ a{
 }
 #about-me{
   font-weight: 800;
-  color: #87004d;
+  color: var(--accent);
   z-index: 10;
 }
-
-/* Sparkle animation */
-i {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: var(--random-color);
-  pointer-events: none;
-  animation: animate 2s linear forwards;
-}
-@keyframes animate {
-  0% {
-    opacity: 1;
-    transform: translate(0,0);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(var(--x), var(--y));
-  }
-}
-
 @media screen and (max-width: 768px) {
   #main-sec{
     flex-direction: column;

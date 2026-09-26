@@ -1,62 +1,41 @@
-const carouselItems = document.querySelectorAll(".carousel-item");
-let currentIndex = 0;
+function setupCarousel(itemSelector, nextId, prevId) {
+  const items = document.querySelectorAll(itemSelector);
+  const nextBtn = document.getElementById(nextId);
+  const prevBtn = document.getElementById(prevId);
+  if (!items.length) return;
 
-function showSlide(index) {
-  // Hide all carousel items
-  carouselItems.forEach((item) => {
-    item.style.display = "none";
-  });
+  let currentIndex = 0;
 
-  // Show the slide at the specified index
-  carouselItems[index].style.display = "block";
-}
+  function showSlide(index) {
+    items.forEach((item, i) => {
+      item.style.display = i === index ? "block" : "none";
+      item.setAttribute("aria-hidden", String(i !== index));
+    });
+  }
 
-function nextSlide() {
-  currentIndex = (currentIndex + 1) % carouselItems.length;
+  function bind(button, step) {
+    if (!button) return;
+    const go = () => {
+      currentIndex = (currentIndex + step + items.length) % items.length;
+      showSlide(currentIndex);
+    };
+    button.addEventListener("click", go);
+    if (button.tagName !== "BUTTON") {
+      button.setAttribute("role", "button");
+      button.setAttribute("tabindex", "0");
+      button.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          go();
+        }
+      });
+    }
+  }
+
   showSlide(currentIndex);
+  bind(nextBtn, 1);
+  bind(prevBtn, -1);
 }
 
-function previousSlide() {
-  currentIndex =
-    (currentIndex - 1 + carouselItems.length) % carouselItems.length;
-  showSlide(currentIndex);
-}
-
-// Show the first slide initially
-showSlide(currentIndex);
-
-// Set up event listeners for next and previous buttons
-document.getElementById("nextBtn").addEventListener("click", nextSlide);
-document.getElementById("prevBtn").addEventListener("click", previousSlide);
-
-
-const carouselItems2 = document.querySelectorAll(".carousel-item2");
-let currentIndex2 = 0;
-
-function showSlide2(index) {
-  // Hide all carousel items
-  carouselItems2.forEach((item) => {
-    item.style.display = "none";
-  });
-
-  // Show the slide at the specified index
-  carouselItems2[index].style.display = "block";
-}
-
-function nextSlide2() {
-  currentIndex2 = (currentIndex2 + 1) % carouselItems2.length;
-  showSlide2(currentIndex2);
-}
-
-function previousSlide2() {
-  currentIndex2 =
-    (currentIndex2 - 1 + carouselItems2.length) % carouselItems2.length;
-  showSlide2(currentIndex2);
-}
-
-// Show the first slide initially
-showSlide2(currentIndex2);
-
-// Set up event listeners for next and previous buttons
-document.getElementById("nextBtn2").addEventListener("click", nextSlide2);
-document.getElementById("prevBtn2").addEventListener("click", previousSlide2);
+setupCarousel(".carousel-item", "nextBtn", "prevBtn");
+setupCarousel(".carousel-item2", "nextBtn2", "prevBtn2");

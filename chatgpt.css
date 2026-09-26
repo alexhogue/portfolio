@@ -1,52 +1,5 @@
 /* ChatGPT-specific enhancements - Typography now handled by common.css */
 
-/* Problem/Solution specific styling */
-#problem h3 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #87004d;
-  margin-top: 0;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-#problem {
-  margin-top: 24px;
-}
-
-#problem-solution-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  margin-top: 8px;
-}
-
-.problem-card,
-.solution-card {
-  flex: 1 1 260px;
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 14px 18px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-  border: 1px solid #e5e7eb;
-}
-
-.problem-card p,
-.solution-card p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #4b5563;
-  margin-bottom: 0;
-}
-
-@media screen and (max-width: 768px) {
-  #problem-solution-grid {
-    flex-direction: column;
-    gap: 16px;
-  }
-}
-
 /* Enhanced overview text styling */
 .overview-text {
   font-size: 14px;
@@ -60,13 +13,13 @@
 
 /* ChatGPT-specific link styling */
 .link:hover {
-  color: #87004d;
+  color: var(--case-accent);
   text-decoration: underline;
 }
 
 /* Enhanced tools section styling with ChatGPT branding */
 #tools{
-  border-left: 4px solid #87004d;
+  border-left: 4px solid var(--case-accent);
 }
 
 /* ChatGPT-specific image styling overrides */
@@ -125,7 +78,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #87004d;
+  color: var(--case-accent);
   margin: 0 0 4px;
 }
 

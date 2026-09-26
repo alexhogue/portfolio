@@ -31,15 +31,6 @@ a{
   gap:10px;
   min-width: 300px;
 }
-#main-img {
-  width: 475px;
-  min-width: 300px;
-  height: 300px;
-  transition: transform .2s;
-  border-radius: 15px;
-  object-fit: cover;
-  flex-wrap: wrap;
-}
 .project-title:hover {
   color: #8a8a8a;
 }
@@ -98,7 +89,7 @@ a{
     width: 100%;
     min-width: 300px;
   }
-  #main-img {
+  #art-sec .work-img {
     width: 100% !important;
     min-width: auto;
     max-width: none;

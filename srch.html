@@ -9,17 +9,10 @@
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="navigation.css">
     <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="mouse.css">
     <link rel="stylesheet" href="srch.css">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   </head>
   <body id="website">
     <div id="nav-bar" class="collapsed"></div>
-    <script>
-      $(function () {
-        $("#nav-bar").load("nav.html");
-      });
-    </script>
 
     <div id="titleArea">
       <h1>Socially Responsible Computing Handbook</h1>
@@ -41,8 +34,8 @@
           <p>Brown University CS Program</p>
         </div>
       </div>
-      <video id="srch-hero-vid" loop autoplay muted playsinline>
-        <source src="assets/srch/home-scroll.mov" type="video/mp4">
+      <video id="srch-hero-vid" loop muted playsinline data-autoplay preload="none" poster="assets/srch/home-scroll-poster.jpg">
+        <source src="assets/srch/home-scroll.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </section>
@@ -120,19 +113,19 @@
             <span class="evidence-kicker">Options explored</span>
             <div class="option-grid">
               <figure class="option-card">
-                <img class="case-img" src="assets/srch/low-fis/lowfi1.png" alt="Low-fi option 1">
+                <img class="case-img" src="assets/srch/low-fis/lowfi1.png" alt="Low-fi option 1" loading="lazy" decoding="async">
                 <figcaption><span class="option-tag">Option A</span></figcaption>
               </figure>
               <figure class="option-card">
-                <img class="case-img" src="assets/srch/low-fis/lowfi2.png" alt="Low-fi option 2">
+                <img class="case-img" src="assets/srch/low-fis/lowfi2.png" alt="Low-fi option 2" loading="lazy" decoding="async">
                 <figcaption><span class="option-tag">Option B</span></figcaption>
               </figure>
               <figure class="option-card option-card--chosen">
-                <img class="case-img" src="assets/srch/low-fis/lowfi3-chosen.png" alt="Chosen low-fi direction">
+                <img class="case-img" src="assets/srch/low-fis/lowfi3-chosen.png" alt="Chosen low-fi direction" loading="lazy" decoding="async">
                 <figcaption><span class="option-tag option-tag--chosen">Chosen</span></figcaption>
               </figure>
               <figure class="option-card">
-                <img class="case-img" src="assets/srch/low-fis/lowfi4.png" alt="Low-fi option 4">
+                <img class="case-img" src="assets/srch/low-fis/lowfi4.png" alt="Low-fi option 4" loading="lazy" decoding="async">
                 <figcaption><span class="option-tag">Option D</span></figcaption>
               </figure>
             </div>
@@ -179,11 +172,11 @@
 
             <div class="media-row">
               <div class="media-block">
-                <img class="case-img" src="assets/srch/final-lightmode-home.png" alt="SRCH homepage in light mode">
+                <img class="case-img" src="assets/srch/final-lightmode-home.webp" alt="SRCH homepage in light mode" loading="lazy" decoding="async">
                 <label>Light mode — contrast-conscious reading UI</label>
               </div>
               <div class="media-block">
-                <img class="case-img" src="assets/srch/final-darkmode-home.png" alt="SRCH homepage in dark mode">
+                <img class="case-img" src="assets/srch/final-darkmode-home.webp" alt="SRCH homepage in dark mode" loading="lazy" decoding="async">
                 <label>Dark mode — same system, alternative reading environment</label>
               </div>
             </div>
@@ -191,19 +184,19 @@
             <span class="evidence-kicker">WCAG contrast checks</span>
             <div class="wcag-row">
               <figure class="wcag-item">
-                <img src="assets/srch/color-contrast-checks/contrast-check-1.png" alt="WCAG color contrast check 1">
+                <img src="assets/srch/color-contrast-checks/contrast-check-1.png" alt="WCAG color contrast check 1" loading="lazy" decoding="async">
                 <figcaption>Contrast check 1</figcaption>
               </figure>
               <figure class="wcag-item">
-                <img src="assets/srch/color-contrast-checks/contrast-check-2.png" alt="WCAG color contrast check 2">
+                <img src="assets/srch/color-contrast-checks/contrast-check-2.png" alt="WCAG color contrast check 2" loading="lazy" decoding="async">
                 <figcaption>Contrast check 2</figcaption>
               </figure>
               <figure class="wcag-item">
-                <img src="assets/srch/color-contrast-checks/contrast-check-3.png" alt="WCAG color contrast check 3">
+                <img src="assets/srch/color-contrast-checks/contrast-check-3.png" alt="WCAG color contrast check 3" loading="lazy" decoding="async">
                 <figcaption>Contrast check 3</figcaption>
               </figure>
               <figure class="wcag-item">
-                <img src="assets/srch/color-contrast-checks/contrast-check-4.png" alt="WCAG color contrast check 4">
+                <img src="assets/srch/color-contrast-checks/contrast-check-4.png" alt="WCAG color contrast check 4" loading="lazy" decoding="async">
                 <figcaption>Contrast check 4</figcaption>
               </figure>
             </div>
@@ -211,11 +204,11 @@
             <span class="evidence-kicker">Color-blindness checks</span>
             <div class="media-row">
               <div class="media-block">
-                <img class="case-img" src="assets/srch/colorblind-light.png" alt="Color-blindness simulation check in light mode">
+                <img class="case-img" src="assets/srch/colorblind-light.png" alt="Color-blindness simulation check in light mode" loading="lazy" decoding="async">
                 <label>Color-blind check — light mode</label>
               </div>
               <div class="media-block">
-                <img class="case-img" src="assets/srch/colorblind-dark.png" alt="Color-blindness simulation check in dark mode">
+                <img class="case-img" src="assets/srch/colorblind-dark.png" alt="Color-blindness simulation check in dark mode" loading="lazy" decoding="async">
                 <label>Color-blind check — dark mode</label>
               </div>
             </div>
@@ -300,14 +293,14 @@
                 <div class="ba-pair ba-pair-video">
                   <figure class="ba-panel">
                     <figcaption><span class="option-tag">Before</span></figcaption>
-                    <video class="ba-vid" loop autoplay muted playsinline>
-                      <source src="assets/srch/testing-comparison/home-scroll-old.mov" type="video/mp4">
+                    <video class="ba-vid" loop muted playsinline data-autoplay preload="none" poster="assets/srch/testing-comparison/home-scroll-old-poster.jpg">
+                      <source src="assets/srch/testing-comparison/home-scroll-old.mp4" type="video/mp4">
                     </video>
                   </figure>
                   <figure class="ba-panel">
                     <figcaption><span class="option-tag option-tag--chosen">After</span></figcaption>
-                    <video class="ba-vid" loop autoplay muted playsinline>
-                      <source src="assets/srch/testing-comparison/home-scroll-new.mov" type="video/mp4">
+                    <video class="ba-vid" loop muted playsinline data-autoplay preload="none" poster="assets/srch/testing-comparison/home-scroll-new-poster.jpg">
+                      <source src="assets/srch/testing-comparison/home-scroll-new.mp4" type="video/mp4">
                     </video>
                   </figure>
                 </div>
@@ -321,11 +314,11 @@
                 <div class="ba-pair">
                   <figure class="ba-panel">
                     <figcaption><span class="option-tag">Before</span></figcaption>
-                    <img src="assets/srch/testing-comparison/curric-cards-old.png" alt="Homepage curriculum cards before revisions — simple icon grid">
+                    <img src="assets/srch/testing-comparison/curric-cards-old.png" alt="Homepage curriculum cards before revisions — simple icon grid" loading="lazy" decoding="async">
                   </figure>
                   <figure class="ba-panel">
                     <figcaption><span class="option-tag option-tag--chosen">After</span></figcaption>
-                    <img src="assets/srch/testing-comparison/curric-cards-new.png" alt="Homepage curriculum cards after revisions — numbered cards with descriptions">
+                    <img src="assets/srch/testing-comparison/curric-cards-new.png" alt="Homepage curriculum cards after revisions — numbered cards with descriptions" loading="lazy" decoding="async">
                   </figure>
                 </div>
               </div>
@@ -338,11 +331,11 @@
                 <div class="ba-pair">
                   <figure class="ba-panel">
                     <figcaption><span class="option-tag">Before</span></figcaption>
-                    <img src="assets/srch/testing-comparison/dropdown-old.png" alt="Modules dropdown before revisions — flat list of four modules">
+                    <img src="assets/srch/testing-comparison/dropdown-old.webp" alt="Modules dropdown before revisions — flat list of four modules" loading="lazy" decoding="async">
                   </figure>
                   <figure class="ba-panel">
                     <figcaption><span class="option-tag option-tag--chosen">After</span></figcaption>
-                    <img src="assets/srch/testing-comparison/dropdown-new.png" alt="Modules dropdown after revisions — mega-menu with primer links grouped by module">
+                    <img src="assets/srch/testing-comparison/dropdown-new.webp" alt="Modules dropdown after revisions — mega-menu with primer links grouped by module" loading="lazy" decoding="async">
                   </figure>
                 </div>
               </div>
@@ -355,11 +348,11 @@
                 <div class="ba-pair ba-pair-narrow ba-pair-crop">
                   <figure class="ba-panel">
                     <figcaption><span class="option-tag">Before</span></figcaption>
-                    <img src="assets/srch/testing-comparison/nav-panel-old.png" alt="Sidebar navigation before revisions — flat module list">
+                    <img src="assets/srch/testing-comparison/nav-panel-old.png" alt="Sidebar navigation before revisions — flat module list" loading="lazy" decoding="async">
                   </figure>
                   <figure class="ba-panel">
                     <figcaption><span class="option-tag option-tag--chosen">After</span></figcaption>
-                    <img src="assets/srch/testing-comparison/nav-panel-new.png" alt="Sidebar navigation after revisions — nested accordion with sub-sections">
+                    <img src="assets/srch/testing-comparison/nav-panel-new.png" alt="Sidebar navigation after revisions — nested accordion with sub-sections" loading="lazy" decoding="async">
                   </figure>
                 </div>
               </div>
@@ -372,11 +365,11 @@
                 <div class="ba-pair">
                   <figure class="ba-panel">
                     <figcaption><span class="option-tag">Before</span></figcaption>
-                    <img src="assets/srch/testing-comparison/primer-old.png" alt="Primer page before revisions">
+                    <img src="assets/srch/testing-comparison/primer-old.webp" alt="Primer page before revisions" loading="lazy" decoding="async">
                   </figure>
                   <figure class="ba-panel">
                     <figcaption><span class="option-tag option-tag--chosen">After</span></figcaption>
-                    <img src="assets/srch/testing-comparison/primer-new.png" alt="Primer page after revisions — learning objectives and clearer hierarchy">
+                    <img src="assets/srch/testing-comparison/primer-new.webp" alt="Primer page after revisions — learning objectives and clearer hierarchy" loading="lazy" decoding="async">
                   </figure>
                 </div>
               </div>
@@ -424,8 +417,8 @@
             </ul>
 
             <div class="media-block">
-              <video class="case-vid" loop autoplay muted playsinline>
-                <source src="assets/srch/search-feature.mov" type="video/mp4">
+              <video class="case-vid" loop muted playsinline data-autoplay preload="none" poster="assets/srch/search-feature-poster.jpg">
+                <source src="assets/srch/search-feature.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
               <label>Search across the handbook</label>
@@ -477,8 +470,8 @@
             </ul>
 
             <div class="media-block">
-              <video class="case-vid" loop autoplay muted playsinline>
-                <source src="assets/srch/primer-video.mov" type="video/mp4">
+              <video class="case-vid" loop muted playsinline data-autoplay preload="none" poster="assets/srch/primer-video-poster.jpg">
+                <source src="assets/srch/primer-video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
               <label>Primer reading experience</label>
@@ -508,31 +501,31 @@
             <div class="diagram-gallery">
               <figure class="diagram-card">
                 <button type="button" class="diagram-frame" aria-label="View Bias in data and model curation diagram larger">
-                  <img src="assets/srch/assets/bias-together.png" alt="Bias in data and model curation diagram">
+                  <img src="assets/srch/assets/bias-together.webp" alt="Bias in data and model curation diagram" loading="lazy" decoding="async">
                 </button>
                 <figcaption>Bias in data and model curation</figcaption>
               </figure>
               <figure class="diagram-card">
                 <button type="button" class="diagram-frame" aria-label="View Inclusive design granular control diagram larger">
-                  <img src="assets/srch/assets/inclusive-design.png" alt="Inclusive design granular control diagram">
+                  <img src="assets/srch/assets/inclusive-design.png" alt="Inclusive design granular control diagram" loading="lazy" decoding="async">
                 </button>
                 <figcaption>Inclusive design: granular control</figcaption>
               </figure>
               <figure class="diagram-card">
                 <button type="button" class="diagram-frame" aria-label="View Stakeholder ecosystem diagram larger">
-                  <img src="assets/srch/assets/governance-diagram.png" alt="Stakeholder ecosystem diagram">
+                  <img src="assets/srch/assets/governance-diagram.png" alt="Stakeholder ecosystem diagram" loading="lazy" decoding="async">
                 </button>
                 <figcaption>Stakeholder ecosystem</figcaption>
               </figure>
               <figure class="diagram-card">
                 <button type="button" class="diagram-frame" aria-label="View Ladder of citizen participation diagram larger">
-                  <img src="assets/srch/assets/ladder-of-citizen-participation.png" alt="Ladder of citizen participation diagram">
+                  <img src="assets/srch/assets/ladder-of-citizen-participation.png" alt="Ladder of citizen participation diagram" loading="lazy" decoding="async">
                 </button>
                 <figcaption>Ladder of citizen participation</figcaption>
               </figure>
               <figure class="diagram-card">
                 <button type="button" class="diagram-frame" aria-label="View Procedural justice pillars diagram larger">
-                  <img src="assets/srch/assets/justice-pillars.png" alt="Procedural justice pillars diagram">
+                  <img src="assets/srch/assets/justice-pillars.png" alt="Procedural justice pillars diagram" loading="lazy" decoding="async">
                 </button>
                 <figcaption>Procedural justice pillars</figcaption>
               </figure>
@@ -559,6 +552,14 @@
         </p>
       </div>
 
+      <nav class="next-project" aria-label="More projects">
+        <a class="next-project-back" href="index.html#selected">← All work</a>
+        <a class="next-project-link" href="hack.html">
+          <span class="next-project-label">Next project</span>
+          <span class="next-project-title">Hack@Brown →</span>
+        </a>
+      </nav>
+
       <footer id="footer">
         <hr>
         <div id="footer-text">
@@ -566,8 +567,8 @@
             <p>Thanks for browsing!</p>
             <p class="footer-note">Designed + built by me with &lt;3 and iced vanilla lattes</p>
           </div>
-          <a href="#titleArea" id="to-top" aria-label="Return to top of page">
-            <img id="up" src="assets/solar_arrow-up-outline.png" alt="">
+          <a href="#top" id="to-top" aria-label="Back to top">
+            <img id="up" src="assets/solar_arrow-up-outline.png" alt="" loading="lazy" decoding="async">
           </a>
         </div>
       </footer>
@@ -581,7 +582,7 @@
 
     <script src="script.js"></script>
     <script src="nav.js"></script>
-    <script src="mouse.js"></script>
+    <script src="media.js"></script>
     <script>
       (function () {
         var lightbox = document.getElementById('asset-lightbox');
@@ -600,14 +601,18 @@
           closeBtn.focus();
         }
 
+        var lastTrigger = null;
+
         function closeLightbox() {
           lightbox.hidden = true;
           lbImg.removeAttribute('src');
           document.body.style.overflow = '';
+          if (lastTrigger) lastTrigger.focus();
         }
 
         document.querySelectorAll('.diagram-frame').forEach(function (btn) {
           btn.addEventListener('click', function () {
+            lastTrigger = btn;
             var img = btn.querySelector('img');
             if (!img) return;
             var card = btn.closest('.diagram-card');
@@ -617,14 +622,24 @@
         });
 
         document.querySelectorAll('.ba-panel img').forEach(function (img) {
-          img.addEventListener('click', function () {
+          function open() {
             var panel = img.closest('.ba-panel');
             var label = panel && panel.querySelector('figcaption');
             var group = img.closest('.comparison-group');
             var title = group && group.querySelector('.comparison-title');
             var caption = (title ? title.textContent.trim() + ' — ' : '') +
               (label ? label.textContent.trim() : '');
+            lastTrigger = img;
             openLightbox(img, caption);
+          }
+          img.setAttribute('tabindex', '0');
+          img.setAttribute('role', 'button');
+          img.addEventListener('click', open);
+          img.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              open();
+            }
           });
         });
 

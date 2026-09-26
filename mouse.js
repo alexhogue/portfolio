@@ -1,52 +1,20 @@
-const titleArea = document.getElementById("title-cont");
-const aboutArea = document.getElementById("writing");
-const footerArea = document.getElementById("footer");
-
-
-// function spark(event) {
-//   let i = document.createElement("i");
-//   i.style.left = event.pageX + "px";
-//   i.style.top = event.pageY + "px";
-//   i.style.scale = `${Math.random() * 2 + 1}`;
-//   i.style.setProperty("--random-color", getRandomColor());
-//   i.style.setProperty(`--x`, getRandomTransitionVal());
-//   i.style.setProperty(`--y`, getRandomTransitionVal());
-
-//   document.body.appendChild(i);
-
-//   setTimeout(() => {
-//     document.body.removeChild(i);
-//   }, 800);
-// }
-
-// function getRandomTransitionVal() {
-//   return `${Math.random() * 200 - 100}px`;
-// }
-
-// function getRandomColor() {
-//   const red = Math.floor(Math.random() + 250); // Random integer between 0 and 255
-//   const green = Math.floor(Math.random() + 120);
-//   const blue = Math.floor(Math.random() * 200);
-//   const color = `rgb(${red}, ${green}, ${blue})`;
-//   return color;
-// }
-
-// titleArea.addEventListener("mousemove", spark);
-// footerArea.addEventListener("mousemove", spark);
-// aboutArea.addEventListener("mousemove", spark);
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const follower = document.querySelector(".mouse-follower");
+  if (!follower) return;
 
+  const finePointer = window.matchMedia("(pointer: fine)");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (!finePointer.matches || reducedMotion.matches) {
+    follower.style.display = "none";
+    return;
+  }
+
+  let frame = null;
   document.addEventListener("mousemove", (event) => {
-    // Get the current mouse coordinates
-    const mouseX = event.clientX - 500;
-    const mouseY = event.clientY - 500;
-
-    // Update the follower's position
-    // Using CSS custom properties (variables) is an efficient method
-    follower.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+    if (frame) return;
+    frame = requestAnimationFrame(() => {
+      follower.style.transform = `translate(${event.clientX - 500}px, ${event.clientY - 500}px)`;
+      frame = null;
+    });
   });
-
 });

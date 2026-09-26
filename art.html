@@ -1,26 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Art Page</title>
+    <meta name="description" content="Illustration, graphic design, data visualization, and photography by Alex Hogue.">
+    <title>Sketchbook — Alex Hogue</title>
     <link rel="stylesheet" href="common.css" />
     <link rel="stylesheet" href="navigation.css" />
     <link rel="stylesheet" href="footer.css" />
-    <link rel="stylesheet" href="mouse.css" />
-    <link rel="stylesheet" href="pages-art/lightbox.min.css" />
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="art.css" />
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="pages-art/lightbox-plus-jquery.min.js"></script>
   </head>
   <body id="website">
-    <div id="nav-bar" class="collapsed">
-    </div>
-    <script>
-      $(function(){
-        $("#nav-bar").load("nav.html");
-      });
-    </script>
+    <div id="nav-bar" class="collapsed"></div>
 
     <div class="circle-area" id="top-circle-area2">
       <div class="circle2 top back"></div>
@@ -34,25 +26,25 @@
     <div class="mouse-follower"></div>
 
     <header id="title-cont">
-      <svg id="title-curve" viewBox="-50 -120 1100 500" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-          <!-- Define the curved path (invisible) -->
-          <path id="curve-path" d="M0.170898 345.661C192.171 275.661 212.671 26.6609 516.171 154.661C819.671 282.661 1002.17 154.661 1054.67 0.160889" fill="none"/>
-          
-          <!-- Text following the path -->
-          <text font-family="Instrument-serif, serif" font-size="96">
-            <textPath id="main-title" href="#curve-path" startOffset="0%">
-              Explore my additional creative work!
-            </textPath>
-          </text>
-        </svg>
-        <!-- <h1>Explore my extra artistic work!</h1>
-        <p>This page is primarily personal work, including graphic design, illustration, and fun personal projects.</p> -->
+      <h1 class="title-heading">
+        <svg id="title-curve" viewBox="-50 -120 1100 500" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+            <!-- Define the curved path (invisible) -->
+            <path id="curve-path" d="M0.170898 345.661C192.171 275.661 212.671 26.6609 516.171 154.661C819.671 282.661 1002.17 154.661 1054.67 0.160889" fill="none"/>
+            
+            <!-- Text following the path -->
+            <text font-family="Instrument-serif, serif" font-size="96">
+              <textPath id="main-title" href="#curve-path" startOffset="0%">
+                Explore my additional creative work!
+              </textPath>
+            </text>
+          </svg>
+      </h1>
     </header>
     <div id="art-sec">
       <article class="work">
         <a href="vis-comm.html">
           <div class="work-content">
-            <img id="main-img" class="work-img" src="assets/petra-thumbnail.png" alt="Visual communication design samples"> 
+            <img class="work-img" src="assets/petra-thumbnail.webp" alt="Visual communication design samples" loading="lazy" decoding="async"> 
             <div class="work-desc">
               <div>
                 <h3 class="project-title">Visual Communication Projects</h3>
@@ -63,12 +55,10 @@
         </a>
       </article>
       <article class="work">
-        <a href="https://alexhogue.github.io/project1/index.html" target="_blank">
+        <a href="https://alexhogue.github.io/project1/index.html" target="_blank" rel="noopener noreferrer">
           <div class="work-content">
-            <!-- <img id="main-img" class="work-img" src="assets/away-we-go.png" alt="Away we Go Homepage displaying Vintage travel posters"/> -->
-            <video loop autoplay muted id="hack-vid" class="work-img" aria-label="Hack@Brown project preview video">
-              <source src="assets/art/away_we_go.mov" type="video/mp4">
-              Your browser does not support the video tag.
+            <video loop muted playsinline data-autoplay preload="none" class="work-img" poster="assets/art/away_we_go-poster.jpg" aria-label="Browsing the Away We Go collection of vintage travel posters">
+              <source src="assets/art/away_we_go.mp4" type="video/mp4">
             </video>
             <div class="work-desc">
               <div>
@@ -80,11 +70,10 @@
         </a>
       </article>
       <article class="work">
-        <a href="https://alexhogue.github.io/project2/index.html" target="_blank">
+        <a href="https://alexhogue.github.io/project2/index.html" target="_blank" rel="noopener noreferrer">
           <div class="work-content">
-           <video loop autoplay muted id="hack-vid" class="work-img" aria-label="Hack@Brown project preview video">
-              <source src="assets/art/heart_rate_vid.mov" type="video/mp4">
-              Your browser does not support the video tag.
+           <video loop muted playsinline data-autoplay preload="none" class="work-img" poster="assets/art/heart_rate_vid-poster.jpg" aria-label="The Heart Rate Atlas visualizing heart rate data">
+              <source src="assets/art/heart_rate_vid.mp4" type="video/mp4">
             </video>
             <div class="work-desc">
               <div>
@@ -99,7 +88,7 @@
       <article class="work">
         <a href="gd.html">
           <div class="work-content">
-            <img id="main-img" class="work-img" src="assets/art/GD/posters.png" alt="Graphic design work featuring typography and layout design"/>
+            <img class="work-img" src="assets/art/GD/posters.webp" alt="Graphic design work featuring typography and layout design" loading="lazy" decoding="async" />
             <div class="work-desc">
               <div>
                 <h3 class="project-title">Festival Brand Identity</h3>
@@ -112,7 +101,7 @@
       <article class="work">
         <a href="data-narrative.html">
           <div class="work-content">
-            <img id="main-img" class="work-img" src="assets/art/data_narrative_thumbnail.png" alt="Data narrative visualization showing interactive charts and graphs"/>
+            <img class="work-img" src="assets/art/data_narrative_thumbnail.webp" alt="Data narrative visualization showing interactive charts and graphs" loading="lazy" decoding="async" />
             <div class="work-desc">
               <div>
                 <h3 class="project-title">Data Narrative</h3>
@@ -125,7 +114,7 @@
       <article class="work">
         <a href="pages-art/vis-art.html">
           <div class="work-content">
-            <img id="main-img" class="work-img" src="assets/art/streets.jpg" alt="Warped - a black and white artistic photograph"/>
+            <img class="work-img" src="assets/art/streets.JPG" alt="Warped - a black and white artistic photograph" loading="lazy" decoding="async" />
             <div class="work-desc">
               <h3 class="project-title">Visual Art</h3>
             </div>
@@ -135,7 +124,7 @@
       <article class="work">
         <a href="pages-art/photography.html">
           <div class="work-content">
-            <img id="main-img" class="work-img" src="assets/art/photography/Plastic-copyright.jpg" alt="Plastic - an artistic photograph featuring plastic materials"/>
+            <img class="work-img" src="assets/art/photography/Plastic-copyright.jpg" alt="Plastic - an artistic photograph featuring plastic materials" loading="lazy" decoding="async" />
             <div class="work-desc">
               <h3 class="project-title">Photography</h3>
             </div>
@@ -150,15 +139,14 @@
           <p>Thanks for browsing!</p>
           <p class="footer-note">Designed + built by me with &lt;3 and iced vanilla lattes</p>
         </div>
-        <a href="#title-cont" id="to-top" aria-label="Return to top of page">
-          <!-- <p id="up-text">Back to top</p> -->
-          <img id="up" src="assets/solar_arrow-up-outline.png" alt="">
+        <a href="#top" id="to-top" aria-label="Back to top">
+          <img id="up" src="assets/solar_arrow-up-outline.png" alt="" loading="lazy" decoding="async">
         </a>
       </div>
     </footer>
     <script src="script.js"></script>
+    <script src="nav.js"></script>
+    <script src="media.js"></script>
+    <script src="mouse.js"></script>
   </body>
-    <!-- <script src="/path/to/masonry.pkgd.min.js"></script> -->
-  <script src="nav.js"></script>
-  <script src="mouse.js"></script>
 </html>

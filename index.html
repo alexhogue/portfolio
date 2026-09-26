@@ -4,29 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Alex Hogue's portfolio - Designer at the intersection of visual communication, technology, and cognitive science focused on accessibility and inclusion.">
-    <title>Alex Hogue - Portfolio Home</title>
+    <title>Alex Hogue — Product Designer</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="navigation.css">
     <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="mouse.css">
     <link rel="stylesheet" href="main.css">
-    
-    <!-- jQuery for navigation loading -->
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   </head>
   
   <body id="website">
     <!-- Navigation -->
-    <nav id="nav-bar" class="collapsed" role="navigation" aria-label="Main navigation">
-    </nav>
-    
-    <script>
-      $(function(){
-        $("#nav-bar").load("nav.html");
-      });
-    </script>
+    <div id="nav-bar" class="collapsed"></div>
 
     <div class="circle-area" id="top-circle-area">
       <div class="circle top back"></div>
@@ -42,17 +31,19 @@
         
         <!-- Main heading -->
         <!-- <h1 id="title">Hello- I'm <a href="about.html"><span id="name">Alex(andra) Hogue</span></a>!</h1> -->
-        <svg id="title-curve" viewBox="-50 -100 1000 550" width="95%" height="auto" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-          <!-- Define the curved path (invisible) -->
-          <path id="curve-path" d="M0.142578 0.479248C141.643 42.4792 167.143 256.979 445.643 256.979C734.643 256.979 881.643 331.979 947.143 495.479" fill="none"/>
-          
-          <!-- Text following the path -->
-          <text font-family="Instrument-serif, serif" font-size="96">
-            <textPath id="main-title" href="#curve-path" startOffset="0%">
-              Hello- I'm <a id="name" href="about.html">Alex(andra) Hogue</a>!
-            </textPath>
-          </text>
-        </svg>
+        <h1 class="title-heading">
+          <svg id="title-curve" viewBox="-50 -100 1000 550" width="95%" height="auto" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+            <!-- Define the curved path (invisible) -->
+            <path id="curve-path" d="M0.142578 0.479248C141.643 42.4792 167.143 256.979 445.643 256.979C734.643 256.979 881.643 331.979 947.143 495.479" fill="none"/>
+            
+            <!-- Text following the path -->
+            <text font-family="Instrument-serif, serif" font-size="96">
+              <textPath id="main-title" href="#curve-path" startOffset="0%">
+                Hello- I'm <a id="name" href="about.html">Alex(andra) Hogue</a>!
+              </textPath>
+            </text>
+          </svg>
+        </h1>
         <div class="facts">
           <div class="fact-area" id="fact1">
             <button type="button" class="fact-trigger" aria-expanded="false" aria-controls="text1" aria-label="Show interdisciplinary design details">
@@ -94,26 +85,18 @@
     <!-- Portfolio Section -->
     <main>
       <section id="selected">
-        <h2>Selected Works:</h2>
+        <h2>Selected Works</h2>
         <hr>
       </section>
-      
-      
+
       <!-- Portfolio Grid -->
       <section id="work-section" aria-label="Portfolio projects">
 
-        <!-- New Project -->
         <article class="work">
           <a href="adobe.html" aria-label="View Adobe Learn project details">
             <div class="work-content">
-              <!-- <img id="adobe-img" class="work-img" src="assets/Adobe_logo.png" alt="Adobe company logo"> -->
-              <!-- <video loop autoplay muted id="adobe-img" class="work-img" aria-label="Hack@Brown project preview video">
-                <source src="assets/adobe/adobe_blurred.mov" type="video/mp4">
-                Your browser does not support the video tag.
-              </video> -->
-              <img id="adobe-img" class="work-img" src="assets/alex_presentation.PNG" alt="Adobe company logo">
+              <img id="adobe-img" class="work-img" src="assets/alex_presentation.webp" alt="Alex presenting her Adobe Learn project at the Adobe intern showcase">
               <div class="work-desc">
-                <!-- <span class="number" aria-hidden="true"><h1>1.</h1></span> -->
                 <div>
                   <h3 class="project-title">Agentic Experience for Adobe Learn</h3>
                   <p class="work-description">Designing an agentic experience that guides users through their learning and support journey</p>
@@ -132,14 +115,13 @@
         <article class="work">
           <a href="srch.html" aria-label="View Socially Responsible Computing Handbook project details">
             <div class="work-content">
-              <video loop autoplay muted id="srch-vid" class="work-img" aria-label="Socially Responsible Computing Handbook project preview">
-                <source src="assets/srch/home-scroll.mov" type="video/mp4">
-                Your browser does not support the video tag.
+              <video loop muted playsinline data-autoplay preload="none" id="srch-vid" class="work-img" poster="assets/srch/home-scroll-poster.jpg" aria-label="Scrolling through the Socially Responsible Computing Handbook home page">
+                <source src="assets/srch/home-scroll.mp4" type="video/mp4">
               </video>
               <div class="work-desc">
                 <div>
                   <h3 class="project-title">Socially Responsible Computing Handbook</h3>
-                  <p>A digital handbook designed to make ethics and accessibility central to computer science education at Brown University</p>
+                  <p class="work-description">A digital handbook designed to make ethics and accessibility central to computer science education at Brown University</p>
                   <div class="project-tags">
                     <p class="project-tag">product design</p>
                     <p class="project-tag">development</p>
@@ -153,19 +135,16 @@
           </a>
         </article>
 
-         <!-- Project 3: Hack@Brown -->
         <article class="work">
           <a href="hack.html" aria-label="View Hack@Brown project details">
             <div class="work-content">
-              <video loop autoplay muted id="hack-vid" class="work-img" aria-label="Hack@Brown project preview video">
+              <video loop muted playsinline data-autoplay preload="none" id="hack-vid" class="work-img" poster="assets/hack-cropped-poster.jpg" aria-label="The Hack@Brown website with its space-themed animations">
                 <source src="assets/hack-cropped.mp4" type="video/mp4">
-                Your browser does not support the video tag.
               </video>
               <div class="work-desc">
-                <!-- <span class="number" aria-hidden="true"><h1>3.</h1></span> -->
                 <div>
                   <h3 class="project-title">Hack@Brown</h3>
-                  <p>Design leader to design the webpage and branding for a student organization</p>
+                  <p class="work-description">Design leader to design the webpage and branding for a student organization</p>
                   <div class="project-tags">
                     <p class="project-tag">web design</p>
                     <p class="project-tag">leadership</p>
@@ -177,16 +156,14 @@
           </a>
         </article>
 
-        <!-- Project 4: ChatGPT Privacy Design -->
         <article class="work">
           <a href="chatgpt.html" aria-label="View ChatGPT privacy redesign project details">
             <div class="work-content">
-              <img id="chatgpt-img" class="work-img" src="assets/chatgpt/current-interface.png" alt="ChatGPT privacy redesign interface mockup">
+              <img id="chatgpt-img" class="work-img" src="assets/chatgpt/current-interface.png" alt="ChatGPT privacy redesign interface mockup" loading="lazy" decoding="async">
               <div class="work-desc">
-                <!-- <span class="number" aria-hidden="true"><h1>4.</h1></span> -->
                 <div>
                   <h3 class="project-title">ChatGPT Privacy Design</h3>
-                  <p>Developing privacy-centered design recommendations for AI chat interfaces</p>
+                  <p class="work-description">Developing privacy-centered design recommendations for AI chat interfaces</p>
                   <div class="project-tags">
                     <p class="project-tag">UX research</p>
                     <p class="project-tag">digital safety</p>
@@ -197,19 +174,16 @@
           </a>
         </article>
 
-        <!-- Project 2: Warp Home -->
         <article class="work">
           <a href="warp.html" aria-label="View Warp Home project details">
             <div class="work-content">
-              <video loop autoplay muted id="warp-vid" class="work-img" aria-label="Warp Home project preview video">
+              <video loop muted playsinline data-autoplay preload="none" id="warp-vid" class="work-img" poster="assets/warp/highfi-poster.jpg" aria-label="Navigating the final Warp Home design">
                 <source src="assets/warp/highfi.mp4" type="video/mp4">
-                Your browser does not support the video tag.
               </video>
               <div class="work-desc">
-                <!-- <span class="number" aria-hidden="true"><h1>2.</h1></span> -->
                 <div>
                   <h3 class="project-title">Warp Home</h3>
-                  <p>Design a home page for the startup Warp that serves as an aggregator to allow for increased discovery of Warp's features</p>
+                  <p class="work-description">Design a home page for the startup Warp that serves as an aggregator to allow for increased discovery of Warp's features</p>
                   <div class="project-tags">
                     <p class="project-tag">product design</p>
                     <p class="project-tag">industry project</p>
@@ -219,70 +193,14 @@
             </div>
           </a>
         </article>
-        
-      
-
-        <!-- <article class="work">
-          <a href="chatgpt.html" aria-label="View ChatGPT privacy redesign project details">
-            <div class="work-content">
-              <img id="chatgpt-img" class="work-img" src="assets/chatgpt/current-interface.png" alt="ChatGPT privacy redesign interface mockup">
-              <div class="work-desc"> -->
-                <!-- <span class="number" aria-hidden="true"><h1>4.</h1></span> -->
-                <!-- <div>
-                  <h3 class="project-title">Socially Responsible Computing Handbook</h3>
-                  <p>Developing privacy-centered design recommendations for AI chat interfaces</p>
-                  <div class="project-tags">
-                    <p class="project-tag">product design</p>
-                    <p class="project-tag">development</p>
-                    <p class="project-tag">leadership</p>
-                    <p class="project-tag">accessibility</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </article> -->
-        
-        <!-- Project 5: Voyage Vault -->
-        <!-- <article class="work">
-          <a href="voyage-vault.html" aria-label="View Voyage Vault project details">
-            <div class="work-content">
-              <img id="voyage-gif" src="assets/interface.gif" alt="Voyage Vault interface animation">
-              <div class="work-desc">
-                <span class="number" aria-hidden="true"><h1>5.</h1></span>
-                <div>
-                  <h3 class="project-title">Voyage Vault</h3>
-                  <p class="project-tags">UI/UX design | front-end development</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </article> -->
-        
-        <!-- Project 6: Visual Communication -->
-        <!-- <article class="work">
-          <a href="vis-comm.html" aria-label="View Visual Communication project details">
-            <div class="work-content">
-              <img id="vis-img" src="assets/petra-thumbnail.png" alt="Visual communication design samples"> 
-              <div class="work-desc">
-                <span class="number" aria-hidden="true"><h1>5.</h1></span>
-                <div>
-                  <h3 class="project-title">Visual Communication</h3>
-                  <p class="project-tags">illustration | graphic design</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </article> -->
       </section>
 
       <section id="art-section">
-        <!-- <hr> -->
         <a href="art.html">
-          <img id="art-blob" src="assets/art_blob.svg"/>
+          <img id="art-blob" src="assets/art_blob.svg" alt="Explore my sketchbook of additional creative work" loading="lazy" decoding="async">
         </a>
       </section>
-      
+
     </main>
     <div class="mouse-follower"></div>
     <!-- Footer -->
@@ -291,17 +209,16 @@
       <div id="footer-text">
         <div id="main-text">
           <p>Thanks for browsing!</p>
-          <p class="footer-note">Designed + coded by me with &lt;3 and iced vanilla lattes</p>
+          <p class="footer-note">Designed + built by me with &lt;3 and iced vanilla lattes</p>
         </div>
-        <a href="#title-cont" id="to-top" aria-label="Return to top of page">
-          <!-- <p id="up-text">Back to top</p> -->
-          <img id="up" src="assets/solar_arrow-up-outline.png" alt="">
+        <a href="#top" id="to-top" aria-label="Back to top">
+          <img id="up" src="assets/solar_arrow-up-outline.png" alt="" loading="lazy" decoding="async">
         </a>
       </div>
     </footer>
     <!-- Scripts -->
     <script src="nav.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="media.js"></script>
     <script src="script.js"></script>
     <script src="mouse.js"></script>
   </body>

@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Narrative</title>
+    <meta name="description" content="A data narrative on U.S. name trends, with visualizations coded in R.">
+    <title>Data Narrative — Alex Hogue</title>
     <link rel="stylesheet" href="common.css" />
     <link rel="stylesheet" href="navigation.css" />
     <link rel="stylesheet" href="footer.css" />
-    <link rel="stylesheet" href="mouse.css" />
     <link rel="stylesheet" href="data-narrative.css" />
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   </head>
   <body id="website">
-    <div id="nav-bar" class="collapsed">
-    </div>
-    <script>
-      $(function(){
-        $("#nav-bar").load("nav.html");
-      });
-    </script>
+    <div id="nav-bar" class="collapsed"></div>
 
     <div id="titleArea">
         <h1>Data Narrative</h1>
@@ -27,10 +21,18 @@
     <div id="centered-sec">
       <div class="section">
         <div class="data-narrative-container">
-          <img src="assets/art/data-narrative.png" alt="Data Narrative visualization showing interactive charts and data insights" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" />
+          <img src="assets/art/data-narrative.webp" alt="Data Narrative visualization showing interactive charts and data insights" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" loading="lazy" decoding="async" />
         </div>
       </div>
     </div>
+
+    <nav class="next-project" aria-label="More projects">
+      <a class="next-project-back" href="art.html">← Back to Sketchbook</a>
+      <a class="next-project-link" href="pages-art/vis-art.html">
+        <span class="next-project-label">Next in Sketchbook</span>
+        <span class="next-project-title">Visual Art →</span>
+      </a>
+    </nav>
 
     <footer id="footer">
       <hr>
@@ -39,9 +41,8 @@
           <p>Thanks for browsing!</p>
           <p class="footer-note">Designed + built by me with &lt;3 and iced vanilla lattes</p>
         </div>
-        <a href="#title-cont" id="to-top" aria-label="Return to top of page">
-          <!-- <p id="up-text">Back to top</p> -->
-          <img id="up" src="assets/solar_arrow-up-outline.png" alt="">
+        <a href="#top" id="to-top" aria-label="Back to top">
+          <img id="up" src="assets/solar_arrow-up-outline.png" alt="" loading="lazy" decoding="async">
         </a>
       </div>
     </footer>

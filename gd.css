@@ -1,14 +1,21 @@
+/* Project accent (see design tokens in common.css) */
+:root {
+  --case-accent: #2c5aa0;
+  --case-accent-hover: #234a85;
+  --case-accent-soft: #e6eefa;
+}
+
 /* Graphic Design Portfolio Page Styles - Typography now handled by common.css */
 
 /* GD-specific link styling */
 .link:hover {
-  color: #2c5aa0;
+  color: var(--case-accent);
   text-decoration: underline;
 }
 
 /* GD-specific tools section styling */
 #tools {
-  border-left: 4px solid #2c5aa0;
+  border-left: 4px solid var(--case-accent);
 }
 
 /* Ensure GD page follows common layout patterns */
@@ -37,7 +44,7 @@
 .value-item h4 {
   font-size: 18px;
   font-weight: 600;
-  color: #2c5aa0;
+  color: var(--case-accent);
   margin-bottom: 12px;
   margin-top: 0;
 }
@@ -112,7 +119,7 @@
 }
 
 .imagery-text h4 {
-  color: #2c5aa0;
+  color: var(--case-accent);
   margin-top: 24px;
 }
 
@@ -144,7 +151,7 @@
 }
 
 .color-text h4 {
-  color: #2c5aa0;
+  color: var(--case-accent);
 }
 
 .color-text p {
@@ -215,7 +222,7 @@
 }
 
 .typography-text h4 {
-  color: #2c5aa0;
+  color: var(--case-accent);
 }
 
 .typography-text p {

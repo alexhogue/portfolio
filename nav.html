@@ -1,31 +1,20 @@
 <div id="nav-bar-text">
-    <text class="nav-button"><a href="index.html">Alex(andra) Hogue</a></text>
-    <nav id="nav-buttons">
+    <a class="nav-button nav-home" href="{{root}}index.html">Alex(andra) Hogue</a>
+    <nav id="nav-buttons" aria-label="Main">
+        <button type="button" id="menu-icon" aria-expanded="false" aria-controls="main-menu" aria-label="Open menu">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
+        </button>
         <ul id="main-menu">
-            <li><text class="nav-button"><a id="work-nav" href="index.html#selected">Work</a></text></li>
-            <li><text class="nav-button"><a href="art.html">Sketchbook</a></text></li>
-            <li><text class="nav-button"><a href="about.html">About</a></text></li>
-            <li><a href="https://www.linkedin.com/in/alex-hogue/" target="_blank">
-                    <img id="linkedin-icon" src="assets/linkedin.png" 
-                        alt="visit Alex's LinkedIn profile"
-                        onerror="this.onerror=null; this.src='../assets/linkedin.png';"/>
-                </a></li>
+            <li><a class="nav-button" data-nav="work" href="{{root}}index.html#selected">Work</a></li>
+            <li><a class="nav-button" data-nav="sketchbook" href="{{root}}art.html">Sketchbook</a></li>
+            <li><a class="nav-button" data-nav="about" href="{{root}}about.html">About</a></li>
+            <li>
+                <a class="nav-linkedin" href="https://www.linkedin.com/in/alex-hogue/" target="_blank" rel="noopener noreferrer">
+                    <img id="linkedin-icon" src="{{root}}assets/linkedin.png" alt="LinkedIn (opens in a new tab)" width="18" height="18">
+                </a>
+            </li>
         </ul>
     </nav>
-    <div id="menu-icon" onclick="toggleMobileMenu(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-        <ul class="mobile-menu">
-            <li><text class="nav-button"><a id="work-nav" href="index.html#selected">Work</a></text></li>
-            <li><text class="nav-button"><a href="art.html">Sketchbook</a></text></li>
-            <li><text class="nav-button"><a href="about.html">About</a></text></li>
-            <li><a href="https://www.linkedin.com/in/alex-hogue/" target="_blank">
-                    <img id="linkedin-icon" src="assets/linkedin.png" 
-                        alt="visit Alex's LinkedIn profile"
-                        onerror="this.onerror=null; this.src='../assets/linkedin.png';"/>
-                </a></li>
-        </ul>
-    </div>
 </div>
-

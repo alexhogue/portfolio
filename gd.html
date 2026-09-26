@@ -3,23 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Graphic Design Portfolio</title>
+    <meta name="description" content="Visual identity, design system, and brand guidelines for a music festival.">
+    <title>Festival Identity — Alex Hogue</title>
 
     <link rel="stylesheet" href="common.css" />
     <link rel="stylesheet" href="navigation.css" />
     <link rel="stylesheet" href="footer.css" />
-    <link rel="stylesheet" href="mouse.css" />
     <link rel="stylesheet" href="gd.css" />
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   </head>
   <body id="website">
-    <div id="nav-bar" class="collapsed">
-    </div>
-    <script>
-      $(function(){
-        $("#nav-bar").load("nav.html");
-      });
-    </script>
+    <div id="nav-bar" class="collapsed"></div>
 
     <div id="titleArea">
         <h1>Festival Identity</h1>
@@ -93,7 +86,7 @@
             <h2>Logo</h2>
             <div class="logo-section">
                 <div class="logo-visual">
-                    <img src="assets/art/GD/logo.png" alt="Papillons de Nuit logo" />
+                    <img src="assets/art/GD/logo.png" alt="Papillons de Nuit logo" loading="lazy" decoding="async" />
                 </div>
                 <div class="logo-description">
                     <p>
@@ -113,7 +106,7 @@
             <div class="typography-section">
                 <div class="typography-content">
                     <div class="typography-visual">
-                        <img src="assets/art/GD/typography_guide.png" alt="Typography guide showing Trente Cinq and Ostia Antica typefaces" />
+                        <img src="assets/art/GD/typography_guide.webp" alt="Typography guide showing Trente Cinq and Ostia Antica typefaces" loading="lazy" decoding="async" />
                     </div>
                 </div>
                 
@@ -136,7 +129,7 @@
                         </p>
                     </div>
                     <div class="typography-visual">
-                        <img src="assets/art/GD/poster_system.png" alt="Poster system grid and layout guidelines" />
+                        <img src="assets/art/GD/poster_system.png" alt="Poster system grid and layout guidelines" loading="lazy" decoding="async" />
                     </div>
                 </div>
             </div>
@@ -165,7 +158,7 @@
                         </p>
                     </div>
                     <div class="color-visual">
-                        <img src="assets/art/GD/primary_palette.png" alt="Primary color palette" />
+                        <img src="assets/art/GD/primary_palette.png" alt="Primary color palette" loading="lazy" decoding="async" />
                     </div>
                 </div>
                 
@@ -179,7 +172,7 @@
                         </p>
                     </div>
                     <div class="color-visual">
-                        <img src="assets/art/GD/extended_palette.png" alt="Extended color palette" />
+                        <img src="assets/art/GD/extended_palette.png" alt="Extended color palette" loading="lazy" decoding="async" />
                     </div>
                 </div>
                 
@@ -198,7 +191,7 @@
                         </p>
                     </div>
                     <div class="color-visual">
-                        <img src="assets/art/GD/color_pairings.png" alt="Color pairings and accessibility guidelines" />
+                        <img src="assets/art/GD/color_pairings.png" alt="Color pairings and accessibility guidelines" loading="lazy" decoding="async" />
                     </div>
                 </div>
             </div>
@@ -235,7 +228,7 @@
                         </p>
                     </div>
                     <div class="imagery-visual">
-                        <img src="assets/art/GD/illustrations.png" alt="Hand-drawn moth illustrations" />
+                        <img src="assets/art/GD/illustrations.webp" alt="Hand-drawn moth illustrations" loading="lazy" decoding="async" />
                     </div>
                 </div>
             </div>
@@ -248,13 +241,13 @@
             <div class="posters-section">
                 <div class="posters-grid">
                     <div class="poster-item">
-                        <img src="assets/art/GD/final_poster1.jpg" alt="Festival poster 1" />
+                        <img src="assets/art/GD/final_poster1.jpg" alt="Festival poster 1" loading="lazy" decoding="async" />
                     </div>
                     <div class="poster-item">
-                        <img src="assets/art/GD/final_poster2.jpg" alt="Festival poster 2" />
+                        <img src="assets/art/GD/final_poster2.jpg" alt="Festival poster 2" loading="lazy" decoding="async" />
                     </div>
                     <div class="poster-item">
-                        <img src="assets/art/GD/final_poster3.jpg" alt="Festival poster 3" />
+                        <img src="assets/art/GD/final_poster3.jpg" alt="Festival poster 3" loading="lazy" decoding="async" />
                     </div>
                 </div>
             </div>
@@ -280,7 +273,7 @@
                         </p>
                     </div>
                     <div class="merchandise-visual">
-                        <img src="assets/art/GD/t-shirt.png" alt="Festival t-shirt design" />
+                        <img src="assets/art/GD/t-shirt.webp" alt="Festival t-shirt design" loading="lazy" decoding="async" />
                     </div>
                 </div>
                 
@@ -293,13 +286,21 @@
                         </p>
                     </div>
                     <div class="merchandise-visual">
-                        <img src="assets/art/GD/tickets.png" alt="Festival ticket design" />
+                        <img src="assets/art/GD/tickets.webp" alt="Festival ticket design" loading="lazy" decoding="async" />
                     </div>
                 </div>
             </div>
         </div>
     </div>
     
+    <nav class="next-project" aria-label="More projects">
+      <a class="next-project-back" href="art.html">← Back to Sketchbook</a>
+      <a class="next-project-link" href="data-narrative.html">
+        <span class="next-project-label">Next in Sketchbook</span>
+        <span class="next-project-title">Data Narrative →</span>
+      </a>
+    </nav>
+
     <footer id="footer">
       <hr>
       <div id="footer-text">
@@ -307,16 +308,13 @@
           <p>Thanks for browsing!</p>
           <p class="footer-note">Designed + built by me with &lt;3 and iced vanilla lattes</p>
         </div>
-        <a href="#titleArea" id="to-top" aria-label="Return to top of page">
-          <!-- <p id="up-text">Back to top</p> -->
-          <img id="up" src="assets/solar_arrow-up-outline.png" alt="">
+        <a href="#top" id="to-top" aria-label="Back to top">
+          <img id="up" src="assets/solar_arrow-up-outline.png" alt="" loading="lazy" decoding="async">
         </a>
       </div>
     </footer>
     
     <script src="script.js"></script>
-    <script src="carosel.js"></script>
-    <script src="mouse.js"></script>
     <script src="nav.js"></script>
   </body>
 </html>
